@@ -1423,11 +1423,20 @@
         fetch(GOOGLE_FORM_ACTION, {
           method: 'POST',
           body: formData,
-          mode: 'no-cors'   /* Google Forms doesn't return CORS headers, so we fire-and-forget */
+          mode: 'no-cors'
         })
-          form.style.display = 'n
+        .then(function() {
+          form.style.display = 'none';
+          successEl.classList.add('is-visible');
+        })
+        .catch(function() {
+          form.style.display = 'none';
+          errorEl.classList.add('is-visible');
+        });
+      });
+    })();
+  </script>
 
-<div id="site-footer"></div>
 <script src="/js/includes.js"></script>
 </body>
 </html>

@@ -486,6 +486,18 @@
       transform: rotate(45deg);
     }
 
+    .ics-fac-detail__list a {
+      color: var(--ics-red);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-thickness: 1px;
+      transition: color 0.2s ease;
+    }
+
+    .ics-fac-detail__list a:hover {
+      color: var(--ics-red-light);
+    }
+
     .ics-fac-detail__pubs {
       list-style: none;
       display: flex;
@@ -505,6 +517,20 @@
     }
 
     /* ===================== */
+    /* DIVIDER               */
+    /* ===================== */
+    .ics-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
+      padding: 0.5rem 2rem;
+      background: var(--ics-cream);
+    }
+    .ics-divider__line { flex: 1; max-width: 180px; height: 1px; background: var(--ics-border-light); }
+    .ics-divider__diamond { width: 7px; height: 7px; background: var(--ics-red); transform: rotate(45deg); flex-shrink: 0; }
+
+    /* ===================== */
     /* BUTTONS               */
     /* ===================== */
     
@@ -518,63 +544,37 @@
     /* ===================== */
     /* CTA BANNER            */
     /* ===================== */
-    .ics-cta-banner { 
-      background: linear-gradient(180deg, #241450 0%, #1F0F3D 100%);
-      padding: 4.5rem 4rem; 
-      text-align: center; 
-      position: relative;
-      overflow: hidden;
-    }
-    .ics-cta-banner::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 20px;
-      height: 20px;
-      background: var(--ics-purple-deep);
-      transform: translate(-50%, -50%) rotate(45deg);
-      box-shadow: 0 0 0 6px rgba(245, 245, 239, 0.02);
-      pointer-events: none;
+    .ics-cta-banner {
+      background: var(--ics-cream);
+      padding: 4.5rem 2rem;
+      text-align: center;
     }
 
-    .ics-cta-banner::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: 
-        radial-gradient(ellipse at 20% 50%, rgba(200,60,44,0.06) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 50%, rgba(241,171,106,0.04) 0%, transparent 60%);
-      pointer-events: none;
+    .ics-cta-banner__inner {
+      max-width: 620px;
+      margin: 0 auto;
     }
 
-    .ics-cta-banner__inner { 
-      max-width: 620px; 
-      margin: 0 auto; 
-      position: relative; 
-      z-index: 1; 
-    }
-
-    .ics-cta-banner__heading { 
-      font-family: var(--font-serif); 
-      font-size: clamp(1.68rem, 3.36vw, 2.28rem); 
-      font-weight: 700; 
-      color: var(--ics-white); 
-      line-height: 1.35; 
-      margin-bottom: 1rem; 
+    .ics-cta-banner__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.68rem, 3.36vw, 2.28rem);
+      font-weight: 700;
+      color: var(--ics-purple);
+      line-height: 1.35;
+      margin-bottom: 1rem;
     }
 
     .ics-cta-banner__heading em {
       font-style: italic;
-      color: var(--ics-coral);
+      color: var(--ics-red);
     }
 
-    .ics-cta-banner__text { 
-      font-family: var(--font-sans); 
-      font-size: 1.08rem; 
-      color: rgba(255,255,255,0.6);
-      margin-bottom: 2rem; 
-      line-height: 1.8; 
+    .ics-cta-banner__text {
+      font-family: var(--font-sans);
+      font-size: 1.08rem;
+      color: #5c5550;
+      margin-bottom: 2rem;
+      line-height: 1.8;
     }
 
     .ics-cta-banner__actions { 
@@ -965,15 +965,21 @@
       </div>
     </section>
 
+    <div class="ics-divider">
+      <div class="ics-divider__line"></div>
+      <div class="ics-divider__diamond"></div>
+      <div class="ics-divider__line"></div>
+    </div>
+
     <!-- ============ CTA BANNER ============ -->
     <section class="ics-cta-banner">
       <div class="ics-cta-banner__inner">
         <h2 class="ics-cta-banner__heading">Learn from Faculty Who <em>Walk Alongside You</em></h2>
         <p class="ics-cta-banner__text">Our small cohort model means you're not a number. You're a colleague. Ready to join a community of educators thinking deeply about faith, practice, and calling?</p>
         <div class="ics-cta-banner__actions">
-          <a href="/mwse-apply/" class="ics-btn ics-btn--primary">Apply Today →</a>
-          <a href="/mwse/" class="ics-btn ics-btn--outline">Explore the MWS-E</a>
-          <a href="/mael/" class="ics-btn ics-btn--outline">Explore the MA-EL</a>
+          <a href="/mwse-apply/" class="ics-btn ics-btn--primary-on-light">Apply Today →</a>
+          <a href="/mwse/" class="ics-btn ics-btn--outline-on-light">Explore the MWS-E</a>
+          <a href="/mael/" class="ics-btn ics-btn--outline-on-light">Explore the MA-EL</a>
         </div>
       </div>
     </section>

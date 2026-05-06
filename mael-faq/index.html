@@ -368,7 +368,7 @@
     /* STILL HAVE QUESTIONS  */
     /* ===================== */
     .ics-faq-contact {
-      background: var(--ics-purple-deep);
+      background: var(--ics-cream);
       padding: 4rem 2rem;
       text-align: center;
     }
@@ -382,7 +382,7 @@
       font-family: var(--font-serif);
       font-size: clamp(1.5rem, 3.2vw, 2rem);
       font-weight: 700;
-      color: var(--ics-white);
+      color: var(--ics-purple);
       line-height: 1.35;
       margin-bottom: 1rem;
     }
@@ -390,18 +390,18 @@
     .ics-faq-contact__text {
       font-family: var(--font-sans);
       font-size: 1.1rem;
-      color: var(--ics-text-on-dark);
+      color: #5c5550;
       line-height: 1.8;
       margin-bottom: 0.5rem;
     }
     .ics-faq-contact__text a {
-      color: var(--mael-accent);
+      color: var(--mael-accent-dark);
       text-decoration: none;
       border-bottom: 1px solid transparent;
       transition: border-color 0.2s ease, color 0.2s ease;
     }
     .ics-faq-contact__text a:hover {
-      color: var(--mael-accent-light);
+      color: var(--mael-accent);
       border-bottom-color: currentColor;
     }
 
@@ -410,14 +410,14 @@
       font-family: var(--font-sans);
       font-size: 1.1rem;
       font-weight: 600;
-      color: var(--mael-accent);
+      color: var(--mael-accent-dark);
       text-decoration: none;
       margin-bottom: 2rem;
       transition: color 0.2s ease;
     }
 
     .ics-faq-contact__email:hover {
-      color: var(--mael-accent-light);
+      color: var(--mael-accent);
     }
 
     .ics-faq-contact__actions {
@@ -1223,14 +1223,20 @@
       </div>
     </section>
 
+    <div class="ics-divider">
+      <div class="ics-divider__line"></div>
+      <div class="ics-divider__diamond"></div>
+      <div class="ics-divider__line"></div>
+    </div>
+
     <!-- ===== STILL HAVE QUESTIONS ===== -->
     <section class="ics-faq-contact">
       <div class="ics-faq-contact__inner">
         <h2 class="ics-faq-contact__heading">Still Have Questions?</h2>
         <p class="ics-faq-contact__text">Reach out to our Academic Registrar at <a href="mailto:academic-registrar@icscanada.edu" class="ics-faq-contact__email">academic-registrar@icscanada.edu</a>. </p>
         <div class="ics-faq-contact__actions">
-          <a href="/mael-apply/" class="ics-btn ics-btn--primary">Apply Today &rarr;</a>
-          <a href="/mael/" class="ics-btn ics-btn--outline">Back to MA-EL Overview</a>
+          <a href="/mael-apply/" class="ics-btn ics-btn--primary-on-light">Apply Today &rarr;</a>
+          <a href="/mael/" class="ics-btn ics-btn--outline-on-light">Back to MA-EL Overview</a>
         </div>
       </div>
     </section>
@@ -1255,13 +1261,31 @@
         });
       });
 
+      function smoothScrollTo(el, offset) {
+        var targetY = el.getBoundingClientRect().top + window.pageYOffset - (offset || 24);
+        var startY = window.pageYOffset;
+        var distance = targetY - startY;
+        var duration = Math.min(Math.max(Math.abs(distance) * 0.6, 300), 900);
+        var startTime = null;
+        function ease(t) {
+          return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+        function step(ts) {
+          if (!startTime) startTime = ts;
+          var progress = Math.min((ts - startTime) / duration, 1);
+          window.scrollTo(0, startY + distance * ease(progress));
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
       const tabs = document.querySelectorAll('.ics-faq-nav__tab[href^="#"]');
       tabs.forEach(function (tab) {
         tab.addEventListener('click', function (e) {
           e.preventDefault();
           const target = document.querySelector(this.getAttribute('href'));
           if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            smoothScrollTo(target);
           }
           tabs.forEach(function (t) { t.classList.remove('ics-faq-nav__tab--active'); });
           this.classList.add('ics-faq-nav__tab--active');
