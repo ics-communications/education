@@ -37,7 +37,25 @@
       transition: all 0.25s ease;
       cursor: pointer;
       border: none; }
-    .ics-btn--ghost-light:hover { border-color: rgba(255,255,255,0.5);
+    .ics-btn--primary-on-light {
+      background: var(--ics-purple);
+      color: var(--ics-white); }
+    .ics-btn--primary-on-light:hover {
+      background: var(--ics-purple-deep);
+      transform: translateY(-1px); }
+    .ics-btn--outline-on-light {
+      background: transparent;
+      border: 1.5px solid var(--ics-purple);
+      color: var(--ics-purple); }
+    .ics-btn--outline-on-light:hover {
+      background: var(--ics-purple);
+      color: var(--ics-white); }
+    .ics-btn--ghost-light {
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.8); }
+    .ics-btn--ghost-light:hover {
+      border-color: rgba(255,255,255,0.5);
       color: var(--ics-white); }
     @media (max-width: 767px) {
       .ics-cilc-cta__actions .ics-btn { width: 100%; max-width: 300px; text-align: center; }
