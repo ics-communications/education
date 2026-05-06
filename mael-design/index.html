@@ -1,0 +1,2003 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/css/shared.css">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon.png">
+  <title>Program Design | MA-EL | Institute for Christian Studies</title>
+<meta name="description" content="Explore the research-focused curriculum of the Master of Arts in Educational Leadership at ICS. A hybrid program combining coursework with thesis research.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://education.icscanada.edu/mael-design/">
+<meta property="og:title" content="MA-EL Program Design | ICS">
+<meta property="og:description" content="Explore the research-focused curriculum of the Master of Arts in Educational Leadership at ICS. A hybrid program combining coursework with thesis research.">
+<meta property="og:url" content="https://education.icscanada.edu/mael-design/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Educational Leadership at ICS">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MA-EL Program Design | ICS">
+<meta name="twitter:description" content="Explore the research-focused curriculum of the Master of Arts in Educational Leadership at ICS. A hybrid program combining coursework with thesis research.">
+
+  <style>
+.ics-mael-pd *,
+    .ics-mael-pd *::before,
+    .ics-mael-pd *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .ics-mael-pd {
+      --ics-orange-dark:  #D89450;
+
+      --mael-accent:       #F1AB6A;
+      --mael-accent-light: #F5C48F;
+      --mael-accent-dark:  #D89450;
+      --instructor-edith:  #D89450;
+      --instructor-gideon: #6FA8DC;
+      --instructor-nik:    #E8896B;
+      --instructor-neal:   #7FA37A;
+
+      font-family: var(--font-sans);
+      color: #3a3330;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+}
+
+    /* ===================== */
+    /* HERO                  */
+    /* ===================== */
+    .ics-pd-hero {
+      position: relative;
+      min-height: 52vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background: var(--ics-purple-deep);
+    }
+
+    .ics-pd-hero__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .ics-pd-hero__bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 1;
+      filter: saturate(0.3) brightness(0.7);
+    }
+
+    .ics-pd-hero__overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(31,15,61,0.5) 0%, rgba(31,15,61,0.85) 60%, rgba(31,15,61,0.97) 100%);
+    }
+
+    .ics-pd-hero__content {
+      position: relative;
+      z-index: 2;
+      max-width: 780px;
+      padding: 4.5rem 2rem 5rem;
+      animation: icsPdFadeUp 0.9s ease-out both;
+    }
+
+    @keyframes icsPdFadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .ics-pd-hero__badge {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.4em 1.1em;
+      background: var(--mael-accent);
+      color: var(--ics-purple);
+      margin-bottom: 1.4rem;
+      animation: icsPdFadeUp 0.9s ease-out 0.1s both;
+    }
+
+    .ics-pd-hero__label {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 1.02rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 1.2rem;
+      animation: icsPdFadeUp 0.9s ease-out 0.2s both;
+    }
+
+    .ics-pd-hero__title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--ics-white);
+      margin-bottom: 1.2rem;
+      animation: icsPdFadeUp 0.9s ease-out 0.3s both;
+    }
+
+    .ics-pd-hero__title em {
+      font-style: italic;
+      color: var(--mael-accent);
+    }
+
+    .ics-pd-hero__subtitle {
+      font-family: var(--font-sans);
+      font-size: 1.14rem;
+      color: rgba(255,255,255,0.6);
+      max-width: 580px;
+      margin: 0 auto;
+      line-height: 1.8;
+      animation: icsPdFadeUp 0.9s ease-out 0.45s both;
+    }
+
+    /* ===================== */
+    /* BUTTONS               */
+    /* ===================== */
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    /* ===================== */
+    /* DIVIDER               */
+    /* ===================== */
+    .ics-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
+      padding: 0.5rem 2rem;
+      background: var(--ics-cream);
+    }
+    .ics-divider__line { flex: 1; max-width: 180px; height: 1px; background: var(--ics-border-light); }
+    .ics-divider__diamond { width: 7px; height: 7px; background: var(--ics-purple); transform: rotate(45deg); flex-shrink: 0; }
+
+    .ics-divider--dark {
+      background: var(--ics-purple);
+    }
+    .ics-divider--dark .ics-divider__line { background: var(--ics-border-dark); }
+
+    /* ===================== */
+    /* PROGRAM OVERVIEW      */
+    /* ===================== */
+    .ics-pd-overview {
+      background: var(--ics-cream);
+      padding: 4.5rem 2rem 3.5rem;
+    }
+
+    .ics-pd-overview__inner {
+      max-width: 1060px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    @media (min-width: 768px) {
+      .ics-pd-overview__inner { grid-template-columns: 1fr 1fr; gap: 4rem; }
+    }
+
+    .ics-pd-overview__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--mael-accent-dark);
+      margin-bottom: 1rem;
+    }
+
+    .ics-pd-overview__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3.84vw, 2.4rem);
+      font-weight: 700;
+      color: var(--ics-purple);
+      line-height: 1.35;
+      margin-bottom: 1.4rem;
+    }
+
+    .ics-pd-overview__body {
+      font-family: var(--font-sans);
+      font-size: 1.1rem;
+      color: #5c5550;
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+
+    .ics-pd-overview__commitments {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      margin-top: 1.4rem;
+    }
+
+    .ics-pd-overview__commitment {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      font-family: var(--font-sans);
+      font-size: 1.02rem;
+      color: #4a4540;
+      line-height: 1.7;
+    }
+
+    .ics-pd-overview__commitment-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      margin-top: 3px;
+      color: var(--mael-accent-dark);
+    }
+
+    .ics-pd-overview__sidebar {
+      background: var(--ics-white);
+      border: 1px solid var(--ics-border-light);
+      padding: 2rem 1.8rem;
+    }
+
+    .ics-pd-overview__sidebar-title {
+      font-family: var(--font-sans);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--mael-accent-dark);
+      margin-bottom: 1.4rem;
+    }
+
+    .ics-pd-overview__sidebar-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .ics-pd-overview__sidebar-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--ics-border-light);
+      font-family: var(--font-sans);
+      font-size: 0.96rem;
+    }
+
+    .ics-pd-overview__sidebar-item:last-child {
+      border-bottom: none;
+    }
+
+    .ics-pd-overview__sidebar-label {
+      font-weight: 600;
+      color: var(--ics-purple);
+    }
+
+    .ics-pd-overview__sidebar-value {
+      color: #5c5550;
+      text-align: right;
+    }
+
+    /* ===================== */
+    /* COURSE CATEGORY SECTION */
+    /* ===================== */
+    .ics-pd-courses {
+      background: var(--ics-purple);
+      padding: 5rem 2rem;
+    }
+
+    .ics-pd-courses--light {
+      background: var(--ics-cream);
+    }
+
+    .ics-pd-courses__inner {
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+
+    .ics-pd-courses__header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .ics-pd-courses__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--mael-accent);
+      margin-bottom: 0.9rem;
+    }
+
+    .ics-pd-courses--light .ics-pd-courses__eyebrow {
+      color: var(--mael-accent-dark);
+    }
+
+    .ics-pd-courses__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.84vw, 2.64rem);
+      font-weight: 700;
+      color: var(--ics-white);
+      line-height: 1.35;
+    }
+
+    .ics-pd-courses--light .ics-pd-courses__heading {
+      color: var(--ics-purple);
+    }
+
+    .ics-pd-courses__subtitle {
+      font-family: var(--font-sans);
+      font-size: 1.1rem;
+      color: var(--ics-text-muted);
+      max-width: 620px;
+      margin: 1rem auto 0;
+      line-height: 1.8;
+    }
+
+    .ics-pd-courses--light .ics-pd-courses__subtitle {
+      color: #5c5550;
+    }
+
+    .ics-pd-courses__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+    }
+
+    @media (min-width: 640px) {
+      .ics-pd-courses__grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (min-width: 960px) {
+      .ics-pd-courses__grid--three { grid-template-columns: 1fr 1fr 1fr; }
+    }
+
+    /* ===================== */
+    /* COURSE CARD (Dark BG) */
+    /* ===================== */
+    .ics-pd-card {
+      background: var(--ics-purple-deep);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 2rem 1.6rem;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ics-pd-card:hover {
+      border-color: rgba(241,171,106,0.25);
+      transform: translateY(-3px);
+    }
+
+    .ics-pd-card__header {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .ics-pd-card__icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      color: var(--mael-accent);
+      margin-top: 2px;
+    }
+
+    .ics-pd-card__title {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--ics-white);
+      line-height: 1.35;
+    }
+
+    .ics-pd-card__instructor {
+      display: inline-block;
+      margin-left: 0.45rem;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+    .ics-pd-card__instructor a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+    .ics-pd-card__instructor a:hover {
+      border-bottom-color: currentColor;
+    }
+
+    .ics-pd-card__instructor--edith { color: var(--instructor-edith); }
+    .ics-pd-card__instructor--gideon { color: var(--instructor-gideon); }
+    .ics-pd-card__instructor--nik { color: var(--instructor-nik); }
+    .ics-pd-card__instructor--neal { color: var(--instructor-neal); }
+
+    .ics-pd-card__desc {
+      font-family: var(--font-sans);
+      font-size: 0.98rem;
+      color: var(--ics-text-on-dark);
+      line-height: 1.75;
+      flex-grow: 1;
+    }
+
+    .ics-pd-card__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 1.2rem;
+    }
+
+    .ics-pd-card__tag {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 0.25em 0.65em;
+      border: 1px solid var(--ics-border-dark);
+      color: var(--ics-text-muted);
+    }
+
+    .ics-pd-card__tag--accent {
+      border-color: rgba(241,171,106,0.3);
+      color: var(--mael-accent);
+    }
+
+    .ics-pd-card__tag--partner {
+      border-color: rgba(241,171,106,0.2);
+      color: var(--mael-accent-light);
+      font-size: 0.72rem;
+    }
+
+    /* ===================== */
+    /* COURSE CARD (Light BG)*/
+    /* ===================== */
+    .ics-pd-card--light {
+      background: var(--ics-white);
+      border: 1px solid var(--ics-border-light);
+    }
+
+    .ics-pd-card--light:hover {
+      border-color: rgba(241,171,106,0.4);
+    }
+
+    .ics-pd-card--light .ics-pd-card__icon {
+      color: var(--mael-accent-dark);
+    }
+
+    .ics-pd-card--light .ics-pd-card__title {
+      color: var(--ics-purple);
+    }
+
+    .ics-pd-card--light .ics-pd-card__desc {
+      color: #5c5550;
+    }
+
+    .ics-pd-card--light .ics-pd-card__tag {
+      border-color: var(--ics-border-light);
+      color: #8a8580;
+    }
+
+    .ics-pd-card--light .ics-pd-card__tag--accent {
+      border-color: rgba(216,148,80,0.4);
+      color: var(--mael-accent-dark);
+    }
+
+    /* ===================== */
+    /* CONCENTRATION SECTION */
+    /* ===================== */
+    .ics-pd-conc {
+      background: var(--ics-purple-deep);
+      padding: 5rem 2rem;
+    }
+
+    .ics-pd-conc__inner {
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+
+    .ics-pd-conc__header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .ics-pd-conc__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--mael-accent);
+      margin-bottom: 0.9rem;
+    }
+
+    .ics-pd-conc__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.84vw, 2.64rem);
+      font-weight: 700;
+      color: var(--ics-white);
+      line-height: 1.35;
+    }
+
+    .ics-pd-conc__subtitle {
+      font-family: var(--font-sans);
+      font-size: 1.1rem;
+      color: var(--ics-text-muted);
+      max-width: 620px;
+      margin: 1rem auto 0;
+      line-height: 1.8;
+    }
+
+    .ics-pd-conc__group {
+      margin-bottom: 3rem;
+    }
+
+    .ics-pd-conc__group:last-child {
+      margin-bottom: 0;
+    }
+
+    .ics-pd-conc__group-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.6rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .ics-pd-conc__group-icon {
+      width: 32px;
+      height: 32px;
+      color: var(--mael-accent);
+      flex-shrink: 0;
+    }
+
+    .ics-pd-conc__group-title {
+      font-family: var(--font-serif);
+      font-size: 1.44rem;
+      font-weight: 700;
+      color: var(--ics-white);
+      line-height: 1.35;
+    }
+
+    .ics-pd-conc__group-desc {
+      font-family: var(--font-sans);
+      font-size: 1.02rem;
+      color: var(--ics-text-muted);
+      line-height: 1.75;
+      margin-bottom: 1.4rem;
+      max-width: 720px;
+    }
+
+    .ics-pd-conc__group-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+    }
+
+    @media (min-width: 640px) {
+      .ics-pd-conc__group-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (min-width: 960px) {
+      .ics-pd-conc__group-grid--three { grid-template-columns: 1fr 1fr 1fr; }
+    }
+
+    /* ===================== */
+    /* CAPSTONE SECTION      */
+    /* ===================== */
+    .ics-pd-capstone {
+      background: var(--ics-cream);
+      padding: 5rem 2rem;
+    }
+
+    .ics-pd-capstone__inner {
+      max-width: 1060px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .ics-pd-capstone__inner { grid-template-columns: 1fr 1fr; gap: 4rem; }
+    }
+
+    .ics-pd-capstone__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--mael-accent-dark);
+      margin-bottom: 1rem;
+    }
+
+    .ics-pd-capstone__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3.84vw, 2.4rem);
+      font-weight: 700;
+      color: var(--ics-purple);
+      line-height: 1.35;
+      margin-bottom: 1.4rem;
+    }
+
+    .ics-pd-capstone__body {
+      font-family: var(--font-sans);
+      font-size: 1.1rem;
+      color: #5c5550;
+      line-height: 1.85;
+      margin-bottom: 1.4rem;
+    }
+
+    .ics-pd-capstone__detail-box {
+      background: var(--ics-white);
+      border: 1px solid var(--ics-border-light);
+      padding: 2rem 1.8rem;
+    }
+
+    .ics-pd-capstone__detail-title {
+      font-family: var(--font-sans);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--mael-accent-dark);
+      margin-bottom: 1rem;
+    }
+
+    .ics-pd-capstone__detail-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .ics-pd-capstone__detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      color: #4a4540;
+      line-height: 1.7;
+    }
+
+    .ics-pd-capstone__detail-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      margin-top: 3px;
+      color: var(--mael-accent-dark);
+    }
+
+    /* ===================== */
+    /* COURSE ROTATION       */
+    /* ===================== */
+    .ics-pd-rotation {
+      background: var(--ics-purple);
+      padding: 5rem 2rem;
+    }
+
+    .ics-pd-rotation__inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .ics-pd-rotation__header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .ics-pd-rotation__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--mael-accent);
+      margin-bottom: 0.8rem;
+    }
+
+    .ics-pd-rotation__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3.84vw, 2.4rem);
+      font-weight: 700;
+      color: var(--ics-white);
+      line-height: 1.35;
+    }
+
+    .ics-pd-rotation__subtitle {
+      font-family: var(--font-sans);
+      font-size: 1.1rem;
+      color: var(--ics-text-muted);
+      max-width: 580px;
+      margin: 1rem auto 0;
+      line-height: 1.8;
+    }
+
+    .ics-pd-rotation__table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .ics-pd-rotation__table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-sans);
+      font-size: 0.96rem;
+      min-width: 500px;
+    }
+
+    .ics-pd-rotation__table thead th {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 1.02rem;
+      text-align: left;
+      padding: 1.1rem 1.2rem;
+      border-bottom: 2px solid rgba(255,255,255,0.15);
+      color: var(--mael-accent);
+    }
+
+    .ics-pd-rotation__table thead th:first-child {
+      color: rgba(255,255,255,0.5);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .ics-pd-rotation__table tbody td {
+      padding: 0.85rem 1.2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      color: var(--ics-text-on-dark);
+      line-height: 1.5;
+      vertical-align: top;
+    }
+
+    .ics-pd-rotation__table tbody td:first-child {
+      font-weight: 600;
+      color: var(--ics-white);
+      white-space: nowrap;
+    }
+
+    .ics-pd-rotation__table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .ics-pd-rotation__footnote {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: var(--ics-text-muted);
+      line-height: 1.6;
+    }
+
+    .ics-pd-rotation__cta {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    /* ===================== */
+    /* CTA BANNER            */
+    /* ===================== */
+    .ics-pd-cta {
+      background: var(--ics-cream);
+      padding: 4.5rem 2rem;
+      text-align: center;
+    }
+
+    .ics-pd-cta__inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .ics-pd-cta__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.68rem, 3.36vw, 2.28rem);
+      font-weight: 700;
+      color: var(--ics-purple);
+      line-height: 1.35;
+      margin-bottom: 1rem;
+    }
+
+    .ics-pd-cta__text {
+      font-family: var(--font-sans);
+      font-size: 1.14rem;
+      color: #5c5550;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .ics-pd-cta__deadlines {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 2rem;
+    }
+
+    .ics-pd-cta__deadline-tag {
+      font-family: var(--font-sans);
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      padding: 0.45em 1em;
+      background: var(--ics-purple);
+      color: var(--ics-white);
+    }
+
+    .ics-pd-cta__actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ===================== */
+    /* PROGRAM COSTS         */
+    /* ===================== */
+    .ics-pd-costs {
+      background: var(--ics-cream);
+      padding: 5rem 2rem;
+    }
+
+    .ics-pd-costs__inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .ics-pd-costs__header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .ics-pd-costs__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--mael-accent-dark);
+      margin-bottom: 0.9rem;
+    }
+
+    .ics-pd-costs__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.84vw, 2.64rem);
+      font-weight: 700;
+      color: var(--ics-purple);
+      line-height: 1.35;
+    }
+
+    .ics-pd-costs__subtitle {
+      font-family: var(--font-sans);
+      font-size: 1.1rem;
+      color: #5c5550;
+      max-width: 620px;
+      margin: 1rem auto 0;
+      line-height: 1.8;
+    }
+
+    .ics-pd-costs__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.4rem;
+    }
+
+    @media (min-width: 640px) {
+      .ics-pd-costs__grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (min-width: 860px) {
+      .ics-pd-costs__grid { grid-template-columns: 1fr 1fr 1fr; }
+    }
+
+    .ics-pd-costs__card {
+      background: var(--ics-white);
+      border: 1px solid var(--ics-border-light);
+      padding: 2rem 1.6rem;
+      text-align: center;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .ics-pd-costs__card:hover {
+      border-color: rgba(241,171,106,0.5);
+      transform: translateY(-3px);
+    }
+
+    .ics-pd-costs__card-icon {
+      width: 32px;
+      height: 32px;
+      color: var(--mael-accent-dark);
+      margin-bottom: 1rem;
+    }
+
+    .ics-pd-costs__card-label {
+      font-family: var(--font-sans);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #8a8580;
+      margin-bottom: 0.5rem;
+    }
+
+    .ics-pd-costs__card-value {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--ics-purple);
+      line-height: 1.3;
+      margin-bottom: 0.4rem;
+    }
+
+    .ics-pd-costs__card-note {
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      color: #8a8580;
+      line-height: 1.6;
+    }
+
+    /* Cost breakdown box */
+    .ics-pd-costs__breakdown {
+      margin-top: 2rem;
+      background: var(--ics-white);
+      border: 1px solid var(--ics-border-light);
+      padding: 2.4rem 2rem;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .ics-pd-costs__breakdown:hover {
+      border-color: rgba(241,171,106,0.5);
+      transform: translateY(-3px);
+    }
+
+    .ics-pd-costs__breakdown-title {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--ics-purple);
+      margin-bottom: 1.2rem;
+    }
+
+    .ics-pd-costs__breakdown-rows {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .ics-pd-costs__breakdown-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--ics-border-light);
+      font-family: var(--font-sans);
+      font-size: 0.96rem;
+    }
+
+    .ics-pd-costs__breakdown-row:last-child {
+      border-bottom: none;
+      padding-top: 0.8rem;
+      margin-top: 0.2rem;
+      border-top: 2px solid var(--ics-purple);
+    }
+
+    .ics-pd-costs__breakdown-row-label {
+      color: #5c5550;
+    }
+
+    .ics-pd-costs__breakdown-row-value {
+      font-weight: 600;
+      color: var(--ics-purple);
+      text-align: right;
+    }
+
+    .ics-pd-costs__breakdown-row:last-child .ics-pd-costs__breakdown-row-label,
+    .ics-pd-costs__breakdown-row:last-child .ics-pd-costs__breakdown-row-value {
+      font-weight: 700;
+      font-size: 1.08rem;
+      color: var(--ics-purple);
+    }
+
+    /* Bursary callout card */
+    .ics-pd-costs__bursary {
+      margin-top: 1.4rem;
+      background: var(--ics-purple);
+      padding: 2.4rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      transition: transform 0.3s ease;
+    }
+
+    .ics-pd-costs__bursary:hover {
+      transform: translateY(-3px);
+    }
+
+    .ics-pd-costs__bursary-icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      color: var(--mael-accent);
+    }
+
+    .ics-pd-costs__bursary-content {
+      flex: 1;
+    }
+
+    .ics-pd-costs__bursary-title {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--ics-white);
+      margin-bottom: 0.5rem;
+    }
+
+    .ics-pd-costs__bursary-text {
+      font-family: var(--font-sans);
+      font-size: 1.02rem;
+      color: var(--ics-text-on-dark);
+      line-height: 1.75;
+    }
+
+    .ics-pd-costs__bursary-amount {
+      flex-shrink: 0;
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--mael-accent);
+    }
+
+    @media (max-width: 640px) {
+      .ics-pd-costs__bursary {
+        flex-direction: column;
+        text-align: center;
+      }
+      .ics-pd-costs__bursary-amount {
+        order: -1;
+      }
+    }
+
+    .ics-pd-costs__footnote {
+      text-align: center;
+      margin-top: 2rem;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: #8a8580;
+      line-height: 1.7;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ===================== */
+    /* MOBILE RESPONSIVE     */
+    /* ===================== */
+    @media (max-width: 767px) {
+
+      .ics-pd-hero { min-height: 55vh; }
+      .ics-pd-hero__content { padding: 2rem 1.25rem; }
+      .ics-pd-hero__title { font-size: 1.8rem; }
+      .ics-pd-hero__subtitle { font-size: 0.95rem; }
+
+      .ics-pd-overview { padding: 3rem 1.25rem; }
+      .ics-pd-overview__inner { flex-direction: column; }
+      .ics-pd-overview__sidebar { margin-top: 2rem; }
+
+      .ics-pd-courses { padding: 3rem 1.25rem; }
+      .ics-pd-courses__grid { grid-template-columns: 1fr; }
+      .ics-pd-courses__grid--three { grid-template-columns: 1fr; }
+
+      .ics-pd-conc { padding: 3rem 1.25rem; }
+      .ics-pd-conc__group-grid { grid-template-columns: 1fr; }
+      .ics-pd-conc__group-grid--three { grid-template-columns: 1fr; }
+
+      .ics-pd-capstone { padding: 3rem 1.25rem; }
+      .ics-pd-capstone__inner { flex-direction: column; }
+
+      .ics-pd-rotation { padding: 3rem 1.25rem; }
+      .ics-pd-rotation__table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+      .ics-pd-costs { padding: 3rem 1.25rem; }
+      .ics-pd-costs__grid { grid-template-columns: 1fr; gap: 1rem; }
+
+      .ics-pd-cta { padding: 3rem 1.25rem; }
+      .ics-pd-cta__heading { font-size: 1.4rem; }
+      .ics-pd-cta__deadlines { flex-direction: column; gap: 0.5rem; }
+      .ics-pd-cta__actions { flex-direction: column; gap: 0.75rem; }
+      .ics-pd-cta__actions 
+    }
+
+    /* Touch-friendly targets */
+    @media (hover: none) and (pointer: coarse) {
+      
+    }
+
+    /* ═══════════════════════════════════════════
+       PRINT STYLES
+       ═══════════════════════════════════════════ */
+    @media print {
+
+      /* ── Reset variables to light-mode ── */
+      :root, .ics-mael, .ics-mael-pd, .ics-faq, .ics-catl {
+        --ics-cream:        #FFFFFF !important;
+        --footer-navy:      #FFFFFF !important;
+      }
+
+      /* ── Global resets ── */
+      *, *::before, *::after {
+        box-shadow: none !important;
+        text-shadow: none !important;
+      }
+
+      body, html {
+        background: #fff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      /* ── Force all sections to light background + dark text ── */
+      section, div[class*="ics-"] {
+        background: #fff !important;
+        background-image: none !important;
+        color: #1a1a1a !important;
+      }
+
+      /* Hero sections: flatten to simple layout */
+      [class*="hero"] {
+        background: #f5f3f0 !important;
+        background-image: none !important;
+        color: #1a1a1a !important;
+        padding: 2rem 1.5rem !important;
+        min-height: auto !important;
+        height: auto !important;
+      }
+
+      [class*="hero"] *,
+      [class*="hero__title"],
+      [class*="hero__subtitle"],
+      [class*="hero__eyebrow"] {
+        color: #1a1a1a !important;
+      }
+
+      [class*="hero"]::before,
+      [class*="hero"]::after,
+      [class*="hero__overlay"],
+      [class*="hero__bg"],
+      [class*="hero__image"] {
+        display: none !important;
+      }
+
+      /* ── All headings and text dark ── */
+      h1, h2, h3, h4, h5, h6,
+      p, li, td, th, span, a, strong, em, label,
+      [class*="__title"],
+      [class*="__heading"],
+      [class*="__subtitle"],
+      [class*="__eyebrow"],
+      [class*="__body"],
+      [class*="__desc"],
+      [class*="__text"],
+      [class*="__name"],
+      [class*="__label"],
+      [class*="__value"],
+      [class*="__detail"],
+      [class*="__note"],
+      [class*="__footnote"] {
+        color: #1a1a1a !important;
+      }
+
+      /* Eyebrow labels: keep accent visible */
+      [class*="__eyebrow"] {
+        color: #6b4c9a !important;
+      }
+
+      /* ── Links ── */
+      a {
+        color: #2D1854 !important;
+        text-decoration: underline !important;
+      }
+
+      /* ── Cards: light bg with border ── */
+      [class*="-card"],
+      [class*="-tile"],
+      .ics-cc,
+      .ics-pd-card,
+      .ics-pd-card--light {
+        background: #ffffff !important;
+        border: 1px solid #dddddd !important;
+        color: #1a1a1a !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      [class*="-card"] *,
+      [class*="-tile"] *,
+      .ics-cc *,
+      .ics-pd-card * {
+        color: #1a1a1a !important;
+      }
+
+      /* ── Tags / badges ── */
+      [class*="__tag"],
+      [class*="__badge"] {
+        background: #f0edf5 !important;
+        color: #2D1854 !important;
+        border: 1px solid #d0c8e0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      /* Accent tags keep subtle color distinction */
+      [class*="__tag--accent"],
+      [class*="__tag--core"],
+      [class*="__tag--capstone"] {
+        background: #e8e0f3 !important;
+        color: #2D1854 !important;
+      }
+
+      /* ── Tables ── */
+      table {
+        border-collapse: collapse !important;
+        width: 100% !important;
+      }
+
+      th, td {
+        border: 1px solid #cccccc !important;
+        padding: 0.5rem 0.75rem !important;
+        background: #ffffff !important;
+        color: #1a1a1a !important;
+      }
+
+      th {
+        background: #f0edf5 !important;
+        font-weight: 600 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      /* ── Buttons: show as text links ── */
+      
+
+      /* Hide CTA banners, they're redundant in print */
+      [class*="cta-banner"],
+      [class*="-cta"] {
+        display: none !important;
+      }
+
+      /* ── Accordion / collapsed content: show everything ── */
+      [class*="__more"],
+      [class*="__panel"],
+      .ics-cc__more,
+      .ics-accordion__panel {
+        display: block !important;
+        max-height: none !important;
+        overflow: visible !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        height: auto !important;
+      }
+
+      /* Hide toggle buttons */
+      [class*="__toggle"],
+      .ics-cc__toggle,
+      .ics-accordion__icon {
+        display: none !important;
+      }
+
+      /* ── Decorative elements: hide ── */
+      .ics-divider,
+      [class*="__accent"],
+      [class*="__diamond"],
+      [class*="__indicator"],
+      [class*="legend"],
+      svg.ics-pd-card__icon,
+      svg.ics-pd-conc__group-icon {
+        display: none !important;
+      }
+
+      /* Keep checkmark icons in detail lists */
+      [class*="__detail-icon"],
+      [class*="__list-icon"],
+      .ics-structure__list-icon {
+        display: inline-block !important;
+        width: 1em !important;
+        height: 1em !important;
+        color: #2D1854 !important;
+        stroke: #2D1854 !important;
+      }
+
+      /* ── Footer: hide entirely for print ── */
+      
+
+      /* ── Filter bar (courses page): hide ── */
+      .ics-catl-filters,
+      .ics-catl-filter-btn,
+      .ics-catl-no-results {
+        display: none !important;
+      }
+
+      /* FAQ nav tabs: hide */
+      .ics-faq-nav {
+        display: none !important;
+      }
+
+      /* ── Images ── */
+      img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      /* ── Page break rules ── */
+      section {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      h2, h3 {
+        page-break-after: avoid;
+        break-after: avoid;
+      }
+
+      /* ── Grids: simplify to single column for narrow print ── */
+      [class*="__grid"] {
+        display: block !important;
+      }
+
+      [class*="__grid"] > * {
+        margin-bottom: 1rem !important;
+      }
+
+      /* Two-column layouts: stack */
+      [class*="__inner"] {
+        display: block !important;
+      }
+
+      /* ── Spacing: tighten for print ── */
+      section {
+        padding: 1.5rem 0 !important;
+      }
+
+      /* ── Bursary / callout boxes ── */
+      [class*="bursary"],
+      [class*="callout"],
+      [class*="detail-box"] {
+        background: #f9f7f4 !important;
+        border: 1px solid #cccccc !important;
+        color: #1a1a1a !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        page-break-inside: avoid;
+      }
+
+      [class*="bursary"] *,
+      [class*="detail-box"] * {
+        color: #1a1a1a !important;
+      }
+
+      /* ── Costs breakdown ── */
+      [class*="breakdown"] {
+        background: #ffffff !important;
+      }
+
+      [class*="breakdown"] * {
+        color: #1a1a1a !important;
+      }
+
+      /* ── Concentration group headers ── */
+      [class*="conc__group"] {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      /* ── Rotation table section ── */
+      .ics-pd-rotation__table-wrap {
+        overflow: visible !important;
+      }
+    }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "MA-EL Program Design | ICS",
+  "url": "https://education.icscanada.edu/mael-design/",
+  "description": "Explore the research-focused curriculum of the Master of Arts in Educational Leadership at ICS. A hybrid program combining coursework with thesis research.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Educational Leadership at ICS",
+    "url": "https://education.icscanada.edu/"
+  }
+}
+</script>
+</head>
+<body>
+<div id="site-header"></div>
+<noscript>
+  <nav style="background:#2D1854;padding:1rem 2rem;">
+    <a href="/" style="color:#fff;margin-right:1rem;">Home</a>
+    <a href="/mwse/" style="color:#fff;margin-right:1rem;">MWS-E</a>
+    <a href="/mael/" style="color:#fff;margin-right:1rem;">MA-EL</a>
+    <a href="/educator-certificates/" style="color:#fff;margin-right:1rem;">Certificates</a>
+    <a href="/courses/" style="color:#fff;margin-right:1rem;">Courses</a>
+    <a href="/faculty/" style="color:#fff;margin-right:1rem;">Faculty</a>
+    <a href="/admission/" style="color:#fff;">Admission</a>
+  </nav>
+</noscript>
+
+<!-- Mobile Menu Overlay -->
+
+  <div class="ics-mael-pd">
+
+    <!-- ===== HERO ===== -->
+    <section class="ics-pd-hero">
+      <div class="ics-pd-hero__bg">
+        <!-- PLACEHOLDER: Replace with your own image -->
+        <img src="https://lightroom.adobe.com/v2c/spaces/8e293c41299846de9eaf08c99ce6ee2a/assets/0159726b9f1819281d197d6204d8546c/revisions/ae691546c152495c8d8fa2e4ad1aeecb/renditions/60178b3ec703100d04e7f18464334c4a" alt="Graduate students in a seminar discussion">
+      </div>
+      <div class="ics-pd-hero__overlay"></div>
+      <div class="ics-pd-hero__content">
+        <span class="ics-pd-hero__badge">Program Design</span>
+        <span class="ics-pd-hero__label">Master of Arts in Educational Leadership</span>
+        <h1 class="ics-pd-hero__title">45 Credit Hours of <em>Integral Scholarship</em></h1>
+        <p class="ics-pd-hero__subtitle">A comprehensive, research-focused curriculum designed around foundation courses, concentration electives, immersive learning, and a capstone research project.</p>
+      </div>
+    </section>
+
+    <!-- ===== PROGRAM OVERVIEW ===== -->
+    <section class="ics-pd-overview">
+      <div class="ics-pd-overview__inner">
+
+        <div>
+          <p class="ics-pd-overview__eyebrow">Curriculum Overview</p>
+          <h2 class="ics-pd-overview__heading">A Program Shaped by Faith, Practice, and Wisdom</h2>
+          <p class="ics-pd-overview__body">The MA (Phil) in Educational Leadership combines ICS's rich history in integrally Christian scholarship with a commitment to inquiry-based learning. This program inspires and equips educators to create innovative, challenging, and just learning environments that contribute to God's ongoing redemptive work in the world.</p>
+          <p class="ics-pd-overview__body">The curriculum is organized around four commitments. Every course is:</p>
+          <ul class="ics-pd-overview__commitments">
+            <li class="ics-pd-overview__commitment">
+              <svg class="ics-pd-overview__commitment-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Biblically informed</strong> and focused on the love embodied by Christ</span>
+            </li>
+            <li class="ics-pd-overview__commitment">
+              <svg class="ics-pd-overview__commitment-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Deeply contextualized</strong> and relevant for educators</span>
+            </li>
+            <li class="ics-pd-overview__commitment">
+              <svg class="ics-pd-overview__commitment-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Aligned</strong> with one's own professional passion and practice</span>
+            </li>
+            <li class="ics-pd-overview__commitment">
+              <svg class="ics-pd-overview__commitment-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Rooted in wisdom</strong> and sound methodology</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="ics-pd-overview__sidebar">
+          <p class="ics-pd-overview__sidebar-title">Program Snapshot</p>
+          <ul class="ics-pd-overview__sidebar-list">
+            <li class="ics-pd-overview__sidebar-item">
+              <span class="ics-pd-overview__sidebar-label">Total Credits</span>
+              <span class="ics-pd-overview__sidebar-value">45 Credit Hours</span>
+            </li>
+            <li class="ics-pd-overview__sidebar-item">
+              <span class="ics-pd-overview__sidebar-label">Foundation Courses</span>
+              <span class="ics-pd-overview__sidebar-value">2 Courses (6 cr.)</span>
+            </li>
+            <li class="ics-pd-overview__sidebar-item">
+              <span class="ics-pd-overview__sidebar-label">Immersive Courses</span>
+              <span class="ics-pd-overview__sidebar-value">5 Courses (15 cr.)</span>
+            </li>
+            <li class="ics-pd-overview__sidebar-item">
+              <span class="ics-pd-overview__sidebar-label">Concentration</span>
+              <span class="ics-pd-overview__sidebar-value">3 Courses (9 cr.)</span>
+            </li>
+            <li class="ics-pd-overview__sidebar-item">
+              <span class="ics-pd-overview__sidebar-label">Capstone</span>
+              <span class="ics-pd-overview__sidebar-value">Praxis &amp; Project (12 cr.)</span>
+            </li>
+            <li class="ics-pd-overview__sidebar-item">
+              <span class="ics-pd-overview__sidebar-label">Delivery</span>
+              <span class="ics-pd-overview__sidebar-value">Fully Online</span>
+            </li>
+            <li class="ics-pd-overview__sidebar-item">
+              <span class="ics-pd-overview__sidebar-label">Timeline</span>
+              <span class="ics-pd-overview__sidebar-value">~3 Years Part-Time</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="ics-divider">
+      <div class="ics-divider__line"></div>
+      <div class="ics-divider__diamond"></div>
+      <div class="ics-divider__line"></div>
+    </div>
+
+    <!-- ===== FOUNDATION COURSES ===== -->
+    <section class="ics-pd-courses ics-pd-courses--light">
+      <div class="ics-pd-courses__inner">
+        <div class="ics-pd-courses__header">
+          <p class="ics-pd-courses__eyebrow">Foundation Courses</p>
+          <h2 class="ics-pd-courses__heading">The Bedrock of Integral Scholarship</h2>
+          <p class="ics-pd-courses__subtitle">Every MA-EL student begins here. These two courses establish the biblical and philosophical foundations that undergird the entire program.</p>
+        </div>
+        <div class="ics-pd-courses__grid">
+
+          <div class="ics-pd-card ics-pd-card--light">
+            <div class="ics-pd-card__header">
+              <svg class="ics-pd-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              <h3 class="ics-pd-card__title"><a href="/courses/#course-biblical-foundations" style="color:inherit;text-decoration:none;">Biblical Foundations</a><span class="ics-pd-card__instructor ics-pd-card__instructor--nik"> | <a href="/faculty/#faculty-nik-ansell">Nik Ansell</a></span></h3>
+            </div>
+            <p class="ics-pd-card__desc">Become more familiar with the Bible as an ongoing story of God and creation. Increase your ability to think creatively and constructively about the relationship between the biblical text, academic reflection, and contemporary discernment.</p>
+            <div class="ics-pd-card__meta">
+              <span class="ics-pd-card__tag ics-pd-card__tag--accent">Core</span>
+              <span class="ics-pd-card__tag">3 Credits</span>
+              <span class="ics-pd-card__tag">Fall</span>
+            </div>
+          </div>
+
+          <div class="ics-pd-card ics-pd-card--light">
+            <div class="ics-pd-card__header">
+              <svg class="ics-pd-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg>
+              <h3 class="ics-pd-card__title"><a href="/courses/#course-what-is-christian" style="color:inherit;text-decoration:none;">What Is Christian About Christian Education?</a><span class="ics-pd-card__instructor ics-pd-card__instructor--neal"> | <a href="/faculty/#faculty-neal-deroo">Neal DeRoo</a></span></h3>
+            </div>
+            <p class="ics-pd-card__desc">Reflect on what it means to teach or educate Christianly. Situate a Reformational understanding of Christian education and develop a clearer understanding of how faith impacts education and how your faith shapes what you do as an educator.</p>
+            <div class="ics-pd-card__meta">
+              <span class="ics-pd-card__tag ics-pd-card__tag--accent">Core</span>
+              <span class="ics-pd-card__tag">3 Credits</span>
+              <span class="ics-pd-card__tag">Summer</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== IMMERSIVE COURSES ===== -->
+    <section class="ics-pd-courses">
+      <div class="ics-pd-courses__inner">
+        <div class="ics-pd-courses__header">
+          <p class="ics-pd-courses__eyebrow">Immersive Courses</p>
+          <h2 class="ics-pd-courses__heading">Deepen Your Practice</h2>
+          <p class="ics-pd-courses__subtitle">Taken by all MA-EL students regardless of concentration, these courses cultivate reflective practice, vocational clarity, adaptive leadership, and inclusive community.</p>
+        </div>
+        <div class="ics-pd-courses__grid">
+
+          <div class="ics-pd-card">
+            <div class="ics-pd-card__header">
+              <svg class="ics-pd-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              <h3 class="ics-pd-card__title"><a href="/courses/#course-called-to-teach" style="color:inherit;text-decoration:none;">Called to Teach: From Formation to Transformation</a><span class="ics-pd-card__instructor ics-pd-card__instructor--edith"> | <a href="/faculty/#faculty-edith-van-der-boom">Edith van der Boom</a></span></h3>
+            </div>
+            <p class="ics-pd-card__desc">A course that provides educators with a vocational vision of Christian educational innovation and leadership. It guides educators on an inner journey as they begin cultivating personal competency in critical and constructive reflection on their professional practice.</p>
+            <div class="ics-pd-card__meta">
+              <span class="ics-pd-card__tag ics-pd-card__tag--accent">Immersive</span>
+              <span class="ics-pd-card__tag">3 Credits</span>
+              <span class="ics-pd-card__tag">Summer</span>
+            </div>
+          </div>
+
+          <div class="ics-pd-card">
+            <div class="ics-pd-card__header">
+              <svg class="ics-pd-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <h3 class="ics-pd-card__title"><a href="/courses/#course-lead-from-where-you-are" style="color:inherit;text-decoration:none;">Lead From Where You Are</a><span class="ics-pd-card__instructor ics-pd-card__instructor--gideon"> | <a href="/faculty/#faculty-gideon-strauss">Gideon Strauss</a></span></h3>
+            </div>
+            <p class="ics-pd-card__desc">Provides understanding and practice in how to diagnose and address the toughest problems experienced by organizations. Students will identify the leadership they are able to contribute to addressing these problems from where they are in their organizations.</p>
+            <div class="ics-pd-card__meta">
+              <span class="ics-pd-card__tag ics-pd-card__tag--accent">Immersive</span>
+              <span class="ics-pd-card__tag">3 Credits</span>
+              <span class="ics-pd-card__tag">Summer</span>
+            </div>
+          </div>
+
+          <div class="ics-pd-card">
+            <div class="ics-pd-card__header">
+              <svg class="ics-pd-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+              <h3 class="ics-pd-card__title"><a href="/courses/#course-craft-of-reflective-practice" style="color:inherit;text-decoration:none;">The Craft of Reflective Practice</a><span class="ics-pd-card__instructor ics-pd-card__instructor--gideon"> | <a href="/faculty/#faculty-gideon-strauss">Gideon Strauss</a></span></h3>
+            </div>
+            <p class="ics-pd-card__desc">Engage in how to do critical reflective practice by telling stories about everyday working lives. Learn qualitative research skills, receive an introduction to phenomenology, develop your own approach to praxis, and consider what you want to change in your practice.</p>
+            <div class="ics-pd-card__meta">
+              <span class="ics-pd-card__tag ics-pd-card__tag--accent">Immersive</span>
+              <span class="ics-pd-card__tag">3 Credits</span>
+              <span class="ics-pd-card__tag">Fall</span>
+            </div>
+          </div>
+
+          <div class="ics-pd-card">
+            <div class="ics-pd-card__header">
+              <svg class="ics-pd-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              <h3 class="ics-pd-card__title"><a href="/courses/#course-cultivating-learning-communities" style="color:inherit;text-decoration:none;">Cultivating Learning Communities of Belonging</a><span class="ics-pd-card__instructor ics-pd-card__instructor--edith"> | <a href="/faculty/#faculty-edith-van-der-boom">Edith van der Boom</a></span></h3>
+            </div>
+            <p class="ics-pd-card__desc">Considers diversity, cultural complexity, increasingly blurred markers of origin and ethnicity, racial justice, and restorative practices, and how they impact and form both school and classroom cultures.</p>
+            <div class="ics-pd-card__meta">
+              <span class="ics-pd-card__tag ics-pd-card__tag--accent">Immersive</span>
+              <span class="ics-pd-card__tag">3 Credits</span>
+              <span class="ics-pd-card__tag">Fall</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONCENTRATIONS ===== -->
+    <section class="ics-pd-conc">
+      <div class="ics-pd-conc__inner">
+        <div class="ics-pd-conc__header">
+          <p class="ics-pd-conc__eyebrow">Four Concentrations</p>
+          <h2 class="ics-pd-conc__heading">Specialize in Your Calling</h2>
+          <p class="ics-pd-conc__subtitle">Choose the concentration that aligns with your context. Each path shares the same foundation and immersive courses while allowing you to go deep in your area of passion.</p>
+        </div>
+
+        <!-- INSTRUCTIONAL LEADERSHIP -->
+        <div class="ics-pd-conc__group">
+          <div class="ics-pd-conc__group-header">
+            <svg class="ics-pd-conc__group-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            <h3 class="ics-pd-conc__group-title">Instructional Leadership</h3>
+          </div>
+          <p class="ics-pd-conc__group-desc">A pedagogical concentration for K&ndash;12 teachers in the classroom. Deepen your understanding of teaching practice, curriculum design, and what it means to lead learning in a Christian context.</p>
+          <div class="ics-pd-conc__group-grid">
+
+            <div class="ics-pd-card">
+              <div class="ics-pd-card__header">
+                <svg class="ics-pd-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg>
+                <h3 class="ics-pd-card__title"><a href="/courses/#course-christian-deeper-learning" style="color:inherit;text-decoration:none;">Christian Deeper Learning</a><span class="ics-pd-card__instructor ics-pd-card__instructor--edith"> | <a href="/faculty/#faculty-edith-van-der-boom">Edith van der Boom</a></span></h3>
+              </div>
+              <p class="ics-pd-card__desc">Helps Christian educators develop deeper learning. Consider what it means to be image-bearers of God called to care for our neighbours and be engaged in real work that is part of God's story. Examine the importance of global citizenship as a form of deeper learning.</p>
+              <div class="ics-pd-card__meta">
+                <span class="ics-pd-card__tag ics-pd-card__tag--accent">Concentration</span>
+                <span class="ics-pd-card__tag">3 Credits</span>
+                <span class="ics-pd-card__tag">Winter &middot; Every Other Year</span>
+              </div>
+            </div>
+
+            <div class="ics-pd-card">
+              <div class="ics-pd-card__header">
+                <svg class="ics-pd-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                <h3 class="ics-pd-card__title"><a href="/courses/#course-transformative-teaching" style="color:inherit;text-decoration:none;">Transformative Teaching: The Practice of Christ-Centred Education</a><span class="ics-pd-card__instructor ics-pd-card__instructor--edith"> | <a href="/faculty/#faculty-edith-van-der-boom">Edith van der Boom</a></span></h3>
+              </div>
+              <p class="ics-pd-card__desc">Frames holiness, justice, and restoration as the foundations of Christian pedagogy. Examine your posture, the cultural narratives that shape your teaching, and how to integrate faith into classroom life. Learn strategies to align pedagogy with school mission and foster spiritual formation.</p>
+              <div class="ics-pd-card__meta">
+                <span class="ics-pd-card__tag ics-pd-card__tag--accent">Concentration</span>
+                <span class="ics-pd-card__tag">3 Credits</span>
+                <span class="ics-pd-card__tag">Winter &middot; Every Other Year</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SCHOOL ADMINISTRATION -->
+        <div class="ics-pd-conc__group">
+          <div class="ics-pd-conc__group-header">
+            <svg class="ics-pd-conc__group-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <h3 class="ics-pd-conc__group-title">School Administration</h3>
+          </div>
+          <p class="ics-pd-conc__group-desc">An organizational concentration for current and prospective school administrators. Develop the capacities to lead Christian school communities with wisdom, justice, and vision.</p>
+          <div class="ics-pd-conc__group-grid ics-pd-conc__group-grid--three">
+
+            <div class="ics-pd-card">
+              <div class="ics-pd-card__header">
+                <svg class="ics-pd-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <h3 class="ics-pd-card__title"><a href="/courses/#course-how-to-coach" style="color:inherit;text-decoration:none;">How to Coach a Strong Team</a><span class="ics-pd-card__instructor ics-pd-card__instructor--gideon"> | <a href="/faculty/#faculty-gideon-strauss">Gideon Strauss</a></span></h3>
+              </div>
+              <p class="ics-pd-card__desc">A course for new and aspiring principals. Provides frameworks and tools for setting directions, building relationships, developing people, developing a school culture and structures to support desired practices, and securing accountability.</p>
+              <div class="ics-pd-card__meta">
+                <span class="ics-pd-card__tag ics-pd-card__tag--accent">Concentration</span>
+                <span class="ics-pd-card__tag">3 Credits</span>
+                <span class="ics-pd-card__tag">Winter &middot; Every 3 Years</span>
+              </div>
+            </div>
+
+            <div class="ics-pd-card">
+              <div class="ics-pd-card__header">
+                <svg class="ics-pd-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <h3 class="ics-pd-card__title"><a href="/courses/#course-how-to-finance" style="color:inherit;text-decoration:none;">How to Finance a Vision</a><span class="ics-pd-card__instructor ics-pd-card__instructor--gideon"> | <a href="/faculty/#faculty-gideon-strauss">Gideon Strauss</a></span></h3>
+              </div>
+              <p class="ics-pd-card__desc">Provides frameworks and tools for leadership in making the connections between the vision of a school, the budgeting process, and the cultivation of sources of revenue. Create your own personal playbook for the financing of a school's vision.</p>
+              <div class="ics-pd-card__meta">
+                <span class="ics-pd-card__tag ics-pd-card__tag--accent">Concentration</span>
+                <span class="ics-pd-card__tag">3 Credits</span>
+                <span class="ics-pd-card__tag">Winter &middot; Every 3 Years</span>
+              </div>
+            </div>
+
+            <div class="ics-pd-card">
+              <div class="ics-pd-card__header">
+                <svg class="ics-pd-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
+                <h3 class="ics-pd-card__title"><a href="/courses/#course-how-to-govern" style="color:inherit;text-decoration:none;">How to Govern a School</a><span class="ics-pd-card__instructor ics-pd-card__instructor--gideon"> | <a href="/faculty/#faculty-gideon-strauss">Gideon Strauss</a></span></h3>
+              </div>
+              <p class="ics-pd-card__desc">Provides frameworks and tools for leadership in governance. Introduces students to the work of nurturing the relationships among the school's stakeholders, with a focus on the pivotal relationship between the board and the principal.</p>
+              <div class="ics-pd-card__meta">
+                <span class="ics-pd-card__tag ics-pd-card__tag--accent">Concentration</span>
+                <span class="ics-pd-card__tag">3 Credits</span>
+                <span class="ics-pd-card__tag">Winter &middot; Every 3 Years</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- INCLUSION -->
+        <div class="ics-pd-conc__group">
+          <div class="ics-pd-conc__group-header">
+            <svg class="ics-pd-conc__group-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <h3 class="ics-pd-conc__group-title">Inclusion</h3>
+          </div>
+          <p class="ics-pd-conc__group-desc">An inclusive practice concentration for teachers and administrators. Learn to cultivate just and welcoming learning communities where every student belongs. Offered in partnership with Calvin University, expanding your scholarly network and community.</p>
+          <div class="ics-pd-conc__group-grid">
+            <div class="ics-pd-card" style="grid-column: 1 / -1; text-align: center; padding: 1.6rem;">
+              <p class="ics-pd-card__desc" style="max-width: 500px; margin: 0 auto;">Concentration courses are delivered through the ICS&ndash;Calvin University partnership. Contact us for the current course rotation and descriptions.</p>
+              <div class="ics-pd-card__meta" style="justify-content: center;">
+                <span class="ics-pd-card__tag ics-pd-card__tag--partner">In Partnership with Calvin University</span>
+                <span class="ics-pd-card__tag">3 Courses &middot; 9 Credits</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LITERACY -->
+        <div class="ics-pd-conc__group">
+          <div class="ics-pd-conc__group-header">
+            <svg class="ics-pd-conc__group-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            <h3 class="ics-pd-conc__group-title">Literacy</h3>
+          </div>
+          <p class="ics-pd-conc__group-desc">A literacy concentration for K&ndash;12 teachers. Explore the intersections of reading, writing, language, and faith-informed pedagogy in developing literate learners. Offered in partnership with Calvin University.</p>
+          <div class="ics-pd-conc__group-grid">
+            <div class="ics-pd-card" style="grid-column: 1 / -1; text-align: center; padding: 1.6rem;">
+              <p class="ics-pd-card__desc" style="max-width: 500px; margin: 0 auto;">Concentration courses are delivered through the ICS&ndash;Calvin University partnership. Contact us for the current course rotation and descriptions.</p>
+              <div class="ics-pd-card__meta" style="justify-content: center;">
+                <span class="ics-pd-card__tag ics-pd-card__tag--partner">In Partnership with Calvin University</span>
+                <span class="ics-pd-card__tag">3 Courses &middot; 9 Credits</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== CAPSTONE ===== -->
+    <section class="ics-pd-capstone">
+      <div class="ics-pd-capstone__inner">
+
+        <div>
+          <p class="ics-pd-capstone__eyebrow">Capstone</p>
+          <h2 class="ics-pd-capstone__heading">Praxis &amp; Project</h2>
+          <p class="ics-pd-capstone__body">The culmination of the MA-EL is a sustained piece of original research undertaken under faculty mentorship. The Praxis &amp; Project (the MA-EL equivalent of a thesis) integrates everything you've learned (biblical foundations, philosophical worldview, and concentration expertise) into a significant scholarly contribution to Christian educational thought. It may take a variety of forms: a professional development workshop, a podcast series, a video documentation, a curriculum, an extensive playbook, a conference paper, or a journal article.</p>
+          <p class="ics-pd-capstone__body">After completing most coursework and the Praxis &amp; Project, MA-EL students participate in <strong>Celebrating Joyful Learning</strong>, the program's capstone course. In this immersive experience, students integrate their learning across the entire program, critically reflect on their development as scholar-practitioners, expand their interdisciplinary understanding of educational leadership in dialogue with peers across both concentrations, and conclude their MA-EL journey in a celebratory manner.</p>
+        </div>
+
+        <div class="ics-pd-capstone__detail-box">
+          <p class="ics-pd-capstone__detail-title">Capstone Details</p>
+          <ul class="ics-pd-capstone__detail-list">
+            <li class="ics-pd-capstone__detail-item">
+              <svg class="ics-pd-capstone__detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>12 credit hours</strong> of sustained original research</span>
+            </li>
+            <li class="ics-pd-capstone__detail-item">
+              <svg class="ics-pd-capstone__detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Individualized mentoring</strong> from ICS faculty throughout</span>
+            </li>
+            <li class="ics-pd-capstone__detail-item">
+              <svg class="ics-pd-capstone__detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Flexible project forms</strong> including workshops, curricula, articles, podcasts, and more</span>
+            </li>
+            <li class="ics-pd-capstone__detail-item">
+              <svg class="ics-pd-capstone__detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Celebrating Joyful Learning</strong> capstone course to integrate and celebrate your journey</span>
+            </li>
+            <li class="ics-pd-capstone__detail-item">
+              <svg class="ics-pd-capstone__detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Foundational</strong> for doctoral study or advanced educational leadership</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== COURSE ROTATION ===== -->
+    <section class="ics-pd-rotation">
+      <div class="ics-pd-rotation__inner">
+        <div class="ics-pd-rotation__header">
+          <p class="ics-pd-rotation__eyebrow">Course Schedule</p>
+          <h2 class="ics-pd-rotation__heading">When Courses Are Offered</h2>
+          <p class="ics-pd-rotation__subtitle">MA-EL courses are delivered on a rotating schedule. Each combines asynchronous online learning with biweekly Zoom sessions.</p>
+        </div>
+        <div class="ics-pd-rotation__table-wrap">
+          <table class="ics-pd-rotation__table">
+            <thead>
+              <tr>
+                <th>Term</th>
+                <th>Course</th>
+                <th>Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Summer 2026</td>
+                <td><a href="/courses/#course-what-is-christian" style="color:inherit;text-decoration:none;">What Is Christian About Christian Education?</a></td>
+                <td>Foundation</td>
+              </tr>
+              <tr>
+                <td>Summer 2026</td>
+                <td><a href="/courses/#course-called-to-teach" style="color:inherit;text-decoration:none;">Called to Teach: From Formation to Transformation</a></td>
+                <td>Immersive</td>
+              </tr>
+              <tr>
+                <td>Summer 2026</td>
+                <td><a href="/courses/#course-lead-from-where-you-are" style="color:inherit;text-decoration:none;">Lead From Where You Are</a></td>
+                <td>Immersive</td>
+              </tr>
+              <tr>
+                <td>Fall 2026</td>
+                <td><a href="/courses/#course-biblical-foundations" style="color:inherit;text-decoration:none;">Biblical Foundations</a></td>
+                <td>Foundation</td>
+              </tr>
+              <tr>
+                <td>Fall 2026</td>
+                <td><a href="/courses/#course-craft-of-reflective-practice" style="color:inherit;text-decoration:none;">The Craft of Reflective Practice</a></td>
+                <td>Immersive</td>
+              </tr>
+              <tr>
+                <td>Fall 2026</td>
+                <td><a href="/courses/#course-cultivating-learning-communities" style="color:inherit;text-decoration:none;">Cultivating Learning Communities of Belonging</a></td>
+                <td>Immersive</td>
+              </tr>
+              <tr>
+                <td>Winter 2027</td>
+                <td><a href="/courses/#course-christian-deeper-learning" style="color:inherit;text-decoration:none;">Christian Deeper Learning</a> / <a href="/courses/#course-transformative-teaching" style="color:inherit;text-decoration:none;">Transformative Teaching: The Practice of Christ-Centred Education</a> (rotating)</td>
+                <td>Concentration</td>
+              </tr>
+              <tr>
+                <td>Winter 2027</td>
+                <td>Administration courses (rotating)</td>
+                <td>Concentration</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="ics-pd-rotation__footnote">Concentration courses rotate on a two- or three-year cycle. The Praxis &amp; Project runs concurrently with coursework in the final terms, culminating in the Celebrating Joyful Learning capstone course. See the ICS Course Catalogue for the most current schedule and syllabi.</p>
+      </div>
+    </section>
+
+    <!-- ===== PROGRAM COSTS ===== -->
+    <section class="ics-pd-costs">
+      <div class="ics-pd-costs__inner">
+        <div class="ics-pd-costs__header">
+          <p class="ics-pd-costs__eyebrow">Program Costs</p>
+          <h2 class="ics-pd-costs__heading">A Wise Investment in Your Calling</h2>
+          <p class="ics-pd-costs__subtitle">The MA-EL is a community-supported degree. With a $500 bursary available each semester, ICS makes rigorous graduate education accessible for working educators.</p>
+        </div>
+
+        <div class="ics-pd-costs__grid">
+          <div class="ics-pd-costs__card">
+            <svg class="ics-pd-costs__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            <p class="ics-pd-costs__card-label">Tuition Rate</p>
+            <p class="ics-pd-costs__card-value">$1,500</p>
+            <p class="ics-pd-costs__card-note">per credit hour</p>
+          </div>
+          <div class="ics-pd-costs__card">
+            <svg class="ics-pd-costs__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"></path></svg>
+            <p class="ics-pd-costs__card-label">Total Credits</p>
+            <p class="ics-pd-costs__card-value">45</p>
+            <p class="ics-pd-costs__card-note">credit hours (10 courses + capstone)</p>
+          </div>
+          <div class="ics-pd-costs__card">
+            <svg class="ics-pd-costs__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <p class="ics-pd-costs__card-label">Bursary</p>
+            <p class="ics-pd-costs__card-value">$500</p>
+            <p class="ics-pd-costs__card-note">per semester (as applicable)</p>
+          </div>
+        </div>
+
+        <!-- Cost breakdown -->
+        <div class="ics-pd-costs__breakdown">
+          <h3 class="ics-pd-costs__breakdown-title">Estimated Cost Breakdown</h3>
+          <ul class="ics-pd-costs__breakdown-rows">
+            <li class="ics-pd-costs__breakdown-row">
+              <span class="ics-pd-costs__breakdown-row-label">10 Term Courses (30 cr. &times; $500)</span>
+              <span class="ics-pd-costs__breakdown-row-value">$15,000</span>
+            </li>
+            <li class="ics-pd-costs__breakdown-row">
+              <span class="ics-pd-costs__breakdown-row-label">Praxis &amp; Project Capstone (12 cr. &times; $500)</span>
+              <span class="ics-pd-costs__breakdown-row-value">$6,000</span>
+            </li>
+            <li class="ics-pd-costs__breakdown-row">
+              <span class="ics-pd-costs__breakdown-row-label">Subtotal (45 Credit Hours)</span>
+              <span class="ics-pd-costs__breakdown-row-value">$21,000</span>
+            </li>
+            <li class="ics-pd-costs__breakdown-row">
+              <span class="ics-pd-costs__breakdown-row-label">Bursary ($500/semester)</span>
+              <span class="ics-pd-costs__breakdown-row-value">&ndash;$5,000</span>
+            </li>
+            <li class="ics-pd-costs__breakdown-row">
+              <span class="ics-pd-costs__breakdown-row-label">Estimated Net Total</span>
+              <span class="ics-pd-costs__breakdown-row-value">~$17,280</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bursary callout -->
+        <div class="ics-pd-costs__bursary">
+          <svg class="ics-pd-costs__bursary-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <div class="ics-pd-costs__bursary-content">
+            <p class="ics-pd-costs__bursary-title">Community-Supported Bursary</p>
+            <p class="ics-pd-costs__bursary-text">ICS is a community-supported institution. A $500 bursary is available each semester, helping make graduate education accessible for working educators.</p>
+          </div>
+          <span class="ics-pd-costs__bursary-amount">$500</span>
+        </div>
+
+        <p class="ics-pd-costs__footnote">All amounts are in Canadian dollars. Tuition and fees are subject to change. Bursary availability is subject to eligibility. The Praxis &amp; Project capstone fees may vary. Contact ICS for the most current fee schedule.</p>
+      </div>
+    </section>
+
+    <div class="ics-divider">
+      <div class="ics-divider__line"></div>
+      <div class="ics-divider__diamond"></div>
+      <div class="ics-divider__line"></div>
+    </div>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="ics-pd-cta">
+      <div class="ics-pd-cta__inner">
+        <h2 class="ics-pd-cta__heading">Ready to Go Deeper?</h2>
+        <p class="ics-pd-cta__text">The MA-EL is for educators who want to produce original scholarship that advances how we think about faith, learning, and leadership. Your next step starts here.</p>
+        <div class="ics-pd-cta__deadlines">
+          <span class="ics-pd-cta__deadline-tag">April 1 &middot; Application Deadline</span>
+          <span class="ics-pd-cta__deadline-tag">November 1 &middot; Application Deadline</span>
+        </div>
+        <div class="ics-pd-cta__actions">
+          <a href="/mael-apply/" class="ics-btn ics-btn--primary-on-light">Apply Today &rarr;</a>
+          <a href="/mael-faq/" class="ics-btn ics-btn--outline-on-light">Read the FAQ</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+<div id="site-footer"></div>
+<script src="/js/includes.js"></script>
+</body>
+</html>

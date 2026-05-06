@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/css/shared.css">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon.png">
+  <title>MA-EL | Master of Arts in Educational Leadership | ICS</title>
+<meta name="description" content="A thesis-based Master of Arts for Christian educators ready to contribute original research to the field of educational leadership.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://education.icscanada.edu/mael/">
+<meta property="og:title" content="Master of Arts in Educational Leadership (MA-EL) | ICS">
+<meta property="og:description" content="A thesis-based Master of Arts for Christian educators ready to contribute original research to the field of educational leadership.">
+<meta property="og:url" content="https://education.icscanada.edu/mael/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Educational Leadership at ICS">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Master of Arts in Educational Leadership (MA-EL) | ICS">
+<meta name="twitter:description" content="A thesis-based Master of Arts for Christian educators ready to contribute original research to the field of educational leadership.">
+  
+  <style>
+.ics-mael *,
+    .ics-mael *::before,
+    .ics-mael *::after { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
+
+    .ics-mael {
+      --ics-orange-dark:  #D89450;
+      
+      /* MA-EL accent = orange (matches landing page card) */
+      --mael-accent:       #F1AB6A;
+      --mael-accent-light: #F5C48F;
+      --mael-accent-dark:  #D89450;
+      
+      font-family: var(--font-sans);
+      color: #3a3330;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+}
+
+    /* ===================== */
+    /* HERO                  */
+    /* ===================== */
+    .ics-mael-hero {
+      position: relative; 
+      min-height: 72vh;
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      text-align: center; 
+      overflow: hidden; 
+      background: var(--ics-purple-deep);
+    }
+    
+    .ics-mael-hero__bg { 
+      position: absolute; 
+      inset: 0; 
+      z-index: 0; 
+    }
+    
+    .ics-mael-hero__bg img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+      opacity: 1; 
+      filter: saturate(0.3) brightness(0.7); 
+    }
+    
+    .ics-mael-hero__overlay {
+      position: absolute; 
+      inset: 0; 
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(31,15,61,0.45) 0%, rgba(31,15,61,0.82) 60%, rgba(31,15,61,0.95) 100%);
+    }
+    
+    .ics-mael-hero__content { 
+      position: relative; 
+      z-index: 2; 
+      max-width: 780px; 
+      padding: 5rem 2rem 6rem; 
+      animation: icsMaelFadeUp 0.9s ease-out both; 
+    }
+    
+    @keyframes icsMaelFadeUp { 
+      from { opacity: 0; transform: translateY(24px); } 
+      to { opacity: 1; transform: translateY(0); } 
+    }
+    
+    .ics-mael-hero__badge {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.4em 1.1em;
+      background: var(--mael-accent);
+      color: var(--ics-purple);
+      margin-bottom: 1.6rem;
+      animation: icsMaelFadeUp 0.9s ease-out 0.1s both;
+    }
+    
+    .ics-mael-hero__label {
+      display: block; 
+      font-family: var(--font-sans); 
+      font-size: 1.02rem; 
+      font-weight: 600;
+      letter-spacing: 0.22em; 
+      text-transform: uppercase; 
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 1.2rem; 
+      animation: icsMaelFadeUp 0.9s ease-out 0.2s both;
+    }
+    
+    .ics-mael-hero__title {
+      font-family: var(--font-serif); 
+      font-size: clamp(2.4rem, 5.5vw, 3.84rem); 
+      font-weight: 700;
+      line-height: 1.2; 
+      color: var(--ics-white); 
+      margin-bottom: 1.4rem;
+      animation: icsMaelFadeUp 0.9s ease-out 0.3s both;
+    }
+    
+    .ics-mael-hero__title em { 
+      font-style: italic; 
+      color: var(--mael-accent); 
+    }
+    
+    .ics-mael-hero__subtitle {
+      font-family: var(--font-sans); 
+      font-size: 1.2rem; 
+      color: rgba(255,255,255,0.62);
+      max-width: 600px; 
+      margin: 0 auto 2.5rem; 
+      line-height: 1.8;
+      animation: icsMaelFadeUp 0.9s ease-out 0.45s both;
+    }
+    
+    .ics-mael-hero__cta-row { 
+      display: flex; 
+      gap: 1rem; 
+      justify-content: center; 
+      flex-wrap: wrap; 
+      animation: icsMaelFadeUp 0.9s ease-out 0.6s both; 
+    }
+
+    /* ===================== */
+    /* BUTTONS               */
+    /* ===================== */
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+
+    /* ===================== */
+    /* INTRO / OVERVIEW      */
+    /* ===================== */
+    .ics-mael-intro { 
+      background: var(--ics-cream); 
+      padding: 4.5rem 2rem 3.5rem; 
+      text-align: center; 
+    }
+    .ics-mael-intro__inner { max-width: 720px; margin: 0 auto; }
+    .ics-mael-intro__eyebrow { 
+      font-family: var(--font-sans); 
+      font-size: 1.4rem; 
+      font-weight: 700; 
+      letter-spacing: 0.22em; 
+      text-transform: uppercase; 
+      color: var(--mael-accent-dark); 
+      margin-bottom: 1.2rem; 
+    }
+    .ics-mael-intro__heading { 
+      font-family: var(--font-serif); 
+      font-size: clamp(1.8rem, 3.84vw, 2.64rem); 
+      font-weight: 700; 
+      color: var(--ics-purple); 
+      line-height: 1.35; 
+      margin-bottom: 1.4rem; 
+    }
+    .ics-mael-intro__body { 
+      font-family: var(--font-sans); 
+      font-size: 1.176rem; 
+      color: #5c5550; 
+      line-height: 1.85; 
+      max-width: 620px; 
+      margin: 0 auto; 
+    }
+
+    /* ===================== */
+    /* DIVIDER               */
+    /* ===================== */
+    .ics-divider { 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      gap: 1.2rem; 
+      padding: 0.5rem 2rem; 
+      background: var(--ics-cream); 
+    }
+    .ics-divider__line { flex: 1; max-width: 180px; height: 1px; background: var(--ics-border-light); }
+    .ics-divider__diamond { width: 7px; height: 7px; background: var(--mael-accent); transform: rotate(45deg); flex-shrink: 0; }
+
+    /* ===================== */
+    /* PROGRAM AT A GLANCE   */
+    /* ===================== */
+    .ics-glance {
+      background: var(--ics-cream);
+      padding: 3rem 2rem 4rem;
+    }
+    .ics-glance__inner {
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+    .ics-glance__header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .ics-glance__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--mael-accent-dark);
+      margin-bottom: 0.8rem;
+    }
+    .ics-glance__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3.84vw, 2.4rem);
+      font-weight: 700;
+      color: var(--ics-purple);
+      line-height: 1.35;
+    }
+    .ics-glance__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1px;
+      background: var(--ics-border-light);
+      border: 1px solid var(--ics-border-light);
+    }
+    @media (min-width: 600px) {
+      .ics-glance__grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 900px) {
+      .ics-glance__grid { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    .ics-glance__item {
+      background: var(--ics-white);
+      padding: 1.8rem 1.6rem;
+      text-align: center;
+      transition: background 0.3s ease;
+    }
+    .ics-glance__item:hover {
+      background: #faf8f5;
+    }
+    .ics-glance__icon {
+      width: 30px;
+      height: 30px;
+      color: var(--mael-accent-dark);
+      margin: 0 auto 0.9rem;
+      display: block;
+    }
+    .ics-glance__item-label {
+      font-family: var(--font-sans);
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--mael-accent-dark);
+      margin-bottom: 0.4rem;
+    }
+    .ics-glance__item-value {
+      font-family: var(--font-serif);
+      font-size: 1.32rem;
+      font-weight: 700;
+      color: var(--ics-purple);
+      line-height: 1.4;
+    }
+    .ics-glance__item-note {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: #8a8580;
+      margin-top: 0.3rem;
+      line-height: 1.5;
+    }
+
+    /* ===================== */
+    /* CONCENTRATIONS        */
+    /* ===================== */
+    .ics-concentrations {
+      background: var(--ics-purple);
+      padding: 5rem 2rem;
+    }
+    .ics-concentrations__inner {
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+    .ics-concentrations__header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .ics-concentrations__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--mael-accent);
+      margin-bottom: 0.9rem;
+    }
+    .ics-concentrations__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.84vw, 2.64rem);
+      font-weight: 700;
+      color: var(--ics-white);
+      line-height: 1.35;
+    }
+    .ics-concentrations__subtitle {
+      font-family: var(--font-sans);
+      font-size: 1.14rem;
+      color: var(--ics-text-muted);
+      max-width: 600px;
+      margin: 1rem auto 0;
+      line-height: 1.8;
+    }
+    .ics-concentrations__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.4rem;
+    }
+    @media (min-width: 640px) {
+      .ics-concentrations__grid { grid-template-columns: 1fr 1fr; }
+    }
+    .ics-conc-card {
+      background: var(--ics-purple-deep);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 2.2rem 1.8rem;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+    .ics-conc-card:hover {
+      border-color: rgba(241,171,106,0.3);
+      transform: translateY(-4px);
+    }
+    .ics-conc-card__icon {
+      width: 36px;
+      height: 36px;
+      color: var(--mael-accent);
+      margin-bottom: 1.1rem;
+    }
+    .ics-conc-card__title {
+      font-family: var(--font-serif);
+      font-size: 1.32rem;
+      font-weight: 700;
+      color: var(--ics-white);
+      line-height: 1.35;
+      margin-bottom: 0.8rem;
+    }
+    .ics-conc-card__desc {
+      font-family: var(--font-sans);
+      font-size: 1.02rem;
+      color: var(--ics-text-on-dark);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+    .ics-conc-card__partner {
+      font-family: var(--font-sans);
+      font-size: 0.84rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 0.35em 0.8em;
+      border: 1px solid var(--ics-border-dark);
+      color: var(--ics-text-muted);
+      display: inline-block;
+    }
+
+    /* ===================== */
+    /* PROGRAM STRUCTURE     */
+    /* ===================== */
+    .ics-structure {
+      background: var(--ics-cream);
+      padding: 5rem 2rem;
+    }
+    .ics-structure__inner {
+      max-width: 1060px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .ics-structure__inner { grid-template-columns: 1fr 1fr; gap: 4rem; }
+    }
+    .ics-structure__text-col {}
+    .ics-structure__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--mael-accent-dark);
+      margin-bottom: 1rem;
+    }
+    .ics-structure__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3.84vw, 2.4rem);
+      font-weight: 700;
+      color: var(--ics-purple);
+      line-height: 1.35;
+      margin-bottom: 1.4rem;
+    }
+    .ics-structure__body {
+      font-family: var(--font-sans);
+      font-size: 1.1rem;
+      color: #5c5550;
+      line-height: 1.85;
+      margin-bottom: 1.8rem;
+    }
+    .ics-structure__list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .ics-structure__list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      font-family: var(--font-sans);
+      font-size: 1.056rem;
+      color: #4a4540;
+      line-height: 1.7;
+    }
+    .ics-structure__list-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      margin-top: 3px;
+      color: var(--mael-accent-dark);
+    }
+    .ics-structure__image-col {
+      position: relative;
+    }
+    .ics-structure__image-col img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: saturate(0.85);
+    }
+    .ics-structure__image-accent {
+      position: absolute;
+      bottom: -12px;
+      left: -12px;
+      width: 60%;
+      height: 60%;
+      border: 3px solid var(--mael-accent);
+      z-index: -1;
+    }
+
+    /* ===================== */
+    /* COMPLETION PATHS      */
+    /* ===================== */
+    .ics-completion {
+      background: var(--ics-purple-deep);
+      padding: 5rem 2rem;
+    }
+    .ics-completion__inner {
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+    .ics-completion__header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .ics-completion__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--mael-accent);
+      margin-bottom: 0.9rem;
+    }
+    .ics-completion__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.84vw, 2.64rem);
+      font-weight: 700;
+      color: var(--ics-white);
+      line-height: 1.35;
+    }
+    .ics-completion__subtitle {
+      font-family: var(--font-sans);
+      font-size: 1.14rem;
+      color: var(--ics-text-muted);
+      max-width: 580px;
+      margin: 1rem auto 0;
+      line-height: 1.8;
+    }
+    .ics-completion__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.6rem;
+    }
+    @media (min-width: 768px) {
+      .ics-completion__grid { grid-template-columns: 1fr 1fr; }
+    }
+    .ics-comp-card {
+      background: var(--ics-purple);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 2.4rem 2rem;
+      text-align: center;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+    .ics-comp-card:hover {
+      border-color: rgba(241,171,106,0.3);
+      transform: translateY(-4px);
+    }
+    .ics-comp-card__icon {
+      width: 42px;
+      height: 42px;
+      color: var(--mael-accent);
+      margin: 0 auto 1.2rem;
+    }
+    .ics-comp-card__title {
+      font-family: var(--font-serif);
+      font-size: 1.44rem;
+      font-weight: 700;
+      color: var(--ics-white);
+      line-height: 1.35;
+      margin-bottom: 0.6rem;
+    }
+    .ics-comp-card__detail {
+      font-family: var(--font-sans);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--mael-accent);
+      margin-bottom: 0.8rem;
+    }
+    .ics-comp-card__desc {
+      font-family: var(--font-sans);
+      font-size: 1.02rem;
+      color: var(--ics-text-muted);
+      line-height: 1.75;
+    }
+
+    /* ===================== */
+    /* SAMPLE COURSES        */
+    /* ===================== */
+    .ics-courses {
+      background: var(--ics-purple);
+      padding: 5rem 2rem;
+    }
+    .ics-courses__inner {
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+    .ics-courses__header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .ics-courses__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--mael-accent);
+      margin-bottom: 0.9rem;
+    }
+    .ics-courses__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.84vw, 2.64rem);
+      font-weight: 700;
+      color: var(--ics-white);
+      line-height: 1.35;
+    }
+    .ics-courses__subtitle {
+      font-family: var(--font-sans);
+      font-size: 1.1rem;
+      color: var(--ics-text-muted);
+      max-width: 560px;
+      margin: 1rem auto 0;
+      line-height: 1.8;
+    }
+    .ics-courses__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    @media (min-width: 640px) {
+      .ics-courses__grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 960px) {
+      .ics-courses__grid { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    .ics-course-tile {
+      background: var(--ics-purple-deep);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 1.8rem 1.5rem;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+    .ics-course-tile:hover {
+      border-color: rgba(241,171,106,0.2);
+      transform: translateY(-3px);
+    }
+    .ics-course-tile__name {
+      font-family: var(--font-serif);
+      font-size: 1.14rem;
+      font-weight: 700;
+      color: var(--ics-white);
+      line-height: 1.4;
+      margin-bottom: 0.7rem;
+    }
+    .ics-course-tile__desc {
+      font-family: var(--font-sans);
+      font-size: 0.96rem;
+      color: var(--ics-text-muted);
+      line-height: 1.7;
+    }
+    .ics-course-tile__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 1rem;
+    }
+    .ics-course-tile__tag {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 0.25em 0.65em;
+      border: 1px solid var(--ics-border-dark);
+      color: var(--ics-text-muted);
+    }
+    .ics-course-tile__tag--accent {
+      border-color: rgba(241,171,106,0.3);
+      color: var(--mael-accent);
+    }
+    .ics-course-tile__tag--core {
+      border-color: rgba(241,171,106,0.35);
+      color: var(--mael-accent);
+    }
+    .ics-course-tile__tag--elective {
+      border-color: var(--ics-border-dark);
+      color: var(--ics-text-muted);
+    }
+    .ics-courses__cta {
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+
+    /* ===================== */
+    /* WHY MA-EL             */
+    /* ===================== */
+    .ics-why { 
+      background: var(--ics-cream); 
+      padding: 5rem 2rem; 
+    }
+    .ics-why__inner { max-width: 1060px; margin: 0 auto; }
+    .ics-why__header { text-align: center; margin-bottom: 3rem; }
+    .ics-why__eyebrow { 
+      font-family: var(--font-sans); 
+      font-size: 1.4rem; 
+      font-weight: 700; 
+      letter-spacing: 0.22em; 
+      text-transform: uppercase; 
+      color: var(--mael-accent-dark); 
+      margin-bottom: 0.9rem; 
+    }
+    .ics-why__heading { 
+      font-family: var(--font-serif); 
+      font-size: clamp(2rem, 3.84vw, 2.64rem); 
+      font-weight: 700; 
+      color: var(--ics-purple); 
+      line-height: 1.35; 
+    }
+    .ics-why__grid { 
+      display: grid; 
+      grid-template-columns: 1fr; 
+      gap: 1.4rem; 
+    }
+    @media (min-width: 640px) { .ics-why__grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 960px) { .ics-why__grid { grid-template-columns: 1fr 1fr 1fr 1fr; } }
+    
+    .ics-why__item { 
+      padding: 1.8rem 1.4rem; 
+      background: var(--ics-white); 
+      border: 1px solid var(--ics-border-light); 
+      transition: border-color 0.3s ease, transform 0.3s ease; 
+    }
+    .ics-why__item:hover { border-color: rgba(241,171,106,0.4); transform: translateY(-3px); }
+    .ics-why__icon { width: 34px; height: 34px; color: var(--mael-accent-dark); margin-bottom: 1.1rem; }
+    .ics-why__item-title { 
+      font-family: var(--font-sans); 
+      font-size: 1.104rem; 
+      font-weight: 600; 
+      color: var(--ics-purple); 
+      margin-bottom: 0.5rem; 
+    }
+    .ics-why__item-text { 
+      font-family: var(--font-sans); 
+      font-size: 1.008rem; 
+      color: #5c5550; 
+      line-height: 1.75; 
+    }
+
+    /* ===================== */
+    /* COMPARISON TABLE      */
+    /* ===================== */
+    .ics-compare {
+      background: var(--ics-purple-deep);
+      padding: 5rem 2rem;
+    }
+    .ics-compare__inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .ics-compare__header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .ics-compare__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--mael-accent);
+      margin-bottom: 0.8rem;
+    }
+    .ics-compare__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3.84vw, 2.4rem);
+      font-weight: 700;
+      color: var(--ics-white);
+      line-height: 1.35;
+    }
+    .ics-compare__table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .ics-compare__table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-sans);
+      font-size: 1.02rem;
+      min-width: 540px;
+    }
+    .ics-compare__table thead th {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 1.08rem;
+      text-align: left;
+      padding: 1.2rem 1.4rem;
+      border-bottom: 2px solid rgba(255,255,255,0.15);
+      color: var(--ics-text-muted);
+    }
+    .ics-compare__table thead th:first-child {
+      color: rgba(255,255,255,0.4);
+      font-weight: 600;
+      font-size: 0.96rem;
+    }
+    .ics-compare__table thead th.ics-compare__col-highlight {
+      background: rgba(241,171,106,0.08);
+      color: var(--mael-accent);
+    }
+    .ics-compare__table tbody td {
+      padding: 1rem 1.4rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      color: var(--ics-text-on-dark);
+      line-height: 1.6;
+      vertical-align: top;
+    }
+    .ics-compare__table tbody td:first-child {
+      font-weight: 600;
+      color: var(--ics-white);
+      white-space: nowrap;
+    }
+    .ics-compare__table tbody td.ics-compare__col-highlight {
+      background: rgba(241,171,106,0.05);
+    }
+    .ics-compare__table tbody tr:last-child td {
+      font-weight: 700;
+      font-size: 1.08rem;
+      border-bottom: none;
+    }
+    .ics-compare__table tbody tr:last-child td.ics-compare__col-highlight {
+      color: var(--mael-accent);
+    }
+    .ics-compare__footnote {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      color: var(--ics-text-muted);
+      line-height: 1.6;
+    }
+
+    /* ===================== */
+    /* CTA BANNER            */
+    /* ===================== */
+    .ics-cta-banner { 
+      background: var(--ics-cream); 
+      padding: 4.5rem 2rem; 
+      text-align: center; 
+    }
+    .ics-cta-banner__inner { max-width: 600px; margin: 0 auto; }
+    .ics-cta-banner__heading { 
+      font-family: var(--font-serif); 
+      font-size: clamp(1.68rem, 3.36vw, 2.28rem); 
+      font-weight: 700; 
+      color: var(--ics-purple); 
+      line-height: 1.35; 
+      margin-bottom: 1rem; 
+    }
+    .ics-cta-banner__text { 
+      font-family: var(--font-sans); 
+      font-size: 1.14rem; 
+      color: #5c5550; 
+      margin-bottom: 2rem; 
+      line-height: 1.8; 
+    }
+    .ics-cta-banner__deadlines {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 2rem;
+    }
+    .ics-cta-banner__deadline-tag {
+      font-family: var(--font-sans);
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      padding: 0.45em 1em;
+      background: var(--ics-purple);
+      color: var(--ics-white);
+    }
+    .ics-cta-banner__actions { 
+      display: flex; 
+      gap: 1rem; 
+      justify-content: center; 
+      flex-wrap: wrap; 
+    }
+
+    /* ===================== */
+    /* MOBILE RESPONSIVE     */
+    /* ===================== */
+    @media (max-width: 767px) {
+
+      .ics-mael-hero { min-height: 60vh; }
+      .ics-mael-hero__content { padding: 2rem 1.25rem; }
+      .ics-mael-hero__label { font-size: 0.72rem; }
+      .ics-mael-hero__title { font-size: 2rem; }
+      .ics-mael-hero__subtitle { font-size: 0.98rem; }
+      .ics-mael-hero__cta-row { flex-direction: column; gap: 0.75rem; }
+      .ics-mael-hero__cta-row 
+
+      .ics-mael-intro { padding: 3rem 1.25rem; }
+      .ics-mael-intro__heading { font-size: 1.5rem; }
+
+      .ics-glance { padding: 3rem 1.25rem; }
+      .ics-glance__grid { grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+      .ics-glance__item { padding: 1rem; }
+
+      .ics-concentrations { padding: 3rem 1.25rem; }
+      .ics-concentrations__grid { grid-template-columns: 1fr; }
+
+      .ics-structure { padding: 3rem 1.25rem; }
+      .ics-structure__inner { flex-direction: column; }
+      .ics-structure__image-col { display: none; }
+
+      .ics-completion { padding: 3rem 1.25rem; }
+      .ics-completion__grid { grid-template-columns: 1fr; }
+
+      .ics-courses { padding: 3rem 1.25rem; }
+      .ics-courses__grid { grid-template-columns: 1fr; }
+
+      .ics-why { padding: 3rem 1.25rem; }
+      .ics-why__grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
+      .ics-compare { padding: 3rem 1.25rem; }
+      .ics-compare__table { font-size: 0.88rem; }
+      .ics-compare__table thead th,
+      .ics-compare__table tbody td { padding: 0.8rem; }
+
+      .ics-cta-banner { padding: 3rem 1.25rem; }
+      .ics-cta-banner__heading { font-size: 1.4rem; }
+      .ics-cta-banner__deadlines { flex-direction: column; gap: 0.5rem; }
+      .ics-cta-banner__actions { flex-direction: column; gap: 0.75rem; }
+      .ics-cta-banner__actions 
+    }
+
+    /* Touch-friendly targets */
+    @media (hover: none) and (pointer: coarse) {
+      
+    }
+
+    /* ═══════════════════════════════════════════
+       PRINT STYLES
+       ═══════════════════════════════════════════ */
+    @media print {
+
+      /* ── Reset variables to light-mode ── */
+      :root, .ics-mael, .ics-mael-pd, .ics-faq, .ics-catl {
+        --ics-cream:        #FFFFFF !important;
+        --footer-navy:      #FFFFFF !important;
+      }
+
+      /* ── Global resets ── */
+      *, *::before, *::after {
+        box-shadow: none !important;
+        text-shadow: none !important;
+      }
+
+      body, html {
+        background: #fff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      /* ── Force all sections to light background + dark text ── */
+      section, div[class*="ics-"] {
+        background: #fff !important;
+        background-image: none !important;
+        color: #1a1a1a !important;
+      }
+
+      /* Hero sections: flatten to simple layout */
+      [class*="hero"] {
+        background: #f5f3f0 !important;
+        background-image: none !important;
+        color: #1a1a1a !important;
+        padding: 2rem 1.5rem !important;
+        min-height: auto !important;
+        height: auto !important;
+      }
+
+      [class*="hero"] *,
+      [class*="hero__title"],
+      [class*="hero__subtitle"],
+      [class*="hero__eyebrow"] {
+        color: #1a1a1a !important;
+      }
+
+      [class*="hero"]::before,
+      [class*="hero"]::after,
+      [class*="hero__overlay"],
+      [class*="hero__bg"],
+      [class*="hero__image"] {
+        display: none !important;
+      }
+
+      /* ── All headings and text dark ── */
+      h1, h2, h3, h4, h5, h6,
+      p, li, td, th, span, a, strong, em, label,
+      [class*="__title"],
+      [class*="__heading"],
+      [class*="__subtitle"],
+      [class*="__eyebrow"],
+      [class*="__body"],
+      [class*="__desc"],
+      [class*="__text"],
+      [class*="__name"],
+      [class*="__label"],
+      [class*="__value"],
+      [class*="__detail"],
+      [class*="__note"],
+      [class*="__footnote"] {
+        color: #1a1a1a !important;
+      }
+
+      /* Eyebrow labels: keep accent visible */
+      [class*="__eyebrow"] {
+        color: #6b4c9a !important;
+      }
+
+      /* ── Links ── */
+      a {
+        color: #2D1854 !important;
+        text-decoration: underline !important;
+      }
+
+      /* ── Cards: light bg with border ── */
+      [class*="-card"],
+      [class*="-tile"],
+      .ics-cc,
+      .ics-pd-card,
+      .ics-pd-card--light {
+        background: #ffffff !important;
+        border: 1px solid #dddddd !important;
+        color: #1a1a1a !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      [class*="-card"] *,
+      [class*="-tile"] *,
+      .ics-cc *,
+      .ics-pd-card * {
+        color: #1a1a1a !important;
+      }
+
+      /* ── Tags / badges ── */
+      [class*="__tag"],
+      [class*="__badge"] {
+        background: #f0edf5 !important;
+        color: #2D1854 !important;
+        border: 1px solid #d0c8e0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      /* Accent tags keep subtle color distinction */
+      [class*="__tag--accent"],
+      [class*="__tag--core"],
+      [class*="__tag--capstone"] {
+        background: #e8e0f3 !important;
+        color: #2D1854 !important;
+      }
+
+      /* ── Tables ── */
+      table {
+        border-collapse: collapse !important;
+        width: 100% !important;
+      }
+
+      th, td {
+        border: 1px solid #cccccc !important;
+        padding: 0.5rem 0.75rem !important;
+        background: #ffffff !important;
+        color: #1a1a1a !important;
+      }
+
+      th {
+        background: #f0edf5 !important;
+        font-weight: 600 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      /* ── Buttons: show as text links ── */
+      
+
+      /* Hide CTA banners, they're redundant in print */
+      [class*="cta-banner"],
+      [class*="-cta"] {
+        display: none !important;
+      }
+
+      /* ── Accordion / collapsed content: show everything ── */
+      [class*="__more"],
+      [class*="__panel"],
+      .ics-cc__more,
+      .ics-accordion__panel {
+        display: block !important;
+        max-height: none !important;
+        overflow: visible !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        height: auto !important;
+      }
+
+      /* Hide toggle buttons */
+      [class*="__toggle"],
+      .ics-cc__toggle,
+      .ics-accordion__icon {
+        display: none !important;
+      }
+
+      /* ── Decorative elements: hide ── */
+      .ics-divider,
+      [class*="__accent"],
+      [class*="__diamond"],
+      [class*="__indicator"],
+      [class*="legend"],
+      svg.ics-pd-card__icon,
+      svg.ics-pd-conc__group-icon {
+        display: none !important;
+      }
+
+      /* Keep checkmark icons in detail lists */
+      [class*="__detail-icon"],
+      [class*="__list-icon"],
+      .ics-structure__list-icon {
+        display: inline-block !important;
+        width: 1em !important;
+        height: 1em !important;
+        color: #2D1854 !important;
+        stroke: #2D1854 !important;
+      }
+
+      /* ── Footer: hide entirely for print ── */
+      
+
+      /* ── Filter bar (courses page): hide ── */
+      .ics-catl-filters,
+      .ics-catl-filter-btn,
+      .ics-catl-no-results {
+        display: none !important;
+      }
+
+      /* FAQ nav tabs: hide */
+      .ics-faq-nav {
+        display: none !important;
+      }
+
+      /* ── Images ── */
+      img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      /* ── Page break rules ── */
+      section {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      h2, h3 {
+        page-break-after: avoid;
+        break-after: avoid;
+      }
+
+      /* ── Grids: simplify to single column for narrow print ── */
+      [class*="__grid"] {
+        display: block !important;
+      }
+
+      [class*="__grid"] > * {
+        margin-bottom: 1rem !important;
+      }
+
+      /* Two-column layouts: stack */
+      [class*="__inner"] {
+        display: block !important;
+      }
+
+      /* ── Spacing: tighten for print ── */
+      section {
+        padding: 1.5rem 0 !important;
+      }
+
+      /* ── Bursary / callout boxes ── */
+      [class*="bursary"],
+      [class*="callout"],
+      [class*="detail-box"] {
+        background: #f9f7f4 !important;
+        border: 1px solid #cccccc !important;
+        color: #1a1a1a !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        page-break-inside: avoid;
+      }
+
+      [class*="bursary"] *,
+      [class*="detail-box"] * {
+        color: #1a1a1a !important;
+      }
+
+      /* ── Costs breakdown ── */
+      [class*="breakdown"] {
+        background: #ffffff !important;
+      }
+
+      [class*="breakdown"] * {
+        color: #1a1a1a !important;
+      }
+
+      /* ── Concentration group headers ── */
+      [class*="conc__group"] {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      /* ── Rotation table section ── */
+      .ics-pd-rotation__table-wrap {
+        overflow: visible !important;
+      }
+    }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalProgram",
+  "name": "Master of Arts in Educational Leadership (MA-EL)",
+  "description": "A thesis-based Master of Arts for Christian educators ready to contribute original research to the field of educational leadership.",
+  "url": "https://education.icscanada.edu/mael/",
+  "provider": {
+    "@type": "EducationalOrganization",
+    "name": "Institute for Christian Studies",
+    "url": "https://icscanada.edu"
+  },
+  "educationalCredentialAwarded": "Master of Arts in Educational Leadership",
+  "programType": "Hybrid, Research-Focused"
+}
+</script>
+</head>
+<body>
+<div id="site-header"></div>
+<noscript>
+  <nav style="background:#2D1854;padding:1rem 2rem;">
+    <a href="/" style="color:#fff;margin-right:1rem;">Home</a>
+    <a href="/mwse/" style="color:#fff;margin-right:1rem;">MWS-E</a>
+    <a href="/mael/" style="color:#fff;margin-right:1rem;">MA-EL</a>
+    <a href="/educator-certificates/" style="color:#fff;margin-right:1rem;">Certificates</a>
+    <a href="/courses/" style="color:#fff;margin-right:1rem;">Courses</a>
+    <a href="/faculty/" style="color:#fff;margin-right:1rem;">Faculty</a>
+    <a href="/admission/" style="color:#fff;">Admission</a>
+  </nav>
+</noscript>
+
+<!-- Mobile Menu Overlay -->
+
+  <div class="ics-mael">
+
+    <!-- ===== HERO ===== -->
+    <section class="ics-mael-hero">
+      <div class="ics-mael-hero__bg">
+        <!-- PLACEHOLDER: Replace with your own image -->
+        <img src="https://lightroom.adobe.com/v2c/spaces/8e293c41299846de9eaf08c99ce6ee2a/assets/b3f4809b73b84a798fe941d98f9e190f/revisions/72fd1d3d88ab4fdb8dd9111a563a8dae/renditions/2dea0aa7babcc41380a1b47d2d72059b" alt="Graduate student researching in a library">
+      </div>
+      <div class="ics-mael-hero__overlay"></div>
+      <div class="ics-mael-hero__content">
+        <span class="ics-mael-hero__badge">Research-Focused</span>
+        <span class="ics-mael-hero__label">Master of Arts in Educational Leadership</span>
+        <h1 class="ics-mael-hero__title">Contribute to the<br><em>Conversation</em></h1>
+        <p class="ics-mael-hero__subtitle">An inquiry-based Master of Arts for Christian educators ready to push the boundaries of educational thought through sustained scholarly inquiry and original research.</p>
+        <div class="ics-mael-hero__cta-row">
+          <a href="/mael-apply/" class="ics-btn ics-btn--primary">Apply Today →</a>
+          <a href="/mael-design/" class="ics-btn ics-btn--outline">Program Design</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INTRO ===== -->
+    <section class="ics-mael-intro">
+      <div class="ics-mael-intro__inner">
+        <p class="ics-mael-intro__eyebrow">About the MA-EL</p>
+        <h2 class="ics-mael-intro__heading">Scholarly Inquiry Rooted in Faith and Practice</h2>
+        <p class="ics-mael-intro__body">The MA (Phil) in Educational Leadership combines ICS's rich history in integrally Christian scholarship with a commitment to inquiry-based learning. This program inspires and equips educators to create innovative, challenging, and just learning environments that contribute to God's ongoing redemptive work in the world.</p>
+      </div>
+    </section>
+
+    <div class="ics-divider">
+      <div class="ics-divider__line"></div>
+      <div class="ics-divider__diamond"></div>
+      <div class="ics-divider__line"></div>
+    </div>
+
+    <!-- ===== PROGRAM AT A GLANCE ===== -->
+    <section class="ics-glance">
+      <div class="ics-glance__inner">
+        <div class="ics-glance__header">
+          <p class="ics-glance__eyebrow">Program at a Glance</p>
+          <h2 class="ics-glance__heading">A Deeper Path for Scholarly Educators</h2>
+        </div>
+        <div class="ics-glance__grid">
+
+          <div class="ics-glance__item">
+            <svg class="ics-glance__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+            <div class="ics-glance__item-label">Length</div>
+            <div class="ics-glance__item-value">~3 Years</div>
+            <div class="ics-glance__item-note">One course per term (10 terms)</div>
+          </div>
+
+          <div class="ics-glance__item">
+            <svg class="ics-glance__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path></svg>
+            <div class="ics-glance__item-label">Modality</div>
+            <div class="ics-glance__item-value">Fully Online</div>
+            <div class="ics-glance__item-note">Async + biweekly Zoom</div>
+          </div>
+
+          <div class="ics-glance__item">
+            <svg class="ics-glance__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"></path></svg>
+            <div class="ics-glance__item-label">Credits</div>
+            <div class="ics-glance__item-value">45 Credit Hours</div>
+            <div class="ics-glance__item-note">10 term courses</div>
+          </div>
+
+          <div class="ics-glance__item">
+            <svg class="ics-glance__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            <div class="ics-glance__item-label">Tuition</div>
+            <div class="ics-glance__item-value">$1,500 / Course</div>
+            <div class="ics-glance__item-note">3 credit hours per course</div>
+          </div>
+
+          <div class="ics-glance__item">
+            <svg class="ics-glance__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><path d="M20 8v6"></path><path d="M23 11h-6"></path></svg>
+            <div class="ics-glance__item-label">Format</div>
+            <div class="ics-glance__item-value">Part-Time Only</div>
+            <div class="ics-glance__item-note">Work while you study</div>
+          </div>
+
+          <div class="ics-glance__item">
+            <svg class="ics-glance__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><path d="M16 2v4"></path><path d="M8 2v4"></path><path d="M3 10h18"></path></svg>
+            <div class="ics-glance__item-label">Application Deadlines</div>
+            <div class="ics-glance__item-value">April 1 · November 1</div>
+            <div class="ics-glance__item-note">Two annual entry points</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SAMPLE COURSES ===== -->
+    <section class="ics-courses">
+      <div class="ics-courses__inner">
+        <div class="ics-courses__header">
+          <p class="ics-courses__eyebrow">Course Offerings</p>
+          <h2 class="ics-courses__heading">What You Will Study</h2>
+          <p class="ics-courses__subtitle">MA-EL courses are offered on a rotating schedule. Each is delivered online with asynchronous work and biweekly live sessions.</p>
+        </div>
+        
+        <div class="ics-courses__cta">
+          <a href="/mael-design/" class="ics-btn ics-btn--outline">View Full Program Design →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROGRAM STRUCTURE ===== -->
+    <section class="ics-structure">
+      <div class="ics-structure__inner">
+        <div class="ics-structure__image-col">
+          <!-- PLACEHOLDER: Replace with your own image -->
+          <img src="https://lightroom.adobe.com/v2c/spaces/8e293c41299846de9eaf08c99ce6ee2a/assets/24bd3b1470474ce88b511545df3a9972/revisions/f54f8dabee39410dbdbfb46a4401d37e/renditions/0a49811184d8aceafe4a53c2728fcbef" alt="Graduate seminar in session">
+          <div class="ics-structure__image-accent"></div>
+        </div>
+        <div class="ics-structure__text-col">
+          <p class="ics-structure__eyebrow">Program Structure</p>
+          <h2 class="ics-structure__heading">45 Credit Hours of Integral Scholarship</h2>
+          <p class="ics-structure__body">The MA-EL is a comprehensive research-focused program consisting of 10 term courses delivered on a rotating schedule. Each course combines asynchronous online learning with biweekly Zoom sessions, plus individualized mentoring throughout.</p>
+          <ul class="ics-structure__list">
+            <li class="ics-structure__list-item">
+              <svg class="ics-structure__list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Core courses</strong> in Biblical foundations and philosophical worldview</span>
+            </li>
+            <li class="ics-structure__list-item">
+              <svg class="ics-structure__list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Concentration electives</strong> aligned with your chosen specialization</span>
+            </li>
+            <li class="ics-structure__list-item">
+              <svg class="ics-structure__list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Praxis &amp; project</strong>: sustained original research that contributes new knowledge</span>
+            </li>
+            <li class="ics-structure__list-item">
+              <svg class="ics-structure__list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Individualized mentoring</strong> throughout the program from ICS faculty</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== COMPLETION PATHS ===== -->
+    <section class="ics-completion">
+      <div class="ics-completion__inner">
+        <div class="ics-completion__header">
+          <p class="ics-completion__eyebrow">Your Timeline</p>
+          <h2 class="ics-completion__heading">Complete at Your Own Pace</h2>
+          <p class="ics-completion__subtitle">The MA-EL is designed for working educators. Choose the pace that works for your life.</p>
+        </div>
+        <div class="ics-completion__grid">
+
+          <div class="ics-comp-card">
+            <svg class="ics-comp-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><path d="M16 2v4"></path><path d="M8 2v4"></path><path d="M3 10h18"></path><path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M16 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"></path></svg>
+            <h3 class="ics-comp-card__title">Steady Pace</h3>
+            <div class="ics-comp-card__detail">~3 Years, 1 Month</div>
+            <p class="ics-comp-card__desc">Take one course each term over 10 terms. A structured rhythm that balances full-time work with steady academic progress.</p>
+          </div>
+
+          <div class="ics-comp-card">
+            <svg class="ics-comp-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"></path><path d="M18 20V4"></path><path d="M6 20v-4"></path></svg>
+            <h3 class="ics-comp-card__title">Self-Paced</h3>
+            <div class="ics-comp-card__detail">Flexible Timeline</div>
+            <p class="ics-comp-card__desc">Take courses when it best suits your schedule. Accelerate when life permits, and pause when you need to. The program bends around your responsibilities.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY MA-EL ===== -->
+    <section class="ics-why">
+      <div class="ics-why__inner">
+        <div class="ics-why__header">
+          <p class="ics-why__eyebrow">Why the MA-EL</p>
+          <h2 class="ics-why__heading">Built for Depth, Designed for Impact</h2>
+        </div>
+        <div class="ics-why__grid">
+          <div class="ics-why__item">
+            <svg class="ics-why__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            <h3 class="ics-why__item-title">Research Foundation</h3>
+            <p class="ics-why__item-text">The MA-EL provides a rigorous scholarly foundation. Ideal preparation for those considering further doctoral study or advanced educational leadership.</p>
+          </div>
+          <div class="ics-why__item">
+            <svg class="ics-why__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg>
+            <h3 class="ics-why__item-title">Four Specializations</h3>
+            <p class="ics-why__item-text">Choose from Instructional Leadership, School Administration, Inclusion, or Literacy, each tailored to your calling and context.</p>
+          </div>
+          <div class="ics-why__item">
+            <svg class="ics-why__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <h3 class="ics-why__item-title">Faculty Mentorship</h3>
+            <p class="ics-why__item-text">Receive individualized mentoring from ICS faculty throughout the program, scholars who are deeply invested in your growth.</p>
+          </div>
+          <div class="ics-why__item">
+            <svg class="ics-why__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"></path><path d="M18 20V4"></path><path d="M6 20v-4"></path></svg>
+            <h3 class="ics-why__item-title">Partnership Opportunities</h3>
+            <p class="ics-why__item-text">The Inclusion and Literacy concentrations are offered in partnership with Calvin University, expanding your network and scholarly community.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MA-EL vs MWS-E COMPARISON ===== -->
+    <section class="ics-compare">
+      <div class="ics-compare__inner">
+        <div class="ics-compare__header">
+          <p class="ics-compare__eyebrow">Not Sure Which Program?</p>
+          <h2 class="ics-compare__heading">MA-EL vs. MWS-E at a Glance</h2>
+        </div>
+        <div class="ics-compare__table-wrap">
+          <table class="ics-compare__table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th class="ics-compare__col-highlight">MA-EL</th>
+                <th>MWS-E</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Delivery</td>
+                <td class="ics-compare__col-highlight">Fully Online</td>
+                <td>Fully Online</td>
+              </tr>
+              <tr>
+                <td>Study Mode</td>
+                <td class="ics-compare__col-highlight">Part-Time Only</td>
+                <td>Part-Time Only</td>
+              </tr>
+              <tr>
+                <td>Credits</td>
+                <td class="ics-compare__col-highlight">45 Credit Hours</td>
+                <td>24 Credit Hours</td>
+              </tr>
+              <tr>
+                <td>Program Structure</td>
+                <td class="ics-compare__col-highlight">10 Courses + Praxis &amp; Project</td>
+                <td>6 Courses + Project and Paper OR 7 Courses + Paper</td>
+              </tr>
+              <tr>
+                <td>Concentrations</td>
+                <td class="ics-compare__col-highlight">4 Available</td>
+                <td>General</td>
+              </tr>
+              <tr>
+                <td>Research Emphasis</td>
+                <td class="ics-compare__col-highlight">Foundational for PhD</td>
+                <td>Applied / Reduced</td>
+              </tr>
+              <tr>
+                <td>Estimated Total Cost</td>
+                <td class="ics-compare__col-highlight">~$17,280</td>
+                <td>~$8,560</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="ics-compare__footnote">Both programs share the same rich course catalogue and community. The MA-EL provides deeper research preparation, while the MWS-E offers a lighter, more affordable pathway.</p>
+      </div>
+    </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="ics-cta-banner">
+      <div class="ics-cta-banner__inner">
+        <h2 class="ics-cta-banner__heading">Ready to Shape the Future of Christian Education?</h2>
+        <p class="ics-cta-banner__text">The MA-EL is for educators who want to go deeper, to produce original scholarship that advances how we think about faith, learning, and leadership.</p>
+        <div class="ics-cta-banner__deadlines">
+          <span class="ics-cta-banner__deadline-tag">April 1 &middot; Application Deadline</span>
+          <span class="ics-cta-banner__deadline-tag">November 1 &middot; Application Deadline</span>
+        </div>
+        <div class="ics-cta-banner__actions">
+          <a href="/mael-apply/" class="ics-btn ics-btn--primary-on-light">Apply Today →</a>
+          <a href="/mael-faq/" class="ics-btn ics-btn--outline-on-light">Read the FAQ</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+<div id="site-footer"></div>
+<script src="/js/includes.js"></script>
+</body>
+</html>

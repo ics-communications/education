@@ -1,0 +1,980 @@
+<!DOCTYPE html><html lang="en-CA"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/css/shared.css">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon.png">
+  <title>Faculty – Educational Leadership | Institute for Christian Studies</title>
+<meta name="description" content="Meet the faculty of ICS educational leadership programs. Experienced Christian educators and scholars committed to faith-integrated learning.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://education.icscanada.edu/faculty/">
+<meta property="og:title" content="Faculty | ICS Educational Leadership">
+<meta property="og:description" content="Meet the faculty of ICS educational leadership programs. Experienced Christian educators and scholars committed to faith-integrated learning.">
+<meta property="og:url" content="https://education.icscanada.edu/faculty/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Educational Leadership at ICS">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Faculty | ICS Educational Leadership">
+<meta name="twitter:description" content="Meet the faculty of ICS educational leadership programs. Experienced Christian educators and scholars committed to faith-integrated learning.">
+  
+  <style>
+.page-section:last-child .content-wrapper,
+    .page-section .content-wrapper {
+      padding-bottom: 0 !important;
+    }
+    
+    
+    
+    
+
+    .ics-faculty *,
+    .ics-faculty *::before,
+    .ics-faculty *::after { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
+
+    .ics-faculty {
+      --ics-cream:        #FAF7F3;
+      --ics-cream-dark:   #F3EDE5;
+      
+      font-family: var(--font-sans);
+      color: #3a3330;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===================== */
+    /* ANIMATIONS             */
+    /* ===================== */
+    @keyframes icsFacFadeUp { 
+      from { opacity: 0; transform: translateY(24px); } 
+      to { opacity: 1; transform: translateY(0); } 
+    }
+
+    @keyframes icsFacSlideIn {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes icsFacReveal {
+      from { clip-path: inset(0 100% 0 0); }
+      to { clip-path: inset(0 0 0 0); }
+    }
+
+    @keyframes icsFacPulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+
+    /* ===================== */
+    /* PAGE HEADER (compact) */
+    /* ===================== */
+    .ics-fac-header {
+      background: var(--ics-purple-deep);
+      padding: 3.5rem 2rem 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ics-fac-header::before {
+      content: '';
+      position: absolute;
+      top: -60%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,60,44,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .ics-fac-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(200,60,44,0.4), transparent);
+    }
+
+    .ics-fac-header__inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .ics-fac-header__left {
+      animation: icsFacSlideIn 0.7s ease-out both;
+    }
+
+    .ics-fac-header__label {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ics-red);
+      margin-bottom: 0.5rem;
+    }
+
+    .ics-fac-header__title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      color: var(--ics-white);
+      line-height: 1.25;
+    }
+
+    .ics-fac-header__title em {
+      font-style: italic;
+      color: var(--ics-coral);
+    }
+
+    .ics-fac-header__count {
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.04em;
+      animation: icsFacSlideIn 0.7s ease-out 0.2s both;
+    }
+
+    /* ===================== */
+    /* FACULTY SECTION        */
+    /* ===================== */
+    .ics-fac-section {
+      background: #F5F5EF;
+      padding: 0 2rem;
+    }
+
+    .ics-fac-section__inner {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    /* ===================== */
+    /* INDIVIDUAL PROFILE     */
+    /* ===================== */
+    .ics-fac-profile {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      border-bottom: 1px solid var(--ics-border-light);
+      padding: 3.5rem 0;
+      position: relative;
+    }
+
+    .ics-fac-profile:last-child {
+      border-bottom: none;
+    }
+
+    @media (min-width: 900px) {
+      .ics-fac-profile {
+        grid-template-columns: 300px 1fr;
+        gap: 3.5rem;
+      }
+
+      /* Alternate layout: flip photo to right on even profiles */
+      .ics-fac-profile:nth-child(even) {
+        grid-template-columns: 1fr 300px;
+      }
+      .ics-fac-profile:nth-child(even) .ics-fac-profile__sidebar {
+        order: 2;
+      }
+      .ics-fac-profile:nth-child(even) .ics-fac-profile__main {
+        order: 1;
+      }
+    }
+
+    /* Sidebar: Photo + Quick Info */
+    .ics-fac-profile__sidebar {
+      position: relative;
+    }
+
+    .ics-fac-profile__photo-frame {
+      position: relative;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .ics-fac-profile__photo {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 5 / 6;
+      overflow: hidden;
+      background: #e0dbd5;
+    }
+
+    .ics-fac-profile__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      filter: saturate(0.85) contrast(1.02);
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.6s ease;
+    }
+
+    .ics-fac-profile:hover .ics-fac-profile__photo img {
+      transform: scale(1.04);
+      filter: saturate(1) contrast(1.02);
+    }
+
+    /* Colored accent stripe at bottom of photo */
+    .ics-fac-profile__photo::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--ics-red);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .ics-fac-profile:hover .ics-fac-profile__photo::after {
+      transform: scaleX(1);
+    }
+
+    /* Contact & Media Links under photo */
+    .ics-fac-profile__links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-top: 1.2rem;
+    }
+
+    .ics-fac-profile__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--ics-purple);
+      text-decoration: none;
+      padding: 0.5rem 0.7rem;
+      background: rgba(45, 24, 84, 0.04);
+      border-left: 2px solid transparent;
+      transition: all 0.25s ease;
+    }
+
+    .ics-fac-profile__link:hover {
+      color: var(--ics-red);
+      background: rgba(200, 60, 44, 0.05);
+      border-left-color: var(--ics-red);
+    }
+
+    .ics-fac-profile__link svg {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+      stroke: currentColor;
+    }
+
+    .ics-fac-profile__link--podcast {
+      color: var(--ics-purple-mid);
+    }
+
+    /* Main content area */
+    .ics-fac-profile__main {
+      display: flex;
+      flex-direction: column;
+      padding-top: 0.5rem;
+    }
+
+    .ics-fac-profile__name {
+      font-family: var(--font-serif);
+      font-size: clamp(1.7rem, 3.2vw, 2.2rem);
+      font-weight: 700;
+      color: var(--ics-purple);
+      line-height: 1.25;
+      margin-bottom: 0.4rem;
+    }
+
+    .ics-fac-profile__name a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+    .ics-fac-profile__name a:hover {
+      color: var(--ics-red);
+    }
+
+    .ics-fac-profile__role {
+      font-family: var(--font-sans);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ics-red);
+      line-height: 1.5;
+      margin-bottom: 0.2rem;
+    }
+
+    .ics-fac-profile__extra-role {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--ics-purple-mid);
+      line-height: 1.5;
+      margin-bottom: 0.3rem;
+    }
+
+    .ics-fac-profile__credentials {
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      font-weight: 400;
+      color: #9a958f;
+      letter-spacing: 0.01em;
+      margin-bottom: 1.6rem;
+    }
+
+    /* Vision / Quote */
+    .ics-fac-profile__vision-wrap {
+      position: relative;
+      margin-bottom: 2rem;
+      padding: 1.6rem 1.8rem;
+      background: var(--ics-white);
+      border-left: 3px solid var(--ics-red);
+    }
+
+    .ics-fac-profile__vision-label {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ics-red);
+      margin-bottom: 0.7rem;
+      display: block;
+    }
+
+    .ics-fac-profile__vision {
+      font-family: var(--font-serif);
+      font-size: 1.08rem;
+      color: #4a4540;
+      line-height: 1.85;
+      font-style: italic;
+    }
+
+    /* Detail Chips: Courses, Research, Pubs */
+    .ics-fac-profile__details-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ics-purple);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.6rem 0;
+      margin-bottom: 0.5rem;
+      transition: color 0.25s ease;
+    }
+
+    .ics-fac-profile__details-toggle:hover {
+      color: var(--ics-red);
+    }
+
+    .ics-fac-profile__details-toggle svg {
+      width: 14px;
+      height: 14px;
+      transition: transform 0.3s ease;
+      stroke: currentColor;
+    }
+
+    .ics-fac-profile__details-toggle[aria-expanded="true"] svg {
+      transform: rotate(180deg);
+    }
+
+    .ics-fac-profile__details {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                  opacity 0.4s ease,
+                  margin 0.4s ease;
+      margin-top: 0;
+    }
+
+    .ics-fac-profile__details.is-open {
+      max-height: 2000px;
+      opacity: 1;
+      margin-top: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .ics-fac-profile__details {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 960px) {
+      .ics-fac-profile__details {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    .ics-fac-detail {
+      padding: 1.2rem;
+      background: var(--ics-white);
+    }
+
+    .ics-fac-detail__heading {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ics-purple);
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--ics-border-light);
+    }
+
+    .ics-fac-detail__list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .ics-fac-detail__list li {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      color: #5c5550;
+      line-height: 1.6;
+      padding-left: 0.9rem;
+      position: relative;
+    }
+
+    .ics-fac-detail__list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 4px;
+      height: 4px;
+      background: var(--ics-red);
+      transform: rotate(45deg);
+    }
+
+    .ics-fac-detail__pubs {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .ics-fac-detail__pubs li {
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      color: #7a7570;
+      line-height: 1.6;
+    }
+
+    .ics-fac-detail__pubs li em {
+      font-style: italic;
+    }
+
+    /* ===================== */
+    /* BUTTONS               */
+    /* ===================== */
+    
+    
+    
+    
+    
+    
+    
+
+    /* ===================== */
+    /* CTA BANNER            */
+    /* ===================== */
+    .ics-cta-banner { 
+      background: linear-gradient(180deg, #241450 0%, #1F0F3D 100%);
+      padding: 4.5rem 4rem; 
+      text-align: center; 
+      position: relative;
+      overflow: hidden;
+    }
+    .ics-cta-banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      background: var(--ics-purple-deep);
+      transform: translate(-50%, -50%) rotate(45deg);
+      box-shadow: 0 0 0 6px rgba(245, 245, 239, 0.02);
+      pointer-events: none;
+    }
+
+    .ics-cta-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse at 20% 50%, rgba(200,60,44,0.06) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(241,171,106,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .ics-cta-banner__inner { 
+      max-width: 620px; 
+      margin: 0 auto; 
+      position: relative; 
+      z-index: 1; 
+    }
+
+    .ics-cta-banner__heading { 
+      font-family: var(--font-serif); 
+      font-size: clamp(1.68rem, 3.36vw, 2.28rem); 
+      font-weight: 700; 
+      color: var(--ics-white); 
+      line-height: 1.35; 
+      margin-bottom: 1rem; 
+    }
+
+    .ics-cta-banner__heading em {
+      font-style: italic;
+      color: var(--ics-coral);
+    }
+
+    .ics-cta-banner__text { 
+      font-family: var(--font-sans); 
+      font-size: 1.08rem; 
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 2rem; 
+      line-height: 1.8; 
+    }
+
+    .ics-cta-banner__actions { 
+      display: flex; 
+      gap: 1rem; 
+      justify-content: center; 
+      flex-wrap: wrap; 
+    }
+
+    /* ===================== */
+    /* RESPONSIVE FINE-TUNE   */
+    /* ===================== */
+    @media (max-width: 899px) {
+      .ics-fac-profile__sidebar {
+        max-width: 280px;
+      }
+
+      .ics-fac-profile__main {
+        padding-top: 1.5rem;
+      }
+
+      .ics-fac-header__inner {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .ics-fac-profile {
+        padding: 2.5rem 0;
+      }
+      .ics-fac-profile__vision-wrap {
+        padding: 1.2rem 1.3rem;
+      }
+    }
+
+    /* ===================== */
+    /* MOBILE RESPONSIVE     */
+    /* ===================== */
+    @media (max-width: 767px) {
+
+      .ics-fac-header { padding: 2.5rem 1.25rem 2rem; }
+      .ics-fac-header__title { font-size: 2rem; }
+
+      .ics-fac-section { padding: 3rem 1.25rem; }
+      .ics-fac-profile { flex-direction: column; }
+      .ics-fac-profile__sidebar { width: 100%; max-width: 280px; margin: 0 auto 1.5rem; }
+      .ics-fac-profile__main { width: 100%; }
+      .ics-fac-profile__name { font-size: 1.35rem; }
+      .ics-fac-profile__details { grid-template-columns: 1fr; }
+
+      .ics-cta-banner { padding: 3rem 1.25rem; }
+      .ics-cta-banner__heading { font-size: 1.4rem; }
+      .ics-cta-banner__actions { flex-direction: column; gap: 0.75rem; }
+      .ics-cta-banner__actions 
+    }
+
+    /* Touch-friendly targets */
+    @media (hover: none) and (pointer: coarse) {
+      
+    }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Faculty | ICS Educational Leadership",
+  "url": "https://education.icscanada.edu/faculty/",
+  "description": "Meet the faculty of ICS educational leadership programs. Experienced Christian educators and scholars committed to faith-integrated learning.",
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "Faculty"
+  }
+}
+</script>
+</head>
+<body>
+<div id="site-header"></div>
+<noscript>
+  <nav style="background:#2D1854;padding:1rem 2rem;">
+    <a href="/" style="color:#fff;margin-right:1rem;">Home</a>
+    <a href="/mwse/" style="color:#fff;margin-right:1rem;">MWS-E</a>
+    <a href="/mael/" style="color:#fff;margin-right:1rem;">MA-EL</a>
+    <a href="/educator-certificates/" style="color:#fff;margin-right:1rem;">Certificates</a>
+    <a href="/courses/" style="color:#fff;margin-right:1rem;">Courses</a>
+    <a href="/faculty/" style="color:#fff;margin-right:1rem;">Faculty</a>
+    <a href="/admission/" style="color:#fff;">Admission</a>
+  </nav>
+</noscript>
+
+<!-- Mobile Menu Overlay -->
+
+  <div class="ics-faculty">
+
+    <!-- ============ COMPACT PAGE HEADER ============ -->
+    <section class="ics-fac-header">
+      <div class="ics-fac-header__inner">
+        <div class="ics-fac-header__left">
+          <p class="ics-fac-header__label">Educational Leadership at ICS</p>
+          <h1 class="ics-fac-header__title">Meet Our <em>Faculty</em></h1>
+        </div>
+        <p class="ics-fac-header__count">4 Scholar-Practitioners · MWS-E &amp; MA-EL Programs</p>
+      </div>
+    </section>
+
+    <!-- ============ FACULTY PROFILES ============ -->
+    <section class="ics-fac-section">
+      <div class="ics-fac-section__inner">
+
+        <!-- ====== EDITH VAN DER BOOM ====== -->
+        <article class="ics-fac-profile" id="faculty-edith-van-der-boom">
+          <div class="ics-fac-profile__sidebar">
+            <div class="ics-fac-profile__photo-frame">
+              <div class="ics-fac-profile__photo">
+                <img src="https://images.squarespace-cdn.com/content/69961bfd9be8a352ca34cb2f/d65363a9-4c68-403b-8ec9-783fb236c4b3/vanderboom-Faculty.jpg?content-type=image%2Fjpeg" alt="Dr. Edith van der Boom">
+              </div>
+            </div>
+            <div class="ics-fac-profile__links">
+              <a class="ics-fac-profile__link" href="mailto:evanderboom@icscanada.edu">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                evanderboom@icscanada.edu
+              </a>
+              <a class="ics-fac-profile__link ics-fac-profile__link--podcast" href="https://www.podbean.com/ew/pb-f8nu4-e39f70/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                Critical Faith: Growth Mindset
+              </a>
+              <a class="ics-fac-profile__link" href="https://faculty.icscanada.edu/evanderboom" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                Full Profile
+              </a>
+            </div>
+          </div>
+
+          <div class="ics-fac-profile__main">
+            <h2 class="ics-fac-profile__name"><a href="#faculty-edith-van-der-boom">Dr. Edith van der Boom</a></h2>
+            <p class="ics-fac-profile__role">Associate Professor of Philosophy of Education and Practice of Pedagogy</p>
+            <p class="ics-fac-profile__extra-role">Director, MA-EL &amp; MWS-E Programs</p>
+            <p class="ics-fac-profile__credentials">PhD (University of Toronto) · MEd · BA</p>
+
+            <div class="ics-fac-profile__vision-wrap">
+              <span class="ics-fac-profile__vision-label">Edith's Vision</span>
+              <blockquote class="ics-fac-profile__vision">My philosophy of education is rooted in the belief that each student is uniquely created by God and that education should celebrate both diversity and community. I believe that Christian schools need to be places of inclusive education where solid foundations are provided for all students, both spiritually and academically.</blockquote>
+            </div>
+
+            <button class="ics-fac-profile__details-toggle" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.classList.toggle('is-open');">
+              Courses, Research &amp; Publications
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="ics-fac-profile__details">
+              <div class="ics-fac-detail">
+                <h4 class="ics-fac-detail__heading">Courses Taught</h4>
+                <ul class="ics-fac-detail__list">
+                  <li><a href="/courses/#course-called-to-teach">Called to Teach: From Formation to Transformation</a></li>
+                  <li><a href="/courses/#course-christian-deeper-learning">Christian Deeper Learning</a></li>
+                  <li><a href="/courses/#course-cultivating-learning-communities">Cultivating Learning Communities of Belonging</a></li>
+                  <li><a href="/courses/#course-transformative-teaching">Transformative Teaching: The Practice of Christ-Centred Education</a></li>
+                </ul>
+              </div>
+              <div class="ics-fac-detail">
+                <h4 class="ics-fac-detail__heading">Research Interests</h4>
+                <ul class="ics-fac-detail__list">
+                  <li>Inclusive Education</li>
+                  <li>Inquiry-Based Learning</li>
+                  <li>Deeper Learning</li>
+                  <li>Differentiated Instruction</li>
+                  <li>Decolonizing Education</li>
+                </ul>
+              </div>
+              <div class="ics-fac-detail">
+                <h4 class="ics-fac-detail__heading">Selected Publications</h4>
+                <ul class="ics-fac-detail__pubs">
+                  <li>van der Boom, E. H. (2025). A listening classroom: The importance of decolonizing Christian education from within. <em>Int. Journal of Christianity &amp; Education.</em></li>
+                  <li>van der Boom, E. H. (2024). Participating in God's redemptive work: A cyclical model for learning and assessment. <em>Int. Journal of Christianity &amp; Education, 28</em>(1), 341–352.</li>
+                  <li>van der Boom, E. H., &amp; Jang, E. E. (2018). The effects of holistic diagnostic feedback intervention on improving struggling readers' reading skills. <em>Journal of Teaching and Learning, 12</em>(2), 54–69.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ====== GIDEON STRAUSS ====== -->
+        <article class="ics-fac-profile" id="faculty-gideon-strauss">
+          <div class="ics-fac-profile__sidebar">
+            <div class="ics-fac-profile__photo-frame">
+              <div class="ics-fac-profile__photo">
+                <img src="https://images.squarespace-cdn.com/content/69961bfd9be8a352ca34cb2f/380594f8-0626-4a16-ac1b-cd3e8dc42618/Strauss-Faculty.jpg?content-type=image%2Fjpeg" alt="Dr. Gideon Strauss">
+              </div>
+            </div>
+            <div class="ics-fac-profile__links">
+              <a class="ics-fac-profile__link" href="mailto:gstrauss@icscanada.edu">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                gstrauss@icscanada.edu
+              </a>
+              <a class="ics-fac-profile__link ics-fac-profile__link--podcast" href="https://criticalfaith.podbean.com/?s=gideon+strauss" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                Critical Faith: Reformational Philosophy
+              </a>
+              <a class="ics-fac-profile__link ics-fac-profile__link--podcast" href="https://instituteforchristianstudies.substack.com/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                ICS Substack: For Love's Sake
+              </a>
+              <a class="ics-fac-profile__link" href="https://faculty.icscanada.edu/gstrauss" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                Full Profile
+              </a>
+            </div>
+          </div>
+
+          <div class="ics-fac-profile__main">
+            <h2 class="ics-fac-profile__name"><a href="#faculty-gideon-strauss">Dr. Gideon Strauss</a></h2>
+            <p class="ics-fac-profile__role">Associate Professor of Leadership and Worldview Studies</p>
+            <p class="ics-fac-profile__extra-role">ICS Academic Dean</p>
+            <p class="ics-fac-profile__credentials">PhD (University of the Orange Free State, South Africa) · MA · BA</p>
+
+            <div class="ics-fac-profile__vision-wrap">
+              <span class="ics-fac-profile__vision-label">Gideon's Vision</span>
+              <blockquote class="ics-fac-profile__vision">I think about the stories we humans tell to account for what we do in terms of what we want. I teach, do research, and serve the wider community in, and at the intersection of, the fields of leadership and worldview studies, with an interdisciplinary approach that attends, specifically, to phenomenological and ethnographic methods of inquiry.</blockquote>
+            </div>
+
+            <button class="ics-fac-profile__details-toggle" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.classList.toggle('is-open');">
+              Courses, Research &amp; Publications
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="ics-fac-profile__details">
+              <div class="ics-fac-detail">
+                <h4 class="ics-fac-detail__heading">Courses Taught</h4>
+                <ul class="ics-fac-detail__list">
+                  <li><a href="/courses/#course-lead-from-where-you-are">Lead from Where You Are</a></li>
+                  <li><a href="/courses/#course-craft-of-reflective-practice">The Craft of Reflective Practice</a></li>
+                  <li><a href="/courses/#course-how-to-coach">How to Coach a Strong Team</a></li>
+                  <li><a href="/courses/#course-how-to-finance">How to Finance a Vision</a></li>
+                  <li><a href="/courses/#course-how-to-govern">How to Govern a School</a></li>
+                </ul>
+              </div>
+              <div class="ics-fac-detail">
+                <h4 class="ics-fac-detail__heading">Research Interests</h4>
+                <ul class="ics-fac-detail__list">
+                  <li>Narrative Practice Studies in Teaching &amp; School Administration</li>
+                  <li>Ethics and Politics</li>
+                  <li>Ontological &amp; Epistemological Conditions for Narrative Practice Studies</li>
+                </ul>
+              </div>
+              <div class="ics-fac-detail">
+                <h4 class="ics-fac-detail__heading">Selected Publications</h4>
+                <ul class="ics-fac-detail__pubs">
+                  <li>Avedisian, J., Strauss, G., Pennings, R., &amp; Wright, W. (2004). <em>To Honor God</em> (A monograph on executive business leadership). Max De Pree Center for Leadership.</li>
+                  <li>Strauss, G. (1997). <em>Does the rainbow cost too much? Polemical essays on the economics of language.</em> University of the Free State Acta Varia.</li>
+                  <li>Strauss, G. (1998). Love is not a four-letter word. <em>Tydskrif vir Christelike Wetenskap</em>, 51–69.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ====== NEAL DEROO ====== -->
+        <article class="ics-fac-profile" id="faculty-neal-deroo">
+          <div class="ics-fac-profile__sidebar">
+            <div class="ics-fac-profile__photo-frame">
+              <div class="ics-fac-profile__photo">
+                <img src="https://images.squarespace-cdn.com/content/69961bfd9be8a352ca34cb2f/a34ecb68-c6b6-412f-81fc-3706988e3436/DeRoo-Faculty.png?content-type=image%2Fpng" alt="Dr. Neal DeRoo">
+              </div>
+            </div>
+            <div class="ics-fac-profile__links">
+              <a class="ics-fac-profile__link" href="mailto:nderoo@icscanada.edu">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                nderoo@icscanada.edu
+              </a>
+              <a class="ics-fac-profile__link ics-fac-profile__link--podcast" href="https://criticalfaith.podbean.com/e/material-spirituality-with-neal-deroo-pt-i/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                Critical Faith: Material Spirituality
+              </a>
+              <a class="ics-fac-profile__link" href="https://faculty.icscanada.edu/neal-deroo" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                Full Profile
+              </a>
+            </div>
+          </div>
+
+          <div class="ics-fac-profile__main">
+            <h2 class="ics-fac-profile__name"><a href="#faculty-neal-deroo">Dr. Neal DeRoo</a></h2>
+            <p class="ics-fac-profile__role">Professor of Philosophy</p>
+            <p class="ics-fac-profile__credentials">PhD (Boston College) · MA (Institute for Christian Studies) · BA (Calvin College)</p>
+
+            <div class="ics-fac-profile__vision-wrap">
+              <span class="ics-fac-profile__vision-label">Neal's Vision</span>
+              <blockquote class="ics-fac-profile__vision">My work tries to account for how spirituality is constantly at work in constituting our experience and the implications that has for how we live our lives. I speak to academic, popular, and professional audiences, including doing professional development work with Christian day school teachers, showing that the deep-seated spiritual forces shaping our experience help us think about faith as something that impacts our everyday life together.</blockquote>
+            </div>
+
+            <button class="ics-fac-profile__details-toggle" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.classList.toggle('is-open');">
+              Courses, Research &amp; Publications
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="ics-fac-profile__details">
+              <div class="ics-fac-detail">
+                <h4 class="ics-fac-detail__heading">Courses Taught</h4>
+                <ul class="ics-fac-detail__list">
+                  <li><a href="/courses/#course-what-is-christian">What Is Christian About Christian Education?</a></li>
+                </ul>
+              </div>
+              <div class="ics-fac-detail">
+                <h4 class="ics-fac-detail__heading">Research Interests</h4>
+                <ul class="ics-fac-detail__list">
+                  <li>Phenomenology</li>
+                  <li>Philosophy of Religion</li>
+                  <li>Spirituality &amp; Experience</li>
+                  <li>Christian Education</li>
+                </ul>
+              </div>
+              <div class="ics-fac-detail">
+                <h4 class="ics-fac-detail__heading">Selected Publications</h4>
+                <ul class="ics-fac-detail__pubs">
+                  <li>DeRoo, N. (2026). <em>Material Spirituality: A Transcendental Phenomenology of Religion.</em> Bloomsbury Academic.</li>
+                  <li>DeRoo, N. (2022). <em>The Political Logic of Experience: Expression in Phenomenology.</em> Fordham University Press.</li>
+                  <li>DeRoo, N. (2013). <em>Futurity in Phenomenology: Promise and Method in Husserl, Levinas, and Derrida.</em> Fordham University Press.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ====== NIK ANSELL ====== -->
+        <article class="ics-fac-profile" id="faculty-nik-ansell">
+          <div class="ics-fac-profile__sidebar">
+            <div class="ics-fac-profile__photo-frame">
+              <div class="ics-fac-profile__photo">
+                <img src="https://images.squarespace-cdn.com/content/69961bfd9be8a352ca34cb2f/6f61cf41-11b3-4b0e-b865-39602e7a096a/Ansell-Faculty.jpg?content-type=image%2Fjpeg" alt="Dr. Nik Ansell">
+              </div>
+            </div>
+            <div class="ics-fac-profile__links">
+              <a class="ics-fac-profile__link" href="mailto:nansell@icscanada.edu">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                nansell@icscanada.edu
+              </a>
+              <a class="ics-fac-profile__link ics-fac-profile__link--podcast" href="https://criticalfaith.podbean.com/?s=ansell" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                Critical Faith: Reading the Bible
+              </a>
+              <a class="ics-fac-profile__link" href="https://faculty.icscanada.edu/nansell/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                Full Profile
+              </a>
+            </div>
+          </div>
+
+          <div class="ics-fac-profile__main">
+            <h2 class="ics-fac-profile__name"><a href="#faculty-nik-ansell">Dr. Nik Ansell</a></h2>
+            <p class="ics-fac-profile__role">Associate Professor of Theology</p>
+            <p class="ics-fac-profile__credentials">PhD (VU University, Amsterdam) · MPhil (Institute for Christian Studies) · BA (University of Bristol)</p>
+
+            <div class="ics-fac-profile__vision-wrap">
+              <span class="ics-fac-profile__vision-label">Nik's Vision</span>
+              <blockquote class="ics-fac-profile__vision">Theology includes reflection on key meta-theological issues that frame the discipline: how the sacred is related to life as a whole, as the hope or heartbeat of the universe, as the revelation of God, self, world, and other. My teaching and research focus on systematic and biblical theology, notably Christology, eschatology, Old Testament wisdom thinking, and the theology of gender.</blockquote>
+            </div>
+
+            <button class="ics-fac-profile__details-toggle" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.classList.toggle('is-open');">
+              Courses, Research &amp; Publications
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="ics-fac-profile__details">
+              <div class="ics-fac-detail">
+                <h4 class="ics-fac-detail__heading">Courses Taught</h4>
+                <ul class="ics-fac-detail__list">
+                  <li><a href="/courses/#course-biblical-foundations">Biblical Foundations: Narrative, Wisdom, and the Art of Reading Scripture</a></li>
+                </ul>
+              </div>
+              <div class="ics-fac-detail">
+                <h4 class="ics-fac-detail__heading">Research Interests</h4>
+                <ul class="ics-fac-detail__list">
+                  <li>Christology &amp; Eschatology</li>
+                  <li>Old Testament Wisdom Thinking</li>
+                  <li>Theology of Gender</li>
+                  <li>Phenomenology of Revelation</li>
+                  <li>Spirituality of Existence</li>
+                </ul>
+              </div>
+              <div class="ics-fac-detail">
+                <h4 class="ics-fac-detail__heading">Selected Publications</h4>
+                <ul class="ics-fac-detail__pubs">
+                  <li>Ansell, N. (2013). <em>The Annihilation of Hell: Universal Salvation and the Redemption of Time in the Eschatology of Jürgen Moltmann.</em> Wipf &amp; Stock.</li>
+                  <li>Ansell, N. (1994). <em>The Woman Will Overcome The Warrior: A Dialogue with the Christian/Feminist Theology of Rosemary Radford Ruether.</em> University Press of America.</li>
+                  <li>Ansell, N. (2001). The Call of Wisdom/The Voice of the Serpent: A Canonical Approach to the Tree of Knowledge. <em>Christian Scholar's Review, 31</em>(1), 31–58.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ CTA BANNER ============ -->
+    <section class="ics-cta-banner">
+      <div class="ics-cta-banner__inner">
+        <h2 class="ics-cta-banner__heading">Learn from Faculty Who <em>Walk Alongside You</em></h2>
+        <p class="ics-cta-banner__text">Our small cohort model means you're not a number. You're a colleague. Ready to join a community of educators thinking deeply about faith, practice, and calling?</p>
+        <div class="ics-cta-banner__actions">
+          <a href="/mwse-apply/" class="ics-btn ics-btn--primary">Apply Today →</a>
+          <a href="/mwse/" class="ics-btn ics-btn--outline">Explore the MWS-E</a>
+          <a href="/mael/" class="ics-btn ics-btn--outline">Explore the MA-EL</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+<div id="site-footer"></div>
+<script src="/js/includes.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://education.icscanada.edu/</loc><priority>1.0</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://education.icscanada.edu/mwse/</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://education.icscanada.edu/mwse-design/</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://education.icscanada.edu/mwse-faq/</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://education.icscanada.edu/mwse-apply/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://education.icscanada.edu/mael/</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://education.icscanada.edu/mael-design/</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://education.icscanada.edu/mael-faq/</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://education.icscanada.edu/mael-apply/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://education.icscanada.edu/courses/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://education.icscanada.edu/faculty/</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://education.icscanada.edu/educator-certificates/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://education.icscanada.edu/cilc/</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://education.icscanada.edu/csac/</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://education.icscanada.edu/cstc/</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://education.icscanada.edu/admission/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+</urlset>

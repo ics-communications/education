@@ -1,0 +1,28 @@
+# Educational Leadership at ICS
+
+> The Institute for Christian Studies (ICS) offers graduate programs in educational leadership rooted in a Christian worldview, based in Toronto, Canada.
+
+## Programs
+
+- Master of Worldview Studies in Education (MWS-E): A graduate program integrating Christian worldview with educational practice. [/mwse/]
+- Master of Arts in Educational Leadership (MA-EL): A graduate degree preparing leaders for Christian school administration. [/mael/]
+
+## Educator Certificates
+
+- CILC — Christian Instructional Leadership Certificate [/cilc/]
+- CSAC — Christian School Administration Certificate [/csac/]
+- CSTC — Christian School Teaching Certificate [/cstc/]
+
+## Key Pages
+
+- Course Catalogue: /courses/
+- Faculty: /faculty/
+- Admission Requirements: /admission/
+- Apply (MWS-E): /mwse-apply/
+- Apply (MA-EL): /mael-apply/
+
+## Contact
+
+- Website: https://education.icscanada.edu
+- Parent institution: https://icscanada.edu
+- Email: academic-registrar@icscanada.edu

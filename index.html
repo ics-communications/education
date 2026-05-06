@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html lang="en-CA">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/css/shared.css">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon.png">
+<title>Educational Leadership at ICS</title>
+<meta name="description" content="Graduate programs in educational leadership at the Institute for Christian Studies. Faith-rooted master's degrees and educator certificates for Christian school teachers and administrators.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://education.icscanada.edu/">
+<meta property="og:title" content="Educational Leadership at ICS">
+<meta property="og:description" content="Graduate programs in educational leadership at the Institute for Christian Studies. Faith-rooted master's degrees and educator certificates for Christian school teachers and administrators.">
+<meta property="og:url" content="https://education.icscanada.edu/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Educational Leadership at ICS">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Educational Leadership at ICS">
+<meta name="twitter:description" content="Graduate programs in educational leadership at the Institute for Christian Studies. Faith-rooted master's degrees and educator certificates for Christian school teachers and administrators.">
+<style>
+.ics-edu-landing *,
+    .ics-edu-landing *::before,
+    .ics-edu-landing *::after { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
+
+    .ics-edu-landing {
+	
+      
+      font-family: var(--font-sans);
+      color: #3a3330;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+}
+
+    /* HERO */
+    .ics-hero {
+      position: relative; 
+      min-height: 78vh;
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      text-align: center; 
+      overflow: hidden; 
+      background: var(--ics-purple-deep);
+    }
+    
+    .ics-hero__bg { 
+      position: absolute; 
+      inset: 0; 
+      z-index: 0; 
+    }
+    
+    .ics-hero__bg img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+      opacity: 0.6; 
+      filter: saturate(0.3) brightness(0.7); 
+    }
+    
+    .ics-hero__overlay {
+      position: absolute; 
+      inset: 0; 
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(31,15,61,0.45) 0%, rgba(31,15,61,0.82) 60%, rgba(31,15,61,0.95) 100%);
+    }
+    
+    .ics-hero__content { 
+      position: relative; 
+      z-index: 2; 
+      max-width: 780px; 
+      padding: 5rem 2rem 7rem; 
+      animation: icsFadeUp 0.9s ease-out both; 
+    }
+    
+    @keyframes icsFadeUp { 
+      from { opacity: 0; transform: translateY(24px); } 
+      to { opacity: 1; transform: translateY(0); } 
+    }
+    
+    .ics-hero__label {
+      display: inline-block; 
+      font-family: var(--font-sans); 
+      font-size: 1.08rem; 
+      font-weight: 600;
+      letter-spacing: 0.22em; 
+      text-transform: uppercase; 
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 1.5rem; 
+      animation: icsFadeUp 0.9s ease-out 0.15s both;
+    }
+    
+    .ics-hero__title {
+      font-family: var(--font-serif); 
+      font-size: clamp(2.64rem, 6vw, 4.32rem); 
+      font-weight: 700;
+      line-height: 1.18; 
+      color: var(--ics-white); 
+      margin-bottom: 1.4rem;
+      animation: icsFadeUp 0.9s ease-out 0.3s both;
+    }
+    
+    .ics-hero__title em { 
+      font-style: italic; 
+      color: var(--ics-red); 
+    }
+    
+    .ics-hero__subtitle {
+      font-family: var(--font-sans); 
+      font-size: 1.26rem; 
+      color: rgba(255,255,255,0.65);
+      max-width: 580px; 
+      margin: 0 auto 2.5rem; 
+      line-height: 1.8;
+      animation: icsFadeUp 0.9s ease-out 0.45s both;
+    }
+    
+    .ics-hero__cta-row { 
+      display: flex; 
+      gap: 1rem; 
+      justify-content: center; 
+      flex-wrap: wrap; 
+      animation: icsFadeUp 0.9s ease-out 0.6s both; 
+    }
+
+    /* BUTTONS */
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    /* INTRO */
+    .ics-intro { background: var(--ics-cream); padding: 4.5rem 2rem 3.5rem; text-align: center; }
+    .ics-intro__inner { max-width: 720px; margin: 0 auto; }
+    .ics-intro__eyebrow { font-family: var(--font-sans); font-size: 1.4rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ics-red); margin-bottom: 1.2rem; }
+    .ics-intro__heading { font-family: var(--font-serif); font-size: clamp(1.8rem,3.84vw,2.64rem); font-weight: 700; color: var(--ics-purple); line-height: 1.35; margin-bottom: 1.4rem; }
+    .ics-intro__body { font-family: var(--font-sans); font-size: 1.176rem; color: #5c5550; line-height: 1.85; max-width: 620px; margin: 0 auto; }
+
+    /* DIVIDER */
+    .ics-divider { display: flex; align-items: center; justify-content: center; gap: 1.2rem; padding: 0.5rem 2rem; background: var(--ics-cream); }
+    .ics-divider__line { flex: 1; max-width: 180px; height: 1px; background: var(--ics-border-light); }
+    .ics-divider__diamond { width: 7px; height: 7px; background: var(--ics-red); transform: rotate(45deg); flex-shrink: 0; }
+
+    /* PROGRAMS */
+    .ics-programs { background: var(--ics-cream); padding: 2.5rem 2rem 5rem; }
+    .ics-programs__grid { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 1.8rem; }
+    @media (min-width: 768px) { .ics-programs__grid { grid-template-columns: 1.2fr 0.9fr 0.9fr; } }
+
+    .ics-card { position: relative; display: flex; flex-direction: column; background: var(--ics-purple); overflow: hidden; transition: transform 0.4s ease, box-shadow 0.4s ease; }
+    .ics-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(45,24,84,0.35); }
+    
+    .ics-card__image { position: relative; width: 100%; height: 210px; overflow: hidden; }
+    .ics-card__image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+    .ics-card:hover .ics-card__image img { transform: scale(1.05); }
+    
+    .ics-card .ics-card__image::after { 
+      content: ''; 
+      position: absolute; 
+      bottom: 0; 
+      left: 0; 
+      right: 0; 
+      height: 50%; 
+      background: linear-gradient(to top, var(--ics-purple), transparent); 
+      z-index: 1; 
+    }
+
+    .ics-card__badge { position: absolute; top: 1rem; left: 1rem; font-family: var(--font-sans); font-size: 0.9rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35em 0.9em; z-index: 2; }
+    .ics-card--mwse .ics-card__badge { background: var(--ics-red); color: var(--ics-white); }
+    .ics-card--mael .ics-card__badge { background: var(--cert-teal-light); color: var(--ics-purple); }
+    .ics-card--cert .ics-card__badge { background: var(--ics-coral); color: var(--ics-white); }
+    
+    .ics-card__body { flex: 1; padding: 1.6rem 1.6rem 1rem; display: flex; flex-direction: column; }
+    .ics-card__program-name { font-family: var(--font-sans); font-size: 1rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    
+    .ics-card--mwse .ics-card__program-name { color: var(--ics-red); }
+    .ics-card--mael .ics-card__program-name { color: var(--ics-coral); }
+    .ics-card--cert .ics-card__program-name { color: var(--cert-teal-light); }
+    
+    .ics-card__title { font-family: var(--font-serif); font-size: 1.68rem; font-weight: 700; color: var(--ics-white); line-height: 1.35; margin-bottom: 0.8rem; }
+    .ics-card__desc { font-family: var(--font-sans); font-size: 1.056rem; color: var(--ics-text-on-dark); line-height: 1.75; flex: 1; margin-bottom: 1.3rem; }
+    
+    .ics-card__meta { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 1.3rem; }
+    .ics-card__tag { font-family: var(--font-sans); font-size: 0.792rem; font-weight: 500; letter-spacing: 0.04em; padding: 0.3em 0.75em; border: 1px solid var(--ics-border-dark); color: var(--ics-text-muted); }
+    
+    .ics-card__footer { padding: 0 1.6rem 1.6rem; }
+    .ics-card__link { display: inline-flex; align-items: center; gap: 0.5em; font-family: var(--font-sans); font-size: 0.984rem; font-weight: 600; text-decoration: none; transition: gap 0.3s ease; }
+    
+    .ics-card--mwse .ics-card__link { color: var(--ics-red); }
+    .ics-card--mael .ics-card__link { color: var(--ics-coral); }
+    .ics-card--cert .ics-card__link { color: var(--cert-teal-light); }
+    
+    .ics-card__link:hover { gap: 0.85em; }
+    .ics-card__link svg { width: 15px; height: 15px; transition: transform 0.3s ease; }
+    .ics-card__link:hover svg { transform: translateX(3px); }
+    
+    @media (min-width: 768px) { .ics-card--mwse .ics-card__image { height: 250px; } }
+
+    /* WHY ICS */
+    .ics-why { background: var(--ics-purple); padding: 5rem 2rem; }
+    .ics-why__inner { max-width: 1060px; margin: 0 auto; }
+    .ics-why__header { text-align: center; margin-bottom: 3rem; }
+    .ics-why__eyebrow { font-family: var(--font-sans); font-size: 1.4rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ics-red); margin-bottom: 0.9rem; }
+    .ics-why__heading { font-family: var(--font-serif); font-size: clamp(2rem,3.84vw,2.64rem); font-weight: 700; color: var(--ics-white); line-height: 1.35; }
+    .ics-why__grid { display: grid; grid-template-columns: 1fr; gap: 1.4rem; }
+    
+    @media (min-width: 640px) { .ics-why__grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 960px) { .ics-why__grid { grid-template-columns: 1fr 1fr 1fr 1fr; } }
+    
+    .ics-why__item { padding: 1.8rem 1.4rem; background: var(--ics-purple-deep); border: 1px solid rgba(255,255,255,0.06); transition: border-color 0.3s ease, transform 0.3s ease; }
+    .ics-why__item:hover { border-color: rgba(200,60,44,0.25); transform: translateY(-3px); }
+    .ics-why__icon { width: 34px; height: 34px; color: var(--ics-red); margin-bottom: 1.1rem; }
+    .ics-why__item-title { font-family: var(--font-sans); font-size: 1.104rem; font-weight: 600; color: var(--ics-white); margin-bottom: 0.5rem; }
+    .ics-why__item-text { font-family: var(--font-sans); font-size: 1.008rem; color: var(--ics-text-muted); line-height: 1.75; }
+
+    /* CTA */
+    .ics-cta-banner { background: var(--ics-cream); padding: 4.5rem 2rem; text-align: center; }
+    .ics-cta-banner__inner { max-width: 600px; margin: 0 auto; }
+    .ics-cta-banner__heading { font-family: var(--font-serif); font-size: clamp(1.68rem,3.36vw,2.28rem); font-weight: 700; color: var(--ics-purple); line-height: 1.35; margin-bottom: 1rem; }
+    .ics-cta-banner__text { font-family: var(--font-sans); font-size: 1.14rem; color: #5c5550; margin-bottom: 2rem; line-height: 1.8; }
+    .ics-cta-banner__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Institute for Christian Studies — Educational Leadership",
+  "url": "https://education.icscanada.edu/",
+  "description": "Graduate programs in educational leadership at the Institute for Christian Studies. Faith-rooted master's degrees and educator certificates for Christian school teachers and administrators.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "59 St. George Street",
+    "addressLocality": "Toronto",
+    "addressRegion": "Ontario",
+    "postalCode": "M5S 2E6",
+    "addressCountry": "CA"
+  },
+  "parentOrganization": {
+    "@type": "EducationalOrganization",
+    "name": "Institute for Christian Studies",
+    "url": "https://icscanada.edu"
+  },
+  "hasOfferingCatalog": {
+    "@type": "OfferingCatalog",
+    "name": "Graduate Programs",
+    "itemListElement": [
+      {
+        "@type": "EducationalOccupationalProgram",
+        "name": "Master of Worldview Studies in Education (MWS-E)",
+        "url": "https://education.icscanada.edu/mwse/"
+      },
+      {
+        "@type": "EducationalOccupationalProgram",
+        "name": "Master of Arts in Educational Leadership (MA-EL)",
+        "url": "https://education.icscanada.edu/mael/"
+      }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+<div id="site-header"></div>
+<noscript>
+  <nav style="background:#2D1854;padding:1rem 2rem;">
+    <a href="/" style="color:#fff;margin-right:1rem;">Home</a>
+    <a href="/mwse/" style="color:#fff;margin-right:1rem;">MWS-E</a>
+    <a href="/mael/" style="color:#fff;margin-right:1rem;">MA-EL</a>
+    <a href="/educator-certificates/" style="color:#fff;margin-right:1rem;">Certificates</a>
+    <a href="/courses/" style="color:#fff;margin-right:1rem;">Courses</a>
+    <a href="/faculty/" style="color:#fff;margin-right:1rem;">Faculty</a>
+    <a href="/admission/" style="color:#fff;">Admission</a>
+  </nav>
+</noscript>
+
+<!-- Mobile Menu Overlay -->
+
+<div class="ics-edu-landing">
+<section class="ics-hero">
+<div class="ics-hero__bg">
+<img alt="Students collaborating at a seminar table" src="https://lightroom.adobe.com/v2c/spaces/8e293c41299846de9eaf08c99ce6ee2a/assets/bc820c38b8cf4270abcfa5efb48d6367/revisions/c25dda36fbb64cad88d1e68c53ceea74/renditions/c228409046f3b6ba37de6f849fb337dd?w=1600&amp;q=80"/>
+</div>
+<div class="ics-hero__overlay"></div>
+<div class="ics-hero__content">
+<span class="ics-hero__label">Institute for Christian Studies · Toronto | Online</span>
+<h1 class="ics-hero__title">Educational Leadership<br/>at <em>ICS</em></h1>
+<p class="ics-hero__subtitle">Graduate programs for educators who believe teaching is more than a job. It’s a practice shaped by faith, story, and the lives entrusted to our&nbsp;care.</p>
+<div class="ics-hero__cta-row">
+<a class="ics-btn ics-btn--primary" href="/mwse/">Explore the MWS-E →</a>
+</div>
+</div>
+</section>
+<section class="ics-intro">
+<div class="ics-intro__inner">
+<p class="ics-intro__eyebrow">Our Approach</p>
+<h2 class="ics-intro__heading">Where Faith, Wisdom, and Educational Practice Intersect</h2>
+<p class="ics-intro__body">ICS education courses create space for reflection and renewal, inviting Christian educators to step out of the daily rush and into a community where they can think deeply about their practice and why it matters. Our programs are Biblically informed, deeply contextual, and aligned with your professional passion.</p>
+</div>
+</section>
+<section class="ics-programs">
+<div class="ics-programs__grid">
+<article class="ics-card ics-card--mwse">
+<div class="ics-card__image">
+<span class="ics-card__badge">New Program</span>
+<img alt="Educator in seminar" src="https://lightroom.adobe.com/v2c/spaces/8e293c41299846de9eaf08c99ce6ee2a/assets/02e3013db11abe21bc16c316878d9220/revisions/72473dc65a284480af26576b74f45009/renditions/152aa4dbf9369e8ee6b95a13cceeeb2f"/>
+</div>
+<div class="ics-card__body">
+<span class="ics-card__program-name">MWS-E</span>
+<h3 class="ics-card__title">Develop Your Practice, Enhance Your Career</h3>
+<p class="ics-card__desc">A flexible, faith-rooted master’s degree for K–12 teachers and administrators. Complete your degree in as few as 2 years while working full-time, through rich online learning and biweekly live sessions.</p>
+<div class="ics-card__meta">
+<span class="ics-card__tag">Online</span>
+<span class="ics-card__tag">Part-Time</span>
+<span class="ics-card__tag">2 Years</span>
+<span class="ics-card__tag">$500 Bursary / Semester</span>
+</div>
+</div>
+<div class="ics-card__footer">
+<a class="ics-card__link" href="/mwse/">Explore the MWS-E <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+</div>
+</article>
+<article class="ics-card ics-card--mael">
+<div class="ics-card__image">
+<img alt="Graduate student in library" src="https://lightroom.adobe.com/v2c/spaces/8e293c41299846de9eaf08c99ce6ee2a/assets/478461766be9402991c24f42f932b97b/revisions/996583608d5743f7b6805b409eb9ba09/renditions/11025fd94a12a0fd1ebcdaeb73d90f7a"/>
+</div>
+<div class="ics-card__body">
+<span class="ics-card__program-name">MA-EL</span>
+<h3 class="ics-card__title">Contribute to the Conversation</h3>
+<p class="ics-card__desc">A thesis-based Master of Arts for those ready to push the boundaries of Christian educational thought through sustained scholarly inquiry and original research.</p>
+<div class="ics-card__meta">
+<span class="ics-card__tag">Hybrid</span>
+<span class="ics-card__tag">Research-Focused</span>
+</div>
+</div>
+<div class="ics-card__footer">
+<a class="ics-card__link" href="/mael/">Explore the MA-EL <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+</div>
+</article>
+<article class="ics-card ics-card--cert">
+<div class="ics-card__image">
+<img alt="Classroom discussion" src="https://lightroom.adobe.com/v2c/spaces/8e293c41299846de9eaf08c99ce6ee2a/assets/bc820c38b8cf4270abcfa5efb48d6367/revisions/c25dda36fbb64cad88d1e68c53ceea74/renditions/c228409046f3b6ba37de6f849fb337dd?w=1600&amp;q=80"/>
+</div>
+<div class="ics-card__body">
+<span class="ics-card__program-name">Educator Certificates</span>
+<h3 class="ics-card__title">Explore Teaching Christianly</h3>
+<p class="ics-card__desc">Focused certificate programs in Teaching Christianly (CSTC), Inclusive Learning (CILC), and School Administration (CSAC), each stackable toward the MWS-E degree.</p>
+<div class="ics-card__meta">
+<span class="ics-card__tag">CSTC</span>
+<span class="ics-card__tag">CILC</span>
+<span class="ics-card__tag">CSAC</span>
+</div>
+</div>
+<div class="ics-card__footer">
+<a class="ics-card__link" href="/educator-certificates/">Explore Certificates <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+</div>
+</article>
+</div>
+</section>
+<section class="ics-why">
+<div class="ics-why__inner">
+<div class="ics-why__header">
+<p class="ics-why__eyebrow">Why ICS</p>
+<h2 class="ics-why__heading">A Different Kind of Graduate School</h2>
+</div>
+<div class="ics-why__grid">
+<div class="ics-why__item">
+<svg class="ics-why__icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+<h3 class="ics-why__item-title">Biblically Rooted</h3>
+<p class="ics-why__item-text">Grounded in the Reformational tradition, our programs centre on the love embodied by Christ as the foundation for all educational practice.</p>
+</div>
+<div class="ics-why__item">
+<svg class="ics-why__icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg>
+<h3 class="ics-why__item-title">Designed for Working Educators</h3>
+<p class="ics-why__item-text">Complete your degree part-time and fully online: one course per term, with asynchronous work and biweekly live Zoom sessions.</p>
+</div>
+<div class="ics-why__item">
+<svg class="ics-why__icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+<h3 class="ics-why__item-title">Community of Practice</h3>
+<p class="ics-why__item-text">Join a community of reflective Christian educators who share your questions, sharpen your thinking, and walk alongside you.</p>
+</div>
+<div class="ics-why__item">
+<svg class="ics-why__icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M12 20V10"></path><path d="M18 20V4"></path><path d="M6 20v-4"></path></svg>
+<h3 class="ics-why__item-title">Accessible &amp; Affordable</h3>
+<p class="ics-why__item-text">At $1,500 per course with a $500 bursary available per semester, ICS makes graduate-level theological education within reach.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="ics-cta-banner">
+<div class="ics-cta-banner__inner">
+<h2 class="ics-cta-banner__heading">Ready to Think Deeper About Your Calling?</h2>
+<p class="ics-cta-banner__text">Applications are now open for Summer, Fall, and Winter starts. Take the next step in your journey as a Christian educator.</p>
+<div class="ics-cta-banner__actions">
+<a class="ics-btn ics-btn--primary-on-light" href="/mwse/">Apply to the MWS-E</a>
+<a class="ics-btn ics-btn--primary-on-light" href="/mael/">Apply to the MA-EL</a>
+</div>
+</div>
+</section>
+</div>
+
+<div id="site-footer"></div>
+<script src="/js/includes.js"></script>
+</body>
+</html>

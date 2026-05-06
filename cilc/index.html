@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/css/shared.css">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon.png">
+  <title>CILC — Christian Instructional Leadership Certificate — ICS Education</title>
+<meta name="description" content="The CILC equips Christian educators with skills in inclusive learning and instructional leadership. A stackable certificate toward the MWS-E degree.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://education.icscanada.edu/cilc/">
+<meta property="og:title" content="Christian Instructional Leadership Certificate (CILC) | ICS">
+<meta property="og:description" content="The CILC equips Christian educators with skills in inclusive learning and instructional leadership. A stackable certificate toward the MWS-E degree.">
+<meta property="og:url" content="https://education.icscanada.edu/cilc/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Educational Leadership at ICS">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Christian Instructional Leadership Certificate (CILC) | ICS">
+<meta name="twitter:description" content="The CILC equips Christian educators with skills in inclusive learning and instructional leadership. A stackable certificate toward the MWS-E degree.">
+  
+  <style>
+.ics-cilc *, .ics-cilc *::before, .ics-cilc *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    .ics-cilc {
+
+      font-family: var(--font-sans);
+      color: #3a3330;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ============================= */
+    /* PAGE HEADER                   */
+    /* ============================= */
+    .ics-cilc-header {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(20, 8, 40, 1) 0%, rgba(45, 24, 84, 0.98) 45%, rgba(91, 164, 164, 0.55) 100%);
+      padding: 3.5rem 2rem 3rem;
+      text-align: center;
+    }
+    .ics-cilc-header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(31, 15, 61, 0.82) 0%, rgba(45, 24, 84, 0.88) 100%);
+      z-index: 0;
+    }
+    .ics-cilc-header__inner {
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      animation: icsCilcFadeUp 0.8s ease-out both;
+    }
+    @keyframes icsCilcFadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .ics-cilc-header__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      margin-bottom: 1.4rem;
+      transition: color 0.2s;
+    }
+    .ics-cilc-header__back:hover { color: rgba(255,255,255,0.85); }
+    .ics-cilc-header__back svg { width: 16px; height: 16px; }
+    .ics-cilc-header__badge {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.35em 1em;
+      background: var(--cert-teal);
+      color: var(--ics-white);
+      margin-bottom: 1.4rem;
+    }
+    .ics-cilc-header__title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      color: var(--ics-white);
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+    .ics-cilc-header__title em {
+      font-style: italic;
+      color: var(--cert-teal-light);
+    }
+    .ics-cilc-header__subtitle {
+      font-family: var(--font-sans);
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.58);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.75;
+    }
+
+    /* ============================= */
+    /* OVERVIEW                      */
+    /* ============================= */
+    .ics-cilc-overview {
+      background: var(--ics-cream);
+      padding: 3.5rem 2rem 2.5rem;
+    }
+    .ics-cilc-overview__inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .ics-cilc-overview__columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    @media (max-width: 640px) {
+      .ics-cilc-overview__columns { grid-template-columns: 1fr; }
+    }
+    .ics-cilc-overview__text {
+      font-family: var(--font-sans);
+      font-size: 1.05rem;
+      color: #5c5550;
+      line-height: 1.85;
+    }
+    .ics-cilc-overview__text p + p { margin-top: 1rem; }
+    .ics-cilc-overview__sidebar {
+      background: var(--ics-purple);
+      border-radius: 8px;
+      padding: 1.6rem;
+      color: var(--ics-white);
+    }
+    .ics-cilc-overview__sidebar-title {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cert-teal-light);
+      margin-bottom: 1rem;
+    }
+    .ics-cilc-overview__sidebar-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.8);
+      padding: 0.55rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .ics-cilc-overview__sidebar-item:last-child { border-bottom: none; }
+    .ics-cilc-overview__sidebar-item svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      color: var(--cert-teal-light);
+      margin-top: 2px;
+    }
+
+    /* ============================= */
+    /* DIVIDER                       */
+    /* ============================= */
+    .ics-divider {
+      display: flex; align-items: center; justify-content: center; gap: 1.2rem;
+      padding: 0.5rem 2rem; background: var(--ics-cream);
+    }
+    .ics-divider__line { flex: 1; max-width: 180px; height: 1px; background: var(--ics-border-light); }
+    .ics-divider__diamond { width: 7px; height: 7px; background: var(--cert-teal); transform: rotate(45deg); flex-shrink: 0; }
+
+    /* ============================= */
+    /* REQUIRED COURSES              */
+    /* ============================= */
+    .ics-cilc-courses {
+      background: var(--ics-cream);
+      padding: 2.5rem 2rem 4rem;
+    }
+    .ics-cilc-courses__inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .ics-cilc-courses__heading-section {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .ics-cilc-courses__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cert-teal-dark);
+      margin-bottom: 0.8rem;
+    }
+    .ics-cilc-courses__main-heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 3.2vw, 2.1rem);
+      font-weight: 700;
+      color: var(--ics-purple);
+      line-height: 1.35;
+      margin-bottom: 0.8rem;
+    }
+    .ics-cilc-courses__intro {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      color: #5c5550;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.75;
+    }
+
+    /* Course Card */
+    .ics-course-card {
+      background: var(--ics-white);
+      border: 1px solid var(--ics-border-light);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      transition: border-color 0.3s ease;
+    }
+    .ics-course-card:hover {
+      border-color: rgba(91,164,164,0.35);
+    }
+    .ics-course-card__inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.3rem 1.4rem;
+    }
+    .ics-course-card__icon {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      color: var(--cert-teal);
+      margin-top: 2px;
+    }
+    .ics-course-card__content { flex: 1; }
+    .ics-course-card__label {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.2em 0.6em;
+      border-radius: 3px;
+      margin-bottom: 0.5rem;
+    }
+    .ics-course-card__label--required {
+      background: rgba(91, 164, 164, 0.12);
+      color: var(--cert-teal-dark);
+    }
+    .ics-course-card__label--alternate {
+      background: rgba(45, 24, 84, 0.08);
+      color: var(--ics-purple-mid);
+    }
+    .ics-course-card__name {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ics-purple);
+      line-height: 1.4;
+      margin-bottom: 0.4rem;
+    }
+    .ics-course-card__desc {
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      color: #7a7570;
+      line-height: 1.7;
+    }
+    .ics-course-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.6rem;
+    }
+    .ics-course-card__tag {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      padding: 0.2em 0.65em;
+      border-radius: 3px;
+      background: rgba(91, 164, 164, 0.1);
+      color: var(--cert-teal-dark);
+    }
+    .ics-course-card__tag--muted {
+      background: rgba(45, 24, 84, 0.06);
+      color: var(--ics-purple-mid);
+    }
+
+    .ics-courses-note {
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      color: #8a8580;
+      font-style: italic;
+      text-align: center;
+      padding: 1rem 1.2rem 0;
+      line-height: 1.7;
+    }
+
+    /* ============================= */
+    /* WHO IS IT FOR                 */
+    /* ============================= */
+    .ics-cilc-audience {
+      background: var(--ics-purple);
+      padding: 3.5rem 2rem;
+    }
+    .ics-cilc-audience__inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .ics-cilc-audience__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cert-teal-light);
+      margin-bottom: 0.8rem;
+      text-align: center;
+    }
+    .ics-cilc-audience__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--ics-white);
+      line-height: 1.35;
+      margin-bottom: 1.2rem;
+      text-align: center;
+    }
+    .ics-cilc-audience__body {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.85;
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto 2rem;
+    }
+    .ics-cilc-audience__traits {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 580px) {
+      .ics-cilc-audience__traits { grid-template-columns: 1fr; }
+    }
+    .ics-cilc-audience__trait {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      padding: 1.1rem 1.2rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 8px;
+    }
+    .ics-cilc-audience__trait-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--cert-teal-light);
+      margin-top: 2px;
+    }
+    .ics-cilc-audience__trait-text {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.6;
+    }
+
+    /* ============================= */
+    /* HOW IT WORKS                  */
+    /* ============================= */
+    .ics-cilc-how {
+      background: var(--ics-purple-deep);
+      padding: 3.5rem 2rem;
+      text-align: center;
+    }
+    .ics-cilc-how__inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .ics-cilc-how__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cert-teal-light);
+      margin-bottom: 0.8rem;
+    }
+    .ics-cilc-how__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--ics-white);
+      line-height: 1.35;
+      margin-bottom: 1rem;
+    }
+    .ics-cilc-how__body {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.85;
+      margin-bottom: 2rem;
+    }
+    .ics-cilc-how__steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    @media (max-width: 580px) {
+      .ics-cilc-how__steps { grid-template-columns: 1fr; gap: 1rem; }
+    }
+    .ics-cilc-how__step {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      padding: 1.4rem 1rem;
+    }
+    .ics-cilc-how__step-num {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cert-teal-light);
+      margin-bottom: 0.5rem;
+    }
+    .ics-cilc-how__step-text {
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.6;
+    }
+
+    /* ============================= */
+    /* CTA BANNER                    */
+    /* ============================= */
+    .ics-cilc-cta {
+      background: #FAF7F2;
+      padding: 3.5rem 2rem;
+      text-align: center;
+    }
+    .ics-cilc-cta__inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .ics-cilc-cta__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 2.8vw, 1.85rem);
+      font-weight: 700;
+      color: var(--ics-purple);
+      line-height: 1.35;
+      margin-bottom: 0.8rem;
+    }
+    .ics-cilc-cta__text {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      color: #5c5550;
+      line-height: 1.75;
+      margin-bottom: 1.8rem;
+    }
+    .ics-cilc-cta__actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem;
+    }
+
+    /* ============================= */
+    /* BUTTONS (shared)              */
+    /* ============================= */
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    /* ===================== */
+    /* MOBILE RESPONSIVE     */
+    /* ===================== */
+    @media (max-width: 767px) {
+
+      .ics-cilc-header { padding: 2.5rem 1.25rem 2rem; }
+      .ics-cilc-header__title { font-size: 1.8rem; }
+
+      .ics-cilc-overview { padding: 3rem 1.25rem; }
+      .ics-cilc-overview__columns { flex-direction: column; }
+      .ics-cilc-overview__sidebar { margin-top: 1.5rem; }
+
+      .ics-cilc-courses { padding: 3rem 1.25rem; }
+      .ics-course-card { padding: 1.2rem; }
+
+      .ics-cilc-audience { padding: 3rem 1.25rem; }
+      .ics-cilc-audience__traits { grid-template-columns: 1fr; }
+
+      .ics-cilc-how { padding: 3rem 1.25rem; }
+      .ics-cilc-how__steps { grid-template-columns: 1fr; }
+
+      .ics-cilc-cta { padding: 3rem 1.25rem; }
+      .ics-cilc-cta__heading { font-size: 1.4rem; }
+      .ics-cilc-cta__actions { flex-direction: column; gap: 0.75rem; }
+      .ics-cilc-cta__actions 
+    }
+
+    /* Touch-friendly targets */
+    @media (hover: none) and (pointer: coarse) {
+      
+    }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalCredential",
+  "name": "Christian Instructional Leadership Certificate",
+  "description": "The CILC equips Christian educators with skills in inclusive learning and instructional leadership. A stackable certificate toward the MWS-E degree.",
+  "url": "https://education.icscanada.edu/cilc/",
+  "credentialCategory": "Professional Certificate",
+  "recognizedBy": {
+    "@type": "EducationalOrganization",
+    "name": "Institute for Christian Studies",
+    "url": "https://icscanada.edu"
+  }
+}
+</script>
+</head>
+<body>
+<div id="site-header"></div>
+<noscript>
+  <nav style="background:#2D1854;padding:1rem 2rem;">
+    <a href="/" style="color:#fff;margin-right:1rem;">Home</a>
+    <a href="/mwse/" style="color:#fff;margin-right:1rem;">MWS-E</a>
+    <a href="/mael/" style="color:#fff;margin-right:1rem;">MA-EL</a>
+    <a href="/educator-certificates/" style="color:#fff;margin-right:1rem;">Certificates</a>
+    <a href="/courses/" style="color:#fff;margin-right:1rem;">Courses</a>
+    <a href="/faculty/" style="color:#fff;margin-right:1rem;">Faculty</a>
+    <a href="/admission/" style="color:#fff;">Admission</a>
+  </nav>
+</noscript>
+
+<!-- Mobile Menu Overlay -->
+
+<div class="ics-cilc">
+
+  <!-- ===== PAGE HEADER ===== -->
+  <header class="ics-cilc-header">
+    <div class="ics-cilc-header__inner">
+      <a href="/educator-certificates/" class="ics-cilc-header__back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        Back to Educator Certificates
+      </a>
+      <div><span class="ics-cilc-header__badge">CILC</span></div>
+      <h1 class="ics-cilc-header__title">Christian Instructional<br>Leadership <em>Certificate</em></h1>
+      <p class="ics-cilc-header__subtitle">A four-course graduate certificate for classroom teachers seeking to deepen their faith-informed teaching practice.</p>
+    </div>
+  </header>
+
+  <!-- ===== OVERVIEW ===== -->
+  <section class="ics-cilc-overview">
+    <div class="ics-cilc-overview__inner">
+      <div class="ics-cilc-overview__columns">
+
+        <div class="ics-cilc-overview__text">
+          <p>The Christian Instructional Leadership Certificate (CILC) is an ICS-issued professional credential designed for K–12 classroom teachers who desire to deepen their Christian worldview in the context of their teaching practice.</p>
+          <p>Through four graduate-level courses, the CILC equips educators to integrate faith and practice, meet the needs of all learners, and cultivate a growth mindset grounded in a biblical vision of education. Each course also counts as graduate credit toward the MA-EL or MWS-E.</p>
+        </div>
+
+        <div class="ics-cilc-overview__sidebar">
+          <p class="ics-cilc-overview__sidebar-title">Quick Facts</p>
+          <div class="ics-cilc-overview__sidebar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>4 graduate-level courses required</span>
+          </div>
+          <div class="ics-cilc-overview__sidebar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Issued directly by ICS</span>
+          </div>
+          <div class="ics-cilc-overview__sidebar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>For classroom teachers</span>
+          </div>
+          <div class="ics-cilc-overview__sidebar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Gateway to the MA-EL &amp; MWS-E</span>
+          </div>
+          <div class="ics-cilc-overview__sidebar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>All courses delivered online</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="ics-divider">
+    <div class="ics-divider__line"></div>
+    <div class="ics-divider__diamond"></div>
+    <div class="ics-divider__line"></div>
+  </div>
+
+  <!-- ===== REQUIRED COURSES ===== -->
+  <section class="ics-cilc-courses">
+    <div class="ics-cilc-courses__inner">
+
+      <div class="ics-cilc-courses__heading-section">
+        <p class="ics-cilc-courses__eyebrow">Required Courses</p>
+        <h2 class="ics-cilc-courses__main-heading">Four Courses to Complete the CILC</h2>
+        <p class="ics-cilc-courses__intro">Complete all four required courses below. One alternate is available as noted.</p>
+      </div>
+
+      <!-- Course 1 -->
+      <div class="ics-course-card">
+        <div class="ics-course-card__inner">
+          <svg class="ics-course-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+          <div class="ics-course-card__content">
+            <span class="ics-course-card__label ics-course-card__label--required">Required</span>
+            <p class="ics-course-card__name"><a href="/courses/#course-called-to-teach" style="color:inherit;text-decoration:none;">Called to Teach: From Formation to Transformation</a></p>
+            <p class="ics-course-card__desc">Explore your vocation as an educator, reflecting on teaching practice in the context of faith and spiritual disciplines. An inner journey designed to inspire refreshment and renewal in your work within Christian education.</p>
+            <div class="ics-course-card__tags">
+              <span class="ics-course-card__tag">CILC Required</span>
+              <span class="ics-course-card__tag--muted ics-course-card__tag">CSTC Area 2 &amp; 3</span>
+              <span class="ics-course-card__tag--muted ics-course-card__tag">Summer Term</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 2 -->
+      <div class="ics-course-card">
+        <div class="ics-course-card__inner">
+          <svg class="ics-course-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <div class="ics-course-card__content">
+            <span class="ics-course-card__label ics-course-card__label--required">Required</span>
+            <p class="ics-course-card__name"><a href="/courses/#course-christian-deeper-learning" style="color:inherit;text-decoration:none;">Deeper Learning: From Wonder to Inquiry to Practice</a></p>
+            <p class="ics-course-card__desc">Explore learning as a journey from wonder to inquiry to action. Develop Deeper Learning within the context of celebrating the learner as image-bearer, mindful learning design, and a responsiveness to culture.</p>
+            <div class="ics-course-card__tags">
+              <span class="ics-course-card__tag">CILC Required</span>
+              <span class="ics-course-card__tag--muted ics-course-card__tag">Winter Term</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 3 -->
+      <div class="ics-course-card">
+        <div class="ics-course-card__inner">
+          <svg class="ics-course-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <div class="ics-course-card__content">
+            <span class="ics-course-card__label ics-course-card__label--required">Required</span>
+            <p class="ics-course-card__name"><a href="/courses/#course-cultivating-learning-communities" style="color:inherit;text-decoration:none;">Cultivating Learning Communities of Belonging</a></p>
+            <p class="ics-course-card__desc">Explore school and classroom cultures, including social and cultural contexts, racial justice, Indigenous perspectives, human sexuality, and restorative practices — and how these topics impact and form school and classroom cultures.</p>
+            <div class="ics-course-card__tags">
+              <span class="ics-course-card__tag">CILC &amp; CSAC Required</span>
+              <span class="ics-course-card__tag--muted ics-course-card__tag">CSTC Area 3</span>
+              <span class="ics-course-card__tag--muted ics-course-card__tag">Fall Term</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 4 -->
+      <div class="ics-course-card">
+        <div class="ics-course-card__inner">
+          <svg class="ics-course-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          <div class="ics-course-card__content">
+            <span class="ics-course-card__label ics-course-card__label--required">Required</span>
+            <p class="ics-course-card__name"><a href="/courses/#course-lead-from-where-you-are" style="color:inherit;text-decoration:none;">Lead From Where You Are</a></p>
+            <p class="ics-course-card__desc">Explore positional and contributory leadership, algorithmic and heuristic practices, and the work of motivating a group of people to shape what they share — making beneficial change happen and ensuring needed maintenance.</p>
+            <div class="ics-course-card__tags">
+              <span class="ics-course-card__tag">CILC &amp; CSAC Required</span>
+              <span class="ics-course-card__tag--muted ics-course-card__tag">CSTC Area 2</span>
+              <span class="ics-course-card__tag--muted ics-course-card__tag">Summer Term</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alternate -->
+      <div class="ics-course-card">
+        <div class="ics-course-card__inner">
+          <svg class="ics-course-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          <div class="ics-course-card__content">
+            <span class="ics-course-card__label ics-course-card__label--alternate">Alternate</span>
+            <p class="ics-course-card__name"><a href="/courses/#course-transformative-teaching" style="color:inherit;text-decoration:none;">Transformative Teaching: The Practice of Christ-Centred Education</a></p>
+            <p class="ics-course-card__desc">An alternate for Deeper Learning. Consider your role as a Christian educator called to be a transformer of society and culture. Examines constructivism through the lens of Scripture and explores Christian practices within teaching.</p>
+            <div class="ics-course-card__tags">
+              <span class="ics-course-card__tag--muted ics-course-card__tag">Can replace Deeper Learning</span>
+              <span class="ics-course-card__tag--muted ics-course-card__tag">CSTC Area 2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="ics-courses-note">Note: Transformative Teaching: The Practice of Christ-Centred Education may be taken in place of Deeper Learning. All CILC courses also count as graduate credit toward the MA-EL or MWS-E.</p>
+
+    </div>
+  </section>
+
+  <!-- ===== WHO IS IT FOR ===== -->
+  <section class="ics-cilc-audience">
+    <div class="ics-cilc-audience__inner">
+      <p class="ics-cilc-audience__eyebrow">Who Is It For?</p>
+      <h2 class="ics-cilc-audience__heading">Designed for Classroom Teachers</h2>
+      <p class="ics-cilc-audience__body">The CILC is designed for K–12 educators who are committed to growing as instructional leaders in their schools and classrooms.</p>
+      <div class="ics-cilc-audience__traits">
+        <div class="ics-cilc-audience__trait">
+          <svg class="ics-cilc-audience__trait-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          <span class="ics-cilc-audience__trait-text">Desire to deepen your Christian worldview in the context of teaching</span>
+        </div>
+        <div class="ics-cilc-audience__trait">
+          <svg class="ics-cilc-audience__trait-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          <span class="ics-cilc-audience__trait-text">Committed to integrating faith and instructional practice</span>
+        </div>
+        <div class="ics-cilc-audience__trait">
+          <svg class="ics-cilc-audience__trait-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          <span class="ics-cilc-audience__trait-text">Passionate about meeting the needs of all learners</span>
+        </div>
+        <div class="ics-cilc-audience__trait">
+          <svg class="ics-cilc-audience__trait-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          <span class="ics-cilc-audience__trait-text">Growth mindset and a desire to practice student-led learning</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="ics-cilc-how">
+    <div class="ics-cilc-how__inner">
+      <p class="ics-cilc-how__eyebrow">How It Works</p>
+      <h2 class="ics-cilc-how__heading">Earning Your CILC</h2>
+      <p class="ics-cilc-how__body">The CILC is administered and issued directly by ICS. Complete four courses and receive your certificate.</p>
+      <div class="ics-cilc-how__steps">
+        <div class="ics-cilc-how__step">
+          <p class="ics-cilc-how__step-num">Step 1</p>
+          <p class="ics-cilc-how__step-text">Register for CILC courses through the ICS Academic Registrar.</p>
+        </div>
+        <div class="ics-cilc-how__step">
+          <p class="ics-cilc-how__step-num">Step 2</p>
+          <p class="ics-cilc-how__step-text">Complete all four required courses (one alternate is available).</p>
+        </div>
+        <div class="ics-cilc-how__step">
+          <p class="ics-cilc-how__step-num">Step 3</p>
+          <p class="ics-cilc-how__step-text">Receive your CILC from ICS, and continue toward a master's degree if you choose.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="ics-cilc-cta">
+    <div class="ics-cilc-cta__inner">
+      <h2 class="ics-cilc-cta__heading">Ready to Start?</h2>
+      <p class="ics-cilc-cta__text">Contact the ICS Academic Registrar to register for a course, or explore our degree programs to see how the CILC can serve as your gateway to a master's degree.</p>
+      <div class="ics-cilc-cta__actions">
+        <a href="mailto:academic-registrar@icscanada.edu" class="ics-btn ics-btn--primary-on-light">Email the Registrar →</a>
+        <a href="/mwse/" class="ics-btn ics-btn--outline-on-light">Explore the MWS-E →</a>
+        <a href="/educator-certificates/" class="ics-btn ics-btn--outline-on-light">← Back to Certificates</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div id="site-footer"></div>
+<script src="/js/includes.js"></script>
+</body>
+</html>
