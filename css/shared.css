@@ -67,8 +67,60 @@ html, body {
 .ics-btn--teal { background: var(--cert-teal); color: var(--ics-white); }
 .ics-btn--teal:hover { background: var(--cert-teal-light); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(91,164,164,0.3); }
 
+.ics-btn--ghost {
+  background: transparent;
+  color: var(--ics-purple);
+  border: 2px solid var(--ics-border-light);
+}
+.ics-btn--ghost:hover {
+  border-color: var(--ics-purple);
+  background: rgba(45, 24, 84, 0.04);
+}
+
+.ics-btn--ghost-light {
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.8);
+}
+.ics-btn--ghost-light:hover {
+  border-color: rgba(255,255,255,0.5);
+  color: var(--ics-white);
+}
+
+.ics-btn--mael {
+  background: var(--ics-orange);
+  color: var(--ics-purple-deep);
+  border: 2px solid var(--ics-orange);
+}
+.ics-btn--mael:hover {
+  background: #D4944A;
+  border-color: #D4944A;
+}
+
+.ics-btn--mwse {
+  background: var(--ics-red);
+  color: var(--ics-white);
+  border: 2px solid var(--ics-red);
+}
+.ics-btn--mwse:hover {
+  background: #A83222;
+  border-color: #A83222;
+}
+
+.ics-btn--accent-on-dark { background: var(--ics-red); color: var(--ics-white); }
+.ics-btn--accent-on-dark:hover { background: var(--ics-red-light); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(200,60,44,0.3); }
+
+/* Doubled selector beats page-wrapper wildcard resets (.ics-page * { padding: 0 }) */
+.ics-btn.ics-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.9em 2.2em;
+  text-decoration: none;
+}
+
 @media (max-width: 600px) {
-  .ics-btn { font-size: 0.92rem; padding: 0.8em 1.6em; }
+  .ics-btn.ics-btn { font-size: 0.92rem; padding: 0.8em 1.6em; }
 }
 
 /* Section 4 — Header & Navigation */

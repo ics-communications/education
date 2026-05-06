@@ -24,6 +24,18 @@
 <meta name="twitter:description" content="A thesis-based Master of Arts for Christian educators ready to contribute original research to the field of educational leadership.">
   
   <style>
+    /* Page-specific button overrides */
+    .ics-btn--primary { background: var(--mael-accent); color: var(--ics-purple); }
+    .ics-btn--primary:hover { background: var(--mael-accent-light); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(241,171,106,0.35); }
+    .ics-btn--outline:hover { border-color: var(--ics-white); background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+    .ics-btn--outline-on-light:hover { border-color: var(--ics-purple); background: rgba(45,24,84,0.04); transform: translateY(-2px); }
+    .ics-btn--accent-on-dark { background: var(--mael-accent); color: var(--ics-purple); }
+    .ics-btn--accent-on-dark:hover { background: var(--mael-accent-light); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(241,171,106,0.3); }
+    @media (max-width: 767px) {
+      .ics-mael-hero__cta-row .ics-btn { width: 100%; max-width: 300px; text-align: center; }
+      .ics-cta-banner__actions .ics-btn { width: 100%; max-width: 300px; text-align: center; }
+    }
+
 .ics-mael *,
     .ics-mael *::before,
     .ics-mael *::after { 

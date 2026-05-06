@@ -22,6 +22,14 @@
 <meta name="twitter:description" content="A flexible, online master's degree integrating Christian worldview with educational practice. Complete in 2 years part-time while working full-time.">
   
   <style>
+    /* Page-specific button overrides */
+    .ics-btn--outline:hover { border-color: var(--ics-white); background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+    .ics-btn--outline-on-light:hover { border-color: var(--ics-purple); background: rgba(45,24,84,0.04); transform: translateY(-2px); }
+    @media (max-width: 767px) {
+      .ics-mwse-hero__cta-row .ics-btn { width: 100%; max-width: 300px; text-align: center; }
+      .ics-cta-banner__actions .ics-btn { width: 100%; max-width: 300px; text-align: center; }
+    }
+
 .ics-mwse *,
     .ics-mwse *::before,
     .ics-mwse *::after { 

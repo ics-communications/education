@@ -24,6 +24,25 @@
 <meta name="twitter:description" content="The CSAC prepares Christian educators for school administration and leadership roles. A stackable certificate toward the MWS-E degree.">
   
   <style>
+    /* Page-specific button overrides */
+    .ics-btn { display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.75em 1.6em;
+      border-radius: 4px;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none; }
+    .ics-btn--ghost-light:hover { border-color: rgba(255,255,255,0.5);
+      color: var(--ics-white); }
+    @media (max-width: 767px) {
+      .ics-csac-cta__actions .ics-btn { width: 100%; max-width: 300px; text-align: center; }
+    }
+
 .ics-csac *, .ics-csac *::before, .ics-csac *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     .ics-csac {

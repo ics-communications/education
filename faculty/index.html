@@ -22,6 +22,12 @@
 <meta name="twitter:description" content="Meet the faculty of ICS educational leadership programs. Experienced Christian educators and scholars committed to faith-integrated learning.">
   
   <style>
+    /* Page-specific button overrides */
+    .ics-btn--outline:hover { border-color: var(--ics-white); background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+    @media (max-width: 767px) {
+      .ics-cta-banner__actions .ics-btn { width: 100%; max-width: 300px; text-align: center; }
+    }
+
 .page-section:last-child .content-wrapper,
     .page-section .content-wrapper {
       padding-bottom: 0 !important;

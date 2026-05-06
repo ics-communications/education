@@ -24,6 +24,47 @@
 <meta name="twitter:description" content="The CSTC develops a distinctly Christian approach to teaching and curriculum. A stackable certificate toward the MWS-E degree.">
 
   <style>
+    /* Page-specific button overrides */
+    .ics-btn { display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.9em 1.8em;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 2px solid transparent; }
+    .ics-btn--primary { background: var(--ics-white);
+      color: var(--ics-purple);
+      border-color: var(--ics-white); }
+    .ics-btn--primary:hover { background: var(--page-accent-light);
+      border-color: var(--page-accent-light);
+      color: var(--ics-purple-deep); }
+    .ics-btn--outline { background: transparent;
+      color: var(--ics-white);
+      border-color: rgba(255,255,255,0.4); }
+    .ics-btn--outline:hover { border-color: var(--ics-white);
+      background: rgba(255,255,255,0.08); }
+    .ics-btn--mael { background: var(--mael-accent);
+      color: var(--ics-purple-deep);
+      border-color: var(--mael-accent); }
+    .ics-btn--mael:hover { background: var(--mael-accent-dark);
+      border-color: var(--mael-accent-dark); }
+    .ics-btn--mwse { background: var(--mwse-accent);
+      color: var(--ics-white);
+      border-color: var(--mwse-accent); }
+    .ics-btn--mwse:hover { background: var(--mwse-accent-dark);
+      border-color: var(--mwse-accent-dark); }
+    .ics-btn--ghost { background: transparent;
+      color: var(--ics-purple);
+      border-color: var(--ics-border-light); }
+    .ics-btn--ghost:hover { border-color: var(--ics-purple);
+      background: rgba(45, 24, 84, 0.04); }
+
 .ics-admissions *,
     .ics-admissions *::before,
     .ics-admissions *::after {

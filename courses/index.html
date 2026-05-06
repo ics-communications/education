@@ -24,6 +24,13 @@
 <meta name="twitter:description" content="Browse the full course catalogue for ICS educational leadership programs. Graduate-level courses in Christian worldview, pedagogy, and school leadership.">
   
   <style>
+    /* Page-specific button overrides */
+    .ics-btn { display: inline-flex; align-items: center; font-family: var(--font-sans); font-size: 0.88rem; font-weight: 600; padding: 0.7em 1.4em; border-radius: 4px; text-decoration: none; transition: all 0.2s; cursor: pointer; border: none; }
+    .ics-btn--outline-on-light:hover { border-color: var(--ics-purple); background: rgba(45, 24, 84, 0.04); }
+    @media (max-width: 480px) {
+      .ics-catl-cta__actions .ics-btn { width: 100%; max-width: 280px; justify-content: center; }
+    }
+
 .ics-catl *, .ics-catl *::before, .ics-catl *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     .ics-catl {

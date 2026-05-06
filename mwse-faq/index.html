@@ -24,6 +24,14 @@
 <meta name="twitter:description" content="Answers to common questions about the MWS-E program at ICS, including admissions, tuition, course format, and degree requirements.">
 
   <style>
+    /* Page-specific button overrides */
+    .ics-btn--outline:hover { border-color: var(--ics-white); background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+    .ics-btn--outline-on-light:hover { border-color: var(--ics-purple); background: rgba(45,24,84,0.04); transform: translateY(-2px); }
+    @media (max-width: 767px) {
+      .ics-faq-contact__actions .ics-btn { width: 100%; max-width: 300px; text-align: center; }
+      .ics-cta-banner__actions .ics-btn { width: 100%; max-width: 300px; text-align: center; }
+    }
+
 .ics-faq *,
     .ics-faq *::before,
     .ics-faq *::after {
