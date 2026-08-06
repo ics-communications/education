@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en-CA"><head>
+<meta charset="UTF-8">
+<title>Graduate Programs in Educational Leadership — 8-page Booklet</title>
+<meta name="description" content="Print-ready 8-page recruitment booklet for the ICS MWS-E and MA-EL programs. Trim 5.5×8.5in, bleed 0.125in, artboard 5.75×8.75in.">
+<!-- Fonts are vendored into edu-booklet/fonts/ and declared with font-display:block.
+     PLAN §7.3: no network dependency at render time. A print render must be
+     reproducible offline and byte-identical on re-run. -->
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+/* ════════════════════════════════════════════════════════════════════════
+   ICS EDUCATION — 8pp Recruitment Booklet (MWS-E · MA-EL)
+   Trim 5.5 × 8.5 in · Bleed 0.125 in · Artboard 5.75 × 8.75 in
+   Safe area 0.375 in from artboard edge (0.25 in inside trim)
+   Spine-side margin 0.5 in from artboard edge:
+       spine = LEFT on odd pages (p1 p3 p5 p7) · RIGHT on even (p2 p4 p6 p8)
+   Single pages in reading order — the printer imposes.
+   ════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Brand — education.icscanada.edu (css/shared.css) */
+  --purple:       #2D1854;
+  --purple-deep:  #1F0F3D;
+  --purple-mid:   #3D2468;
+  --red:          #C83C2C;
+  --red-ink:      #B03426;   /* darkened brand red — small type on cream-dark only */
+  --orange:       #F1AB6A;
+  --orange-dark:  #D89450;
+  --orange-ink:   #A0561F;   /* darkened brand orange — small type on cream only */
+  --cream:        #FAF7F2;
+  --cream-dark:   #F0EBE3;
+  --on-dark:      #E4DFD6;
+  --ink:          #3A3330;
+  --ink-soft:     #6B615B;
+
+  /* Text scale — four steps, floor 7.5pt (tracked caps only). Nothing below 8pt
+     carries running copy. See PLAN §3. */
+  --t-eyebrow: 7.5pt;   /* tracked uppercase only */
+  --t-label:   8pt;     /* stat labels, captions, fine print */
+  --t-sm:      8.5pt;   /* secondary prose */
+  --t-body:    9.5pt;   /* body, stat values, block titles */
+
+  --display: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  --text:    'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Block-interval scale — governs the space BETWEEN major blocks on a page.
+     Roughly 1.6× per step, so two adjacent steps are always tellable apart at
+     arm's length. Components keep their own optically-tuned internal padding;
+     this scale is not a global spacing reset. Rule: intervals inside one voice
+     use sp-4 or tighter, a change of voice uses sp-5 or wider. */
+  --sp-1: 0.06in;
+  --sp-2: 0.10in;
+  --sp-3: 0.16in;
+  --sp-4: 0.26in;
+  --sp-5: 0.42in;
+  --sp-6: 0.68in;
+
+  --bleed:  0.125in;
+  --safe:   0.375in;   /* from artboard edge */
+  --spine:  0.5in;     /* from artboard edge, binding side */
+  --page-w: 5.75in;
+  --page-h: 8.75in;
+}
+
+@page { size: 5.75in 8.75in; margin: 0; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: #2b2b2b;
+  font-family: var(--text);
+  color: var(--ink);
+  hyphens: none;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4in;
+  padding: 0.5in 0;
+}
+
+.page {
+  position: relative;
+  width: var(--page-w);
+  height: var(--page-h);
+  background: var(--cream);
+  overflow: hidden;
+  page-break-after: always;
+  break-after: page;
+  box-shadow: 0 12px 50px rgba(0,0,0,0.35);
+}
+.page:last-child { page-break-after: auto; break-after: auto; }
+
+/* ──── Screen-only guides ──── */
+.page::before, .page::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  z-index: 9999;
+}
+.page::before { inset: var(--bleed); outline: 1px dashed rgba(255,80,80,0.55); }   /* trim */
+.page::after  { inset: var(--safe);  outline: 1px dashed rgba(80,200,120,0.4); }   /* safe */
+
+@media print {
+  .page::before, .page::after { display: none; }
+  .book { gap: 0; padding: 0; background: none; }
+  html, body { background: #fff; }
+  .page { box-shadow: none; }
+}
+
+/* ──── Safe-area container (asymmetric: spine side gets 0.5in) ──── */
+.safe-area {
+  position: absolute;
+  top: var(--safe);
+  bottom: var(--safe);
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+}
+.page--odd  .safe-area { left: var(--spine); right: var(--safe);  }  /* spine LEFT  */
+.page--even .safe-area { left: var(--safe);  right: var(--spine); }  /* spine RIGHT */
+
+/* ════════════════════════ Type primitives ════════════════════════ */
+/* 0.22em put the letter gap at ~0.28em against a 0.43em word space — 1.5:1, at which
+   point long strings stop reading as words and become a dotted band. 0.16em + word
+   spacing restores ~2:1 and shortens the 50-character eyebrows by 6%. */
+.eyebrow {
+  font-family: var(--text);
+  font-size: var(--t-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  word-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.dsp {
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.014em;
+  color: var(--purple);
+}
+.dsp em { font-style: italic; font-weight: 400; }
+
+/* Libre Baskerville is a text face pushed to display: its sidebearings are cut for
+   9–11pt and read progressively loose as size rises, so tracking tightens with size. */
+.d-cover { font-size: 40pt; line-height: 1.06; letter-spacing: -0.022em; }
+.d-lg    { font-size: 24pt; line-height: 1.16; }
+
+/* Measure is capped on every prose role: at 8–9.5pt the full 4.875in column runs
+   82–101 characters, well past the 45–75ch band. Leading rises with measure.
+   Outfit is a geometric sans doing text work — a touch of positive tracking opens
+   the counters for a 40+ reader in bad light. */
+.body {
+  font-family: var(--text);
+  font-size: var(--t-body);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--ink);
+  max-width: 4.15in;
+  letter-spacing: 0.006em;
+}
+.caption   { font-family: var(--text); font-size: var(--t-label); line-height: 1.45; letter-spacing: 0.006em; color: var(--ink-soft); }
+.quote {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--t-body);
+  line-height: 1.55;
+  color: var(--purple);
+  max-width: 3.7in;
+}
+.body, .quote, .dist, .pillar__body, .step__body, .fac__cred,
+.prog__statnote, .p7__prereq, .p7__notready p, .p8__credential { text-wrap: pretty; }
+
+/* Stat label — one shared primitive; pages recolour it via --acc-ink */
+.lbl {
+  font-family: var(--text);
+  font-size: var(--t-label);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+/* ──── Signature motif: 7px 45° red diamond flanked by hairlines ──── */
+.dia-rule {
+  display: flex;
+  align-items: center;
+  gap: 0.075in;
+}
+.dia-rule i {
+  width: 7px; height: 7px;
+  background: var(--red);
+  transform: rotate(45deg);
+  flex: 0 0 auto;
+}
+.dia-rule span {
+  height: 1px;
+  background: rgba(45,24,84,0.22);
+}
+.dia-rule--left span:first-of-type { width: 0.22in; flex: 0 0 auto; }
+.dia-rule--left span:last-of-type  { flex: 1 1 auto; }
+.dia-rule--center span { flex: 1 1 auto; }
+.dia-rule--short span:first-of-type { width: 0.22in; flex: 0 0 auto; }
+.dia-rule--short span:last-of-type  { width: 0.7in; flex: 0 0 auto; }
+.on-dark .dia-rule span, .dia-rule--dark span { background: rgba(228,223,214,0.28); }
+
+/* ──── Signature motif: 3px offset accent frame behind a photo ──── */
+.framed { position: relative; display: block; }
+.framed::before {
+  content: '';
+  position: absolute;
+  left: 0.055in; top: 0.055in; right: -0.055in; bottom: -0.055in;
+  border: 3px solid var(--frame, var(--red));
+  z-index: 0;
+}
+.framed img { position: relative; z-index: 1; display: block; }
+
+/* ══════════════════════════════════════════════════════════════════ */
+/* P1 — FRONT COVER                                                    */
+/* ══════════════════════════════════════════════════════════════════ */
+.p1 { background: var(--purple-deep); color: var(--on-dark); }
+.p1__photo {
+  position: absolute; inset: 0;
+  background-image: url('img/seminar-table.jpg');
+  background-size: cover;
+  background-position: 56% 42%;
+  filter: saturate(0.3) contrast(1.1) brightness(1.06);
+  z-index: 0;
+}
+/* Purple duotone scrim */
+.p1__duotone {
+  position: absolute; inset: 0;
+  background: var(--purple);
+  mix-blend-mode: multiply;
+  opacity: 0.7;
+  z-index: 1;
+}
+.p1__grade {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg,
+    rgba(31,15,61,0.78) 0%,
+    rgba(31,15,61,0.30) 26%,
+    rgba(31,15,61,0.55) 55%,
+    rgba(31,15,61,0.93) 82%,
+    rgba(31,15,61,0.98) 100%);
+  z-index: 2;
+}
+.p1 .safe-area { justify-content: space-between; color: var(--on-dark); }
+.p1__eyebrow { color: rgba(241,171,106,0.92); }
+.p1__lockup { margin-top: auto; }
+.p1__head { color: #FFFFFF; }
+.p1__head em { color: var(--orange); }
+.p1__rule { margin: 0.16in 0 0.14in; width: 2.1in; }
+.p1__sub {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 11pt;
+  line-height: 1.48;
+  letter-spacing: 0.008em;
+  color: rgba(238,234,228,0.96);
+  max-width: 3.9in;
+}
+.p1__foot {
+  margin-top: 0.42in;
+  padding-top: 0.16in;
+  border-top: 1px solid rgba(228,223,214,0.22);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.18in;
+}
+.p1__foot-text {
+  font-family: var(--text);
+  font-size: var(--t-label);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: rgba(232,228,220,0.9);
+  max-width: 3.0in;
+}
+.p1__logo { width: 1.55in; height: auto; display: block; flex: 0 0 auto; }
+
+/* ══════════════════════════════════════════════════════════════════ */
+/* P2 — WHY ICS                                                        */
+/* ══════════════════════════════════════════════════════════════════ */
+.p2 { background: var(--cream); }
+.p2__photo {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 3.55in;
+  background-image: url('img/library-research.jpg');
+  background-size: cover;
+  background-position: center 58%;
+  filter: saturate(0.5) contrast(1.02);
+  z-index: 0;
+}
+.p2__photo-tint {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 3.55in;
+  background: var(--purple);
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+  z-index: 1;
+}
+.p2__photo-fade {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 3.55in;
+  background: linear-gradient(180deg,
+    rgba(250,247,242,1) 0%,
+    rgba(250,247,242,0) 32%,
+    rgba(31,15,61,0.10) 70%,
+    rgba(31,15,61,0.34) 100%);
+  z-index: 2;
+}
+.p2 .safe-area { bottom: 3.65in; }   /* clears the fade, which reaches full cream at 32% */
+.p2__eyebrow { color: var(--red); }
+.p2__head { margin-top: 0.08in; }
+.p2__head em { color: var(--red); }
+.p2__sub {
+  margin-top: 0.1in;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 11pt;
+  line-height: 1.35;
+  color: var(--purple-mid);
+  max-width: 4.4in;
+}
+.p2__rule { margin: 0.14in 0; }
+.p2__body { }
+.p2__pillars {
+  margin-top: var(--sp-5);   /* header cluster ends, the four reasons begin */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.26in;
+  row-gap: 0.34in;
+}
+.pillar { border-top: 1.5px solid rgba(45,24,84,0.18); padding-top: 0.13in; }
+.pillar__mark {
+  width: 6px; height: 6px;
+  background: var(--red);
+  transform: rotate(45deg);
+  margin-bottom: 0.08in;
+}
+.pillar__title {
+  font-family: var(--text);
+  font-size: var(--t-body);
+  font-weight: 700;
+  letter-spacing: 0.005em;
+  line-height: 1.2;
+  color: var(--purple);
+}
+.pillar__body {
+  margin-top: 0.08in;
+  font-family: var(--text);
+  font-size: var(--t-sm);
+  line-height: 1.45;
+  letter-spacing: 0.006em;
+  color: var(--ink-soft);
+}
+
+/* ══════════════════════════════════════════════════════════════════ */
+/* P3 — BUILT AROUND YOUR SCHOOL YEAR                                  */
+/* ══════════════════════════════════════════════════════════════════ */
+.p3 { background: var(--cream); }
+/* The distill freed ~2.7in here. `space-between` spent it as three gaps of
+   0.821in — mathematically even, which is the same as having no rhythm: the
+   fact panel and the testimonial read as equal weights when the panel IS the
+   page's argument. Now the panel takes most of that space as internal air and
+   leads, and the one wide interval falls at the single change of voice
+   (data → a student speaking). Reads 0.42 / 0.76 / 0.42 down the page. */
+.p3 .safe-area { justify-content: flex-start; }
+.p3 .factpanel   { margin-top: var(--sp-5); }
+.p3 .testimonial { margin-top: auto; }        /* surplus lands at the voice change */
+.p3 .paths       { margin-top: var(--sp-5); }
+.p3__lockup > .p3__head { margin-top: 0.08in; }
+.p3__lockup > .p3__intro { margin-top: 0.12in; }
+.p3__eyebrow { color: var(--red); }
+.p3__head em { color: var(--red); }
+
+
+.factpanel {
+  background: var(--cream-dark);
+  border-left: 3px solid var(--purple);
+  padding: 0.26in 0.26in 0.27in;
+}
+.factrow {
+  display: grid;
+  grid-template-columns: 1.05in 1fr;
+  gap: 0.1in;
+  padding: 0.115in 0;
+  border-bottom: 1px solid rgba(45,24,84,0.1);
+  align-items: baseline;
+}
+.factrow:last-of-type { border-bottom: 0; }
+.factrow__label { color: var(--red-ink); }
+.factrow__value {
+  font-family: var(--text);
+  font-size: var(--t-body);
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--purple);
+}
+
+.testimonial { padding-left: 0.2in; border-left: 2px solid var(--red); }
+.nb { white-space: nowrap; }
+.testimonial__attr {
+  margin-top: 0.1in;
+  font-family: var(--text);
+  font-size: var(--t-sm);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  max-width: 4.0in;
+  color: var(--ink-soft);
+}
+
+.paths { margin-top: 0; }
+.paths__cta {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 11pt;
+  line-height: 1.3;
+  color: var(--red);
+}
+.paths__cta::after { content: ' \2192'; font-style: normal; }
+
+/* ══════════════════════════════════════════════════════════════════ */
+/* P4 · P5 — CENTER SPREAD (mirrored program pages)                    */
+/* ══════════════════════════════════════════════════════════════════ */
+.p4, .p5 { background: var(--cream-dark); }
+/* --acc = graphic accent (rules, diamonds, hairlines) · --acc-ink = same accent
+   darkened for small type on cream, so the MA-EL page reads as strongly as MWS-E */
+.p4 { --acc: #C83C2C; --acc-lt: #E8896B; --acc-ink: #B03426; }
+.p5 { --acc: #D89450; --acc-lt: #F1AB6A; --acc-ink: #A0561F; }
+
+/* Top band — full bleed, identical height on both pages (same press sheet) */
+.prog__band-top {
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 2.35in;
+  background: var(--purple);
+  z-index: 1;
+}
+/* Accent hairline at the band foot — full bleed and a crossover, so it must be ONE
+   colour on both halves or it changes colour at the fold. Program accents live in
+   the eyebrow, labels and diamonds instead. */
+.prog__band-top::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 2.5px;
+  background: var(--red);
+}
+
+.prog__head {
+  position: absolute;
+  top: var(--safe);
+  height: calc(2.35in - var(--safe) - 0.18in);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 4;
+  color: var(--on-dark);
+}
+.p4 .prog__head { left: var(--safe);  right: var(--spine); }
+.p5 .prog__head { left: var(--spine); right: var(--safe);  }
+.prog__eyebrow { color: var(--acc-lt); }
+.prog__mark {
+  margin-top: 0.07in;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 36pt;
+  line-height: 1;
+  letter-spacing: 0.005em;
+  color: #FFFFFF;
+}
+.prog__headline {
+  margin-top: 0.09in;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 15pt;
+  line-height: 1.24;
+  color: var(--on-dark);
+}
+.prog__headline em { font-style: italic; color: var(--acc-lt); }
+
+/* Body column between the two bands */
+.prog__body {
+  position: absolute;
+  top: 2.35in; bottom: 1.55in;
+  padding-top: 0.2in;
+  padding-bottom: 0.14in;
+  display: flex;
+  flex-direction: column;
+  z-index: 4;
+}
+.p4 .prog__body { left: var(--safe);  right: var(--spine); }
+.p5 .prog__body { left: var(--spine); right: var(--safe);  }
+
+.prog__who { color: var(--ink); }
+.prog__stats { margin-top: 0.2in; }
+.statrow {
+  display: grid;
+  grid-template-columns: 1.02in 1fr;
+  gap: 0.09in;
+  padding: 0.054in 0;
+  border-bottom: 1px solid rgba(45,24,84,0.12);
+  align-items: baseline;
+}
+.statrow__label { color: var(--acc-ink, var(--acc)); }
+.statrow__value {
+  font-family: var(--text);
+  font-size: var(--t-body);
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--purple);
+}
+.prog__statnote {
+  margin-top: 0.1in;
+  font-size: var(--t-label);
+  line-height: 1.48;
+  letter-spacing: 0.006em;
+  max-width: 3.6in;
+  color: var(--ink-soft);
+}
+.prog__dist { margin-top: 0.19in; display: flex; flex-direction: column; gap: 0.115in; }
+.dist {
+  font-family: var(--text);
+  font-size: var(--t-sm);
+  line-height: 1.5;
+  letter-spacing: 0.006em;
+  max-width: 4.0in;
+  color: var(--ink);
+  padding-left: 0.17in;
+  position: relative;
+}
+.dist::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0.045in;
+  width: 6px; height: 6px;
+  background: var(--acc);
+  transform: rotate(45deg);
+}
+.dist b { font-weight: 700; color: var(--purple); }
+/* A URL reads as a URL — no tracking, no caps */
+.prog__cta {
+  margin-top: auto;
+  padding-top: 0.12in;
+  font-family: var(--text);
+  font-size: var(--t-label);
+  font-weight: 600;
+  color: var(--acc-ink, var(--acc));
+  line-height: 1.4;
+}
+
+/* Bottom crossover band — continuous colour, no text across the fold.
+   Fixed padding-top (not centring) so the course line sits at the SAME height on
+   both halves of the spread; P5 carries a hidden eyebrow to hold that slot open. */
+.prog__band {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1.55in;
+  background: var(--purple-deep);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 0.26in;
+  padding-bottom: var(--safe);
+}
+.p4 .prog__band { padding-left: var(--safe);  padding-right: var(--spine); }
+.p5 .prog__band { padding-left: var(--spine); padding-right: var(--safe);  }
+.prog__band-eyebrow { color: var(--orange); margin-bottom: 0.08in; }
+.prog__band-eyebrow--ghost { visibility: hidden; }   /* holds the slot on P5 */
+.prog__courses {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: var(--t-body);
+  line-height: 1.5;
+  letter-spacing: 0.012em;
+  max-width: 4.0in;
+  color: var(--on-dark);
+}
+.prog__courses span { color: var(--orange); font-style: normal; padding: 0 0.02in; }
+.prog__band-cap {
+  margin-top: 0.11in;
+  font-family: var(--text);
+  font-size: var(--t-label);
+  line-height: 1.45;
+  letter-spacing: 0.008em;
+  color: rgba(228,223,214,0.92);
+}
+
+/* ══════════════════════════════════════════════════════════════════ */
+/* P6 — FACULTY                                                        */
+/* ══════════════════════════════════════════════════════════════════ */
+.p6 { background: var(--cream); }
+.p6 .safe-area { gap: 0.1in; }
+.p6__eyebrow { color: var(--red); }
+.p6__head em { color: var(--red); }
+
+
+.p6__faculty { margin-top: var(--sp-3); display: flex; flex-direction: column; gap: 0.28in; }
+.fac {
+  display: grid;
+  grid-template-columns: 0.78in 1fr;
+  column-gap: 0.22in;
+  align-items: start;
+}
+.fac .framed { --frame: var(--red); width: 0.78in; }
+.fac img { width: 0.78in; height: 0.78in; object-fit: cover; background: var(--cream-dark); }
+.fac__name {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 11pt;
+  line-height: 1.15;
+  color: var(--purple);
+}
+/* Sentence case, not tracked caps — the title supports the name, it does not outshout it */
+.fac__title {
+  margin-top: 0.04in;
+  font-family: var(--text);
+  font-size: var(--t-label);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--red-ink);
+}
+.fac__cred {
+  margin-top: 0.05in;
+  font-family: var(--text);
+  font-size: var(--t-sm);
+  line-height: 1.48;
+  letter-spacing: 0.006em;
+  color: var(--ink-soft);
+}
+.fac__cred i { font-family: var(--display); font-style: italic; }
+
+.p6__testimonial {
+  margin-top: auto;
+  background: var(--cream-dark);
+  border-top: 2px solid var(--red);
+  padding: 0.19in 0.21in 0.2in;
+}
+.p6__testimonial .dia-rule { margin-bottom: 0.14in; }
+
+/* ══════════════════════════════════════════════════════════════════ */
+/* P7 — COST, AID & HOW TO APPLY                                       */
+/* ══════════════════════════════════════════════════════════════════ */
+.p7 { background: var(--cream); }
+/* Was `gap: 0.088in` on every break plus a 1.062in hole above the QR grid — four
+   intervals that meant nothing and one that looked like a mistake. The steps are
+   the only thing on this page that asks the reader to act, so the prerequisite
+   fine print attaches to them (sp-2) and the response block gets the page's one
+   wide interval. */
+.p7 .safe-area { gap: 0; }
+.p7__head    { margin-top: 0.08in; }
+.p7 .money   { margin-top: 0.22in; }
+.p7 .steps   { margin-top: 0.22in; }
+.p7__eyebrow { color: var(--red); }
+.p7__head em { color: var(--red); }
+
+.money {
+  background: var(--purple);
+  color: var(--on-dark);
+  padding: 0.16in 0.17in 0.15in;
+}
+.money .moneyrow {
+  display: grid;
+  grid-template-columns: 1.2in 1fr;
+  gap: 0.08in;
+  padding: 0.075in 0;
+  border-bottom: 1px solid rgba(228,223,214,0.16);
+  align-items: baseline;
+}
+.money .moneyrow:last-of-type { border-bottom: 0; }
+.moneyrow__label { color: var(--orange); letter-spacing: 0.14em; }
+.moneyrow__value {
+  font-family: var(--text);
+  font-size: var(--t-body);
+  font-weight: 500;
+  line-height: 1.3;
+  color: #FFFFFF;
+}
+.steps { display: flex; flex-direction: column; gap: 0.13in; }
+.step {
+  display: grid;
+  grid-template-columns: 0.28in 1fr;
+  column-gap: 0.08in;
+  align-items: baseline;
+  padding-bottom: 0.09in;
+  border-bottom: 1px dotted rgba(45,24,84,0.2);
+}
+.step:last-child { border-bottom: 0; padding-bottom: 0; }
+.step__num {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 15pt;
+  line-height: 1;
+  font-variant-numeric: lining-nums;
+  color: rgba(200,60,44,0.75);
+}
+.step__title {
+  font-family: var(--text);
+  font-size: var(--t-body);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--purple);
+}
+.step__body {
+  margin-top: 0.03in;
+  font-family: var(--text);
+  font-size: var(--t-sm);
+  line-height: 1.48;
+  letter-spacing: 0.006em;
+  color: var(--ink-soft);
+}
+.p7__prereq { margin-top: var(--sp-2); font-size: var(--t-label); line-height: 1.5; letter-spacing: 0.006em; max-width: 3.7in; color: var(--ink-soft); }
+
+.p7__grid {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: 1.5in 1fr;
+  column-gap: 0.22in;
+  align-items: start;
+}
+.qrblock { text-align: left; }
+.qrblock__frame {
+  width: 1.0in; height: 1.0in;
+  background: #fff;
+  padding: 0.07in;
+  border: 1px solid rgba(45,24,84,0.18);
+}
+.qrblock__frame img { width: 100%; height: 100%; display: block; }
+.qrblock__cta {
+  margin-top: 0.09in;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 11pt;
+  line-height: 1.2;
+  color: var(--purple);
+}
+.qrblock__cap { margin-top: 0.045in; font-size: var(--t-label); line-height: 1.35; color: var(--ink-soft); }
+
+.deadlines__hd {
+  font-family: var(--text);
+  font-size: var(--t-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  word-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purple-mid);
+  padding-bottom: 0.06in;
+  border-bottom: 1.5px solid rgba(45,24,84,0.28);
+}
+.deadlines__row { padding: 0.085in 0; border-bottom: 1px solid rgba(45,24,84,0.1); }
+.deadlines__prog {
+  font-family: var(--text);
+  font-size: var(--t-body);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+.deadlines__row--mwse .deadlines__prog { color: var(--red-ink); }
+.deadlines__row--mael .deadlines__prog { color: var(--orange-ink); }
+.deadlines__dates {
+  margin-top: 0.03in;
+  font-family: var(--text);
+  font-size: var(--t-sm);
+  line-height: 1.35;
+  color: var(--purple);
+}
+
+.p7__notready {
+  margin-top: 0.15in;
+  padding-top: 0.13in;
+  border-top: 1.5px solid rgba(45,24,84,0.18);
+}
+.p7__notready h4 {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 11pt;
+  line-height: 1.24;
+  color: var(--red);
+  margin-bottom: 0.05in;
+}
+.p7__notready p { font-size: var(--t-sm); line-height: 1.48; letter-spacing: 0.006em; color: var(--ink-soft); }
+
+/* ══════════════════════════════════════════════════════════════════ */
+/* P8 — BACK COVER                                                     */
+/* ══════════════════════════════════════════════════════════════════ */
+.p8 { background: var(--purple-deep); color: var(--on-dark); }
+.p8__glow {
+  position: absolute;
+  top: -1.6in; left: 50%;
+  transform: translateX(-50%);
+  width: 6in; height: 5in;
+  background: radial-gradient(ellipse at center, rgba(200,60,44,0.26), rgba(200,60,44,0) 62%);
+  z-index: 0;
+}
+.p8 .safe-area { align-items: center; text-align: center; color: var(--on-dark); }
+.p8__logo { width: 1.7in; height: auto; display: block; }
+.p8__rule { width: 2.4in; margin: 0.22in 0 0.2in; }
+/* fixed, not auto — with two autos the surplus split into two equal holes and
+   neither break meant anything. The masthead break is unruled, so it takes the
+   surplus; this one already has a rule doing the separating. */
+.p8__rule--foot { margin-top: var(--sp-5); margin-bottom: 0; }
+.p8__head {
+  margin-top: auto;
+  line-height: 1.24;
+  color: #FFFFFF;
+}
+.p8__head em { color: var(--orange); }
+.p8__body {
+  margin-top: 0.15in;
+  font-family: var(--text);
+  font-size: var(--t-body);
+  line-height: 1.5;
+  letter-spacing: 0.006em;
+  color: rgba(232,228,220,0.94);
+  max-width: 3.8in;
+}
+.p8__qr {
+  margin-top: 0.28in;
+  width: 1.3in; height: 1.3in;
+  background: #fff;
+  padding: 0.07in;
+}
+.p8__qr img { width: 100%; height: 100%; display: block; }
+.p8__qr-cap {
+  margin-top: 0.1in;
+  font-family: var(--text);
+  font-size: var(--t-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  word-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.p8__url {
+  margin-top: 0.08in;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 18pt;
+  letter-spacing: -0.012em;
+  color: #FFFFFF;
+}
+.p8__contact {
+  /* fixed gap, NOT auto — the foot divider must read as attached to this block */
+  margin-top: 0.26in;
+  padding-top: 0;
+  font-family: var(--text);
+  font-size: var(--t-sm);
+  line-height: 1.55;
+  letter-spacing: 0.006em;
+  color: rgba(232,228,220,0.92);
+}
+.p8__contact strong {
+  display: block;
+  font-size: var(--t-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  word-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 0.05in;
+}
+.p8__program {
+  margin-top: 0.15in;
+  font-family: var(--text);
+  font-size: var(--t-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  word-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(232,228,220,0.9);
+}
+/* The credential line is the trust anchor of the whole piece — it does not whisper */
+.p8__credential {
+  margin-top: 0.16in;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: var(--t-sm);
+  line-height: 1.5;
+  letter-spacing: 0.012em;
+  color: rgba(232,228,220,0.92);
+  max-width: 3.5in;
+}
+.p8__figures {
+  margin-top: 0.1in;
+  font-family: var(--text);
+  font-size: var(--t-label);
+  letter-spacing: 0.01em;
+  color: rgba(228,223,214,0.86);
+}
+
+/* ──── Floating print helper (screen only) ──── */
+.print-bar {
+  position: fixed;
+  top: 12px; right: 12px;
+  background: #111; color: #fff;
+  font-family: var(--text);
+  font-size: 11px;
+  padding: 10px 14px;
+  display: flex; gap: 10px; align-items: center;
+  z-index: 99999;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+.print-bar button {
+  background: var(--red); color: #fff; border: 0;
+  padding: 6px 12px;
+  font-family: var(--text); font-weight: 600; font-size: 11px;
+  letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer;
+}
+.print-bar label { display: inline-flex; align-items: center; gap: 4px; cursor: pointer; user-select: none; }
+.no-guides .page::before, .no-guides .page::after { display: none; }
+@media print { .print-bar { display: none; } }
+</style>
+</head>
+<body style="">
+
+<div class="print-bar">
+  <strong>ICS Education · 8pp Booklet</strong>
+  <span>5.5×8.5 in · 0.125 in bleed</span>
+  <label><input type="checkbox" id="toggleGuides" checked=""> Show trim &amp; safe guides</label>
+  <button onclick="window.print()">Print / Save as PDF</button>
+</div>
+
+<div class="book" id="book">
+
+  <!-- ══════════════════════ P1 — FRONT COVER ══════════════════════ -->
+  <section class="page page--odd p1" aria-label="Front cover">
+    <div class="p1__photo"></div>
+    <div class="p1__duotone"></div>
+    <div class="p1__grade"></div>
+    <div class="safe-area">
+      <div class="eyebrow p1__eyebrow">Institute for Christian Studies · Toronto</div>
+
+      <div class="p1__lockup">
+        <h1 class="dsp d-cover p1__head"><br>Educational Leadership at ICS</h1><div class="dia-rule dia-rule--left dia-rule--dark p1__rule"><i></i><span></span></div>
+        <p class="p1__sub">Teaching is a practice shaped by faith, story, and the lives entrusted to our care.</p>
+
+        <div class="p1__foot">
+          <div class="p1__foot-text">Two Master’s Degrees in Educational Leadership · Fully Online</div>
+          <img class="p1__logo" src="img/ics-logo-white.webp" alt="Institute for Christian Studies">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ P2 — WHY ICS ══════════════════════ -->
+  <section class="page page--even p2" aria-label="Why ICS">
+    <div class="p2__photo"></div>
+    <div class="p2__photo-tint"></div>
+    <div class="p2__photo-fade"></div>
+    <div class="safe-area">
+      <div class="eyebrow p2__eyebrow">Why ICS</div>
+      <h2 class="dsp d-lg p2__head">A Different Kind<br>of Graduate School</h2>
+      <p class="p2__sub">Where Faith, Wisdom, and Educational Practice Intersect</p>
+      <div class="dia-rule dia-rule--short p2__rule"><span></span><i></i><span></span></div>
+      <p class="body p2__body">ICS courses invite Christian educators out of the daily rush and into a community that thinks deeply about practice and why it matters.</p>
+
+      <div class="p2__pillars">
+        <div class="pillar">
+          <div class="pillar__mark"></div>
+          <h3 class="pillar__title">Biblically Rooted</h3>
+          <p class="pillar__body">Grounded in the Reformational tradition, centred on the love embodied by Christ.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar__mark"></div>
+          <h3 class="pillar__title">Designed for Working Educators</h3>
+          <p class="pillar__body">Part-time and fully online. One course per term.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar__mark"></div>
+          <h3 class="pillar__title">Community of Practice</h3>
+          <p class="pillar__body">Reflective Christian educators who share your questions and sharpen your thinking.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar__mark"></div>
+          <h3 class="pillar__title">Accessible &amp; Affordable</h3>
+          <p class="pillar__body">$1,500 CAD per course, with a $500 CAD bursary every semester.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ P3 — BUILT AROUND YOUR SCHOOL YEAR ══════════════════════ -->
+  <section class="page page--odd p3" aria-label="Built around your school year">
+    <div class="safe-area">
+      <div class="p3__lockup">
+        <div class="eyebrow p3__eyebrow">Time · Money · Fit</div>
+        <h2 class="dsp d-lg p3__head">Built Around<br>Your School Year</h2>
+        <p class="body p3__intro">Courses follow the rhythms of a teaching year, so you can pursue graduate study without stepping away from the classroom.</p>
+      </div>
+
+      <div class="factpanel">
+        <div class="factrow"><div class="lbl factrow__label">Delivery</div><div class="factrow__value">Fully online. No Toronto visits required.</div></div>
+        <div class="factrow"><div class="lbl factrow__label">Format</div><div class="factrow__value">Part-time only · one course per term</div></div>
+        <div class="factrow"><div class="lbl factrow__label">Class time</div><div class="factrow__value">Asynchronous · ~6 live Zoom sessions per course</div></div>
+        <div class="factrow"><div class="lbl factrow__label">Cohort size</div><div class="factrow__value">Up to 12 students</div></div>
+        <div class="factrow"><div class="lbl factrow__label">July</div><div class="factrow__value">Summer courses pause so you can enjoy your break</div></div>
+        <div class="factrow"><div class="lbl factrow__label">Per course</div><div class="factrow__value">$1,500 CAD · $500 CAD per credit hour</div></div>
+        <div class="factrow"><div class="lbl factrow__label">Bursary</div><div class="factrow__value">$500 CAD per semester</div></div>
+      </div>
+
+      <blockquote class="testimonial">
+        <p class="quote">“Nothing I did at ICS felt like a make-work project. I’m astounded by how the ICS professors make online classes feel like a community — I miss classes.”</p>
+        <p class="testimonial__attr">Kevin Otter — Teacher since 2009, Northumberland Christian School <span class="nb">· MA‑EL student</span></p>
+      </blockquote>
+
+      <div class="paths">
+        <p class="paths__cta">Two programs, one community.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ P4 — MWS-E (left of centre spread) ══════════════════════ -->
+  <section class="page page--even p4" aria-label="Master of Worldview Studies in Education">
+    <div class="prog__band-top"></div>
+
+    <div class="prog__head">
+      <div class="eyebrow prog__eyebrow">Master of Worldview Studies in Education</div>
+      <div class="prog__mark">MWS-E</div>
+      <h2 class="prog__headline">Develop Your Practice,<br>Enhance Your Career</h2>
+    </div>
+
+    <div class="prog__body">
+      <p class="body prog__who">For teachers, department heads, and administrators who want to think more deeply about their practice while teaching full-time.</p>
+
+      <div class="prog__stats">
+        <div class="statrow"><div class="lbl statrow__label">Length</div><div class="statrow__value">~2 years part-time</div></div>
+        <div class="statrow"><div class="lbl statrow__label">Coursework</div><div class="statrow__value">6–7 courses</div></div>
+        <div class="statrow"><div class="lbl statrow__label">Capstone</div><div class="statrow__value">Action Project + paper, or major research paper</div></div>
+        <div class="statrow"><div class="lbl statrow__label">Net cost</div><div class="statrow__value">$7,000–$8,500 CAD</div></div>
+        <div class="statrow"><div class="lbl statrow__label">Starts</div><div class="statrow__value">Three per year</div></div>
+        <p class="prog__statnote">Net cost assumes the $500 semester bursary. Timelines assume a steady pace; you can take longer.</p>
+      </div>
+
+      <div class="prog__dist">
+        <p class="dist"><b>An Action Project in your own school</b> — apply your learning where you already teach, then reflect on it in a summative paper.</p>
+        <p class="dist"><b>Two ways to finish</b> — the Action Project, or a seventh course and a major research paper.</p>
+        <p class="dist"><b>Begin when your year allows</b> — entry points in Summer, Fall, and Winter.</p>
+      </div>
+
+      <div class="prog__cta">education.icscanada.edu/mwse</div>
+    </div>
+
+    <div class="prog__band">
+      <div class="eyebrow prog__band-eyebrow">Sample Courses</div>
+      <p class="prog__courses">·&nbsp;Called to Teach: From Formation to Transformation<span><br></span>·&nbsp;Lead From Where You Are</p>
+      <p class="prog__band-cap">Both programs draw on the same catalogue and the same community.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ P5 — MA-EL (right of centre spread) ══════════════════════ -->
+  <section class="page page--odd p5" aria-label="Master of Arts in Educational Leadership">
+    <div class="prog__band-top"></div>
+
+    <div class="prog__head">
+      <div class="eyebrow prog__eyebrow">Master of Arts (Philosophy) in Educational Leadership</div>
+      <div class="prog__mark">MA-EL</div>
+      <h2 class="prog__headline">Contribute to<br>the Conversation</h2>
+    </div>
+
+    <div class="prog__body">
+      <p class="body prog__who">For educators ready to go deeper: toward doctoral study, school administration, or original scholarship in Christian education.</p>
+
+      <div class="prog__stats">
+        <div class="statrow"><div class="lbl statrow__label">Length</div><div class="statrow__value">~3 years part-time</div></div>
+        <div class="statrow"><div class="lbl statrow__label">Coursework</div><div class="statrow__value">10 courses</div></div>
+        <div class="statrow"><div class="lbl statrow__label">Capstone</div><div class="statrow__value">Praxis &amp; Project · in a form you choose</div></div>
+        <div class="statrow"><div class="lbl statrow__label">Net cost</div><div class="statrow__value">~$17,000 CAD</div></div>
+        <div class="statrow"><div class="lbl statrow__label">Starts</div><div class="statrow__value">Two per year</div></div>
+        <p class="prog__statnote">Net cost assumes the $500 semester bursary. Timelines assume a steady pace; you can take longer.</p>
+      </div>
+
+      <div class="prog__dist">
+        <p class="dist"><b>Four concentrations</b> — Instructional Leadership, School Administration, Inclusion, and Literacy (the last two with Calvin University).</p>
+        <p class="dist"><b>A capstone you shape</b> — a curriculum, a playbook, a podcast series, a workshop, or a journal article.</p>
+        <p class="dist"><b>A foundation for doctoral study</b> — sustained original research under individualized faculty mentoring.</p>
+      </div>
+
+      <div class="prog__cta">education.icscanada.edu/mael</div>
+    </div>
+
+    <div class="prog__band">
+      <div class="eyebrow prog__band-eyebrow prog__band-eyebrow--ghost" aria-hidden="true">Sample Courses</div>
+      <p class="prog__courses">·&nbsp;Cultivating Learning Communities of Belonging<span><br></span>·&nbsp;What Is Christian About Christian Education?</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ P6 — FACULTY ══════════════════════ -->
+  <section class="page page--even p6" aria-label="Faculty">
+    <div class="safe-area">
+      <div class="eyebrow p6__eyebrow">Faculty</div>
+      <h2 class="dsp d-lg p6__head">Learn from Faculty<br>Who <em>Walk Alongside</em> You</h2>
+      <p class="body p6__intro">Four scholar-practitioners teach across both programs. In cohorts of up to twelve, they know your name and your school.</p>
+
+      <div class="p6__faculty">
+        <div class="fac">
+          <span class="framed"><img src="img/vanderboom.webp" alt="Dr. Edith van der Boom"></span>
+          <div>
+            <div class="fac__name">Dr. Edith van der Boom</div>
+            <div class="fac__title">Director, MA-EL &amp; MWS-E</div>
+            <div class="fac__cred">Author of <i>Cultivating Learning Communities of Belonging</i> (Cascade, 2026). PhD, University of Toronto.</div>
+          </div>
+        </div>
+
+        <div class="fac">
+          <span class="framed"><img src="img/strauss.webp" alt="Dr. Gideon Strauss"></span>
+          <div>
+            <div class="fac__name">Dr. Gideon Strauss</div>
+            <div class="fac__title">ICS Academic Dean</div>
+            <div class="fac__cred">Teaches reflective practice and leadership.</div>
+          </div>
+        </div>
+
+        <div class="fac">
+          <span class="framed"><img src="img/deroo.webp" alt="Dr. Neal DeRoo"></span>
+          <div>
+            <div class="fac__name">Dr. Neal DeRoo</div>
+            <div class="fac__title">Professor of Philosophy</div>
+            <div class="fac__cred">Leads professional development with Christian day-school teachers. Author of <i>Material Spirituality</i> (Bloomsbury, 2026).</div>
+          </div>
+        </div>
+
+        <div class="fac">
+          <span class="framed"><img src="img/ansell.webp" alt="Dr. Nik Ansell"></span>
+          <div>
+            <div class="fac__name">Dr. Nik Ansell</div>
+            <div class="fac__title">Associate Professor of Theology</div>
+            <div class="fac__cred">Teaches Biblical Foundations.</div>
+          </div>
+        </div>
+      </div>
+
+      <blockquote class="p6__testimonial">
+        <div class="dia-rule dia-rule--short"><span></span><i></i><span></span></div>
+        <p class="quote">“Doing it online meant I could fit a master’s program into the busyness of our life — I have four children with their own things going on. When I was seeking out the principal role, I had messages of prayer from my classmates.”</p>
+        <p class="testimonial__attr">Carolyn Bentum — Principal, Cairn Christian School <span class="nb">· MA‑EL student</span></p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ P7 — COST, AID & HOW TO APPLY ══════════════════════ -->
+  <section class="page page--odd p7" aria-label="Cost, aid and how to apply">
+    <div class="safe-area">
+      <div class="eyebrow p7__eyebrow">Cost, Aid &amp; How to Apply</div>
+      <h2 class="dsp d-lg p7__head">An Investment<br><em>Within Reach</em></h2>
+
+      <div class="money">
+        <div class="moneyrow"><div class="lbl moneyrow__label">Per course</div><div class="moneyrow__value">$1,500 CAD · 3 credit hours</div></div>
+        <div class="moneyrow"><div class="lbl moneyrow__label">Bursary</div><div class="moneyrow__value">$500 CAD per semester</div></div>
+        <div class="moneyrow"><div class="lbl moneyrow__label">Colleagues</div><div class="moneyrow__value">$100 CAD off each · 2+ educators, same school, same course</div></div>
+        <div class="moneyrow"><div class="lbl moneyrow__label">PD funding</div><div class="moneyrow__value">Your school’s PD budget may apply · ask your principal</div></div>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step__num">1</div>
+          <div>
+            <div class="step__title">Submit the inquiry form</div>
+            <div class="step__body">Scan the code below. Your name, your email, your questions. Two minutes.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__num">2</div>
+          <div>
+            <div class="step__title">Hear from the Academic Registrar</div>
+            <div class="step__body">A reply within two business days, with next steps for your program.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__num">3</div>
+          <div>
+            <div class="step__title">Complete your application</div>
+            <div class="step__body">Purpose statement, transcripts, three references, and a writing sample.</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="p7__prereq">Admission requires a four-year bachelor’s degree (or equivalent) with a B+ average, plus proficiency in English. Full requirements at education.icscanada.edu/admission.</p>
+
+      <div class="p7__grid">
+        <div class="qrblock">
+          <div class="qrblock__frame"><img src="img/qr-education.png" alt="QR code to education.icscanada.edu"></div>
+          <div class="qrblock__cta">Start the conversation</div>
+          <p class="qrblock__cap">education.icscanada.edu</p>
+        </div>
+
+        <div class="deadlines">
+          <div class="deadlines__hd">Application Deadlines</div>
+          <div class="deadlines__row deadlines__row--mwse">
+            <div class="deadlines__prog">MWS-E</div>
+            <div class="deadlines__dates">Apr 1 (Summer) · Aug 1 (Fall) · Dec 1 (Winter)</div>
+          </div>
+          <div class="deadlines__row deadlines__row--mael">
+            <div class="deadlines__prog">MA-EL</div>
+            <div class="deadlines__dates">Apr 1 (Summer or Fall) · Nov 1 (Winter or Summer)</div>
+          </div>
+          <div class="p7__notready">
+            <h4>&nbsp;</h4>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ P8 — BACK COVER ══════════════════════ -->
+  <section class="page page--even p8" aria-label="Back cover">
+    <div class="p8__glow"></div>
+    <div class="safe-area">
+      <img class="p8__logo" src="img/ics-logo-white.webp" alt="Institute for Christian Studies">
+      <div class="dia-rule dia-rule--center dia-rule--dark p8__rule"><span></span><i></i><span></span></div>
+
+      <h2 class="dsp d-lg p8__head">Ready to Think<br>Deeper About<br>Your Calling?</h2>
+      <p class="p8__body">Applications are open for Summer, Fall, and Winter starts. Take the next step in your journey as a Christian educator.</p>
+
+      <div class="p8__qr"><img src="img/qr-education.png" alt="QR code to education.icscanada.edu"></div>
+      <div class="p8__qr-cap">Scan to start the conversation</div>
+      <div class="p8__url">education.icscanada.edu</div>
+
+      <div class="dia-rule dia-rule--center dia-rule--dark p8__rule p8__rule--foot"><span></span><i></i><span></span></div>
+
+      <div class="p8__contact">
+        <strong>Academic Registrar</strong>
+        academic-registrar@icscanada.edu<br>
+        1-888-326-5347<br>
+        59 St. George Street, Toronto ON M5S 2E6
+      </div>
+
+      <div class="p8__program">Graduate Programs in Educational Leadership — MWS-E · MA-EL</div>
+
+      <p class="p8__credential">ICS is a graduate school in the Reformational tradition, affiliated with the University of Toronto through the Toronto School of Theology, granting degrees under a charter of the Ontario Legislature.</p>
+      <p class="p8__figures">All figures in Canadian dollars and subject to change.</p>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  document.getElementById('toggleGuides').addEventListener('change', function (e) {
+    document.getElementById('book').classList.toggle('no-guides', !e.target.checked);
+  });
+</script>
+
+
+
+</body></html>

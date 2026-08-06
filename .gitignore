@@ -1,0 +1,6 @@
+# Playwright render/measure harness for edu-booklet (21MB of node_modules)
+.render/
+
+# macOS AppleDouble resource forks
+._*
+.DS_Store
