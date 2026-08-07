@@ -123,7 +123,7 @@ One idea: **the logistics objection, killed.** Free space is distributed evenly 
 | Per course | $1,500 · $500 per credit hour |
 | Bursary | $500 per semester (as available) |
 
-## Testimonial — Kevin Otter
+## Testimonial — Kevin Otter · portrait `img/otter.webp`
 
 > "Nothing I did at ICS felt like a make-work project. I'm astounded by how the ICS professors make online classes feel like a community — I miss classes."
 
@@ -224,7 +224,7 @@ and Dr. Green took the fourth slot — `img/green.webp`, cropped square to match
 *Dr. van der Boom carries both titles, professorial above director, so a reader can tell what she is
 a professor of.*
 
-## Testimonial — Carolyn Bentum
+## Testimonial — Carolyn Bentum · portrait `img/bentum.webp`
 
 > "Doing it online meant I could fit a master's program into the busyness of our life — I have four children with their own things going on. When I was seeking out the principal role, I had messages of prayer from my classmates."
 

@@ -412,6 +412,13 @@ html, body {
 
 .testimonial { padding-left: 0.2in; border-left: 2px solid var(--red); }
 .nb { white-space: nowrap; }
+
+/* Testimonial portrait — the faculty photos' 3px offset frame, two-thirds their size.
+   A quote is carried by the words; the face is corroboration, so it sits smaller than
+   the faculty headshots and never leads the block. */
+.tst { display: grid; grid-template-columns: 0.68in 1fr; column-gap: 0.24in; align-items: start; }
+.tst .framed { --frame: var(--red); width: 0.68in; }
+.tst img { width: 0.68in; height: 0.68in; object-fit: cover; display: block; background: var(--cream-dark); }
 .testimonial__attr {
   margin-top: 0.1in;
   font-family: var(--text);
@@ -1018,8 +1025,13 @@ html, body {
       </div>
 
       <blockquote class="testimonial">
-        <p class="quote">“Nothing I did at ICS felt like a make-work project. I’m astounded by how the ICS professors make online classes feel like a community — I miss classes.”</p>
-        <p class="testimonial__attr">Kevin Otter — Teacher since 2009, Northumberland Christian School <span class="nb">· MA‑EL student</span></p>
+        <div class="tst">
+          <span class="framed"><img src="img/otter.webp" alt="Kevin Otter"></span>
+          <div>
+            <p class="quote">“Nothing I did at ICS felt like a make-work project. I’m astounded by how the ICS professors make online classes feel like a community — I miss classes.”</p>
+            <p class="testimonial__attr">Kevin Otter — Teacher since 2009, Northumberland Christian School <span class="nb">· MA‑EL student</span></p>
+          </div>
+        </div>
       </blockquote>
 
       <div class="paths">
@@ -1148,8 +1160,13 @@ html, body {
 
       <blockquote class="p6__testimonial">
         <div class="dia-rule dia-rule--short"><span></span><i></i><span></span></div>
-        <p class="quote">“Doing it online meant I could fit a master’s program into the busyness of our life — I have four children with their own things going on.”</p>
-        <p class="testimonial__attr">Carolyn Bentum — Principal, Cairn Christian School <span class="nb">· MA‑EL student</span></p>
+        <div class="tst">
+          <span class="framed"><img src="img/bentum.webp" alt="Carolyn Bentum"></span>
+          <div>
+            <p class="quote">“Doing it online meant I could fit a master’s program into the busyness of our life — I have four children with their own things going on.”</p>
+            <p class="testimonial__attr">Carolyn Bentum — Principal, Cairn Christian School <span class="nb">· MA‑EL student</span></p>
+          </div>
+        </div>
       </blockquote>
     </div>
   </section>

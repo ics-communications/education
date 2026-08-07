@@ -126,7 +126,15 @@ The course is being rethought as Nik Ansell transitions out, and Dr. van der Boo
 
 ### 9. Does David belong on the faculty page — in the booklet, on the site, or both?
 
-He is now teaching the Biblical Foundations course that Nik Ansell taught, which is the reason Nik came off P6. No instruction was given to add him. Flagged so the omission is a decision rather than an oversight.
+He is now teaching the Biblical Foundations course that Nik Ansell taught, which is the reason Nik
+came off P6 and off `/faculty/`. No instruction was given to add him. Flagged so the omission is a
+decision rather than an oversight.
+
+**A side-effect worth knowing about:** three pages named Nik Ansell as the instructor of Biblical
+Foundations and linked to his (now removed) faculty anchor — `/courses/`, `/mwse-design/` and
+`/mael-design/`. Naming a departed instructor is worse than naming none, so **the attribution was
+removed from all three**. The course itself is untouched. Give me David's details and the line goes
+back, correctly.
 
 **Who can answer:** Program Director.
 
@@ -142,9 +150,31 @@ The review call moved **programme enquiries** to Dr. van der Boom — done in th
 
 ---
 
+### 11. Dr. Beth Green's `/faculty/` profile is a stub, and her email address is a guess
+
+She is on the faculty page now, in the slot Nik Ansell vacated. Her entry carries only what is
+known for certain: name, **Associate Professor of Education**, **President, Institute for Christian
+Studies**, and the photograph. Every other profile on that page also carries a credentials line, a
+"Vision" statement, and an expandable panel of courses, research interests and publications. Hers
+has none of them, so beside a full-height portrait it reads as unfinished — which it is.
+
+**What's needed:** degrees and awarding institutions, two or three sentences of vision in her own
+words, courses she teaches or will teach, research interests, and two or three selected
+publications. Also a `faculty.icscanada.edu` profile URL if she has one — the existing four all
+link out, and the slug pattern is inconsistent enough that it can't be guessed.
+
+**And confirm the email.** `bgreen@icscanada.edu` is published on the page but it is **derived from
+the pattern**, not verified — the other four profiles are all first-initial-plus-surname
+(`evanderboom`, `gstrauss`, `nderoo`, `nansell`). If it's wrong, an enquiry from a prospective
+student bounces silently. This is a one-minute check and worth doing today.
+
+**Who can answer:** Dr. Green / Academic Dean.
+
+---
+
 ## Assets required from ICS
 
-### 11. A portrait cover photograph with a woman in it — the current one prints at 156 dpi
+### 12. A portrait cover photograph with a woman in it — the current one prints at 156 dpi
 
 `img/seminar-table.jpg` is 2048 × 1365 px, a 3:2 **landscape** image on a 5.75 × 8.75 in **portrait** artboard. Under `background-size: cover` the crop is height-driven: 1365 px spanning 8.75 in = **156 dpi**, or 52% of the 300 dpi print spec, on the largest and most scrutinised surface in the piece. Everything else is healthy — headshots run 1,122–1,504 dpi, logos 529–581 dpi, QR codes 625–715 dpi.
 
@@ -160,19 +190,27 @@ Also on the current image: a legible third-party trademark (a Patagonia cap logo
 
 ---
 
-### 12. Headshots of Kevin Otter and Carolyn Bentum
+### 13. Kevin Otter — student or graduate?
 
-To sit beside their quotes on P3 and P6 — the request from the review call was to make the testimonials "more real". Same spec as the faculty photos: square crop, ≥ 240 px, plain background. **Not yet in the build**; the quotes currently run without portraits.
+His portrait on P3 is a convocation photograph: regalia, hood, ceremony. The attribution beside
+it still reads **"MA-EL student."** If he has since graduated, the photo and the caption are
+telling a reader two different things, and the stronger of the two is going unclaimed — a
+graduate's endorsement carries more than a current student's.
+
+Carolyn Bentum's attribution has the same question behind it, though her photograph doesn't
+raise it.
+
+**Who can answer:** Program Director.
 
 ---
 
-### 13. A revised Kevin Otter quote
+### 14. A revised Kevin Otter quote
 
 The current P3 quote was assembled by AI from an interview transcript and reads as two spliced thoughts. Dr. van der Boom is rewriting it. Until the replacement arrives the existing text stands.
 
 ---
 
-### 14. A vector ICS logo, if one exists
+### 15. A vector ICS logo, if one exists
 
 Every logo in the piece is raster, max 1200 px wide. That is fine at the sizes used (529–581 dpi effective), so this is a nice-to-have rather than a defect — but if an SVG or EPS master exists anywhere, swapping it in costs nothing.
 
@@ -182,7 +220,7 @@ Every logo in the piece is raster, max 1200 px wide. That is fine at the sizes u
 
 | Item | Command | Blocked on |
 |---|---|---|
-| Five of eight pages carry no photography | `/impeccable layout` | item 11 |
+| Five of eight pages carry no photography | `/impeccable layout` | item 12 |
 | `.webp` assets → JPEG/PNG for the print pipeline | `/impeccable harden` | nothing |
 | QR quiet zones are 2.4–2.75 modules against the 4-module spec | `/impeccable harden` | nothing |
 | Flatten `mix-blend-mode` / filters / gradients for PDF/X-1a | `/impeccable harden` | printer's answer on PDF/X-1a vs high-quality PDF |
@@ -201,7 +239,8 @@ Every logo in the piece is raster, max 1200 px wide. That is fine at the sizes u
 | **Both programs start three times a year** — Fall, Winter, Summer — and carry the same three application deadlines. The MA-EL's two-start pattern was stale policy. | P4/P5 stat rows, P7 deadline grid, P8 body — **see item 5 for the form dependency** |
 | **Dr. van der Boom is the contact**, not the Academic Registrar. It builds the relationship, it takes work off Parker, and it means an enquiry reaches one named person rather than an office that reads as bigger than it is. | P7 step 2, P8 contact block, apply and FAQ pages — **see item 10 for what stayed with the Registrar** |
 | **Both her titles print** — professorial title above the director title, so a reader knows what she is a professor *of*. Taken from the faculty page: *Associate Professor of Philosophy of Education and Practice of Pedagogy*. Worth a glance to confirm it is current. | P6 |
-| **Nik Ansell comes off the faculty page, Dr. Beth Green goes on** — Associate Professor of Education, President of ICS. Her headshot is cropped square to match the other three and the page is back to four. Worth confirming her rank still reads that way after Academic Council meets in September. | P6 |
+| **Nik Ansell comes off, Dr. Beth Green goes on** — Associate Professor of Education, President of ICS. Her headshot is cropped square to match the other three and the page is back to four. Applied on `/faculty/` as well: Nik's profile removed, hers added in the slot he vacated. Worth confirming her rank still reads that way after Academic Council meets in September. | P6 · `/faculty/` |
+| **Both testimonials now carry a portrait** — Kevin Otter on P3, Carolyn Bentum on P6, in the same offset red frame as the faculty photos but two-thirds the size, so the face corroborates the quote rather than leading it. | P3, P6 |
 | **The QR codes are correct** — both resolve to `education.icscanada.edu`, which is the right destination. Sending a reader who wants information to an application form would be the wrong one. | P7, P8 |
 | **The MA-EL attribution on both testimonials is fine as it stands.** An MWS-E voice would be better, but the programme is in its first year and there are no graduates to quote. Relabelling the existing quotes as "education graduate student" was considered and judged unnecessary. | P3, P6 |
 | **No mailing address or telephone number on the back cover** — nobody uses them, and they push the two email addresses down the page. | P8 |
@@ -214,7 +253,6 @@ Every logo in the piece is raster, max 1200 px wide. That is fine at the sizes u
 
 These came out of the same call and have owners outside this file.
 
-- **Dr. Beth Green is on the booklet's faculty page but not on `/faculty/`**, which still lists Nik Ansell and carries no entry for her. The site was left alone because it was not asked for — say the word and it follows in one pass, headshot included.
 - **The website heading should eventually become "Graduate Programs in Education"** to match the booklet. Not urgent, and not done — the booklet is the piece with a press deadline.
 - **A monthly email to the ICS list.** September is course promotion; other months are programme promotion. Dr. van der Boom is drafting a month-by-month plan for feedback. The stated priority is unambiguous: **fill courses first, programme applications second** — teachers taking a course for professional development are the target, and programme students come out of that pool.
 - **Leave Biblical Foundations out of the September email** — full, not running next year, and about to be renamed. See item 8.
