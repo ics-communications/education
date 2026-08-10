@@ -45,7 +45,7 @@ Every hedge is stated **once, in one place**. Currency and "subject to change" l
 
 # P1 — Front cover
 
-Full-bleed seminar photo, purple duotone + gradient scrim. Must read at arm's length across a conference table.
+Full-bleed photograph (`img/evdb-launch.jpg` — Dr. van der Boom in conversation at her book launch), purple duotone + gradient scrim. Must read at arm's length across a conference table.
 
 **EYEBROW**
 > Institute for Christian Studies · Toronto
@@ -192,9 +192,11 @@ Mirrored layouts. Identical slots, identical order, so comparison happens across
 
 - **P4 courses:** Called to Teach: From Formation to Transformation · Lead From Where You Are
 - **P5 courses:** Cultivating Learning Communities of Belonging · What Is Christian About Christian Education?
-- **P4 caption:** Both programs draw on the same catalogue and the same community.
+- **P5 caption:** Both programs draw on the same catalogue and the same community.
 
-*The caption sits on P4 because P5's course titles run two lines; this keeps the two band halves at comparable depth.*
+*The caption sits on P5. It is a spread-level sentence, and with both it and the "Sample Courses"
+label on the left half, the band's right third was empty purple. Label anchors the left, caption
+anchors the right, course titles run between them across the fold.*
 
 ---
 

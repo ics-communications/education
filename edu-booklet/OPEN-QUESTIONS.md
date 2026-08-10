@@ -174,19 +174,26 @@ student bounces silently. This is a one-minute check and worth doing today.
 
 ## Assets required from ICS
 
-### 12. A portrait cover photograph with a woman in it — the current one prints at 156 dpi
+### 12. Two things to confirm about the new cover photograph
 
-`img/seminar-table.jpg` is 2048 × 1365 px, a 3:2 **landscape** image on a 5.75 × 8.75 in **portrait** artboard. Under `background-size: cover` the crop is height-driven: 1365 px spanning 8.75 in = **156 dpi**, or 52% of the 300 dpi print spec, on the largest and most scrutinised surface in the piece. Everything else is healthy — headshots run 1,122–1,504 dpi, logos 529–581 dpi, QR codes 625–715 dpi.
+The cover is now `img/evdb-launch.jpg` — Dr. van der Boom at her book launch, in conversation, cropped
+from `assets/images/evdb-launch.jpg`. It answers everything that was open about the old one: portrait
+crop at **400 dpi** both ways (the old `seminar-table.jpg` printed at 156 dpi, 52% of spec), women in
+frame, a real conversation rather than a posed shot, and the crop takes the venue's "The Villages"
+banner logo out of frame — a third-party trademark, which is what the old Patagonia cap was.
 
-Confirmed in the review call as a placeholder, with three requirements:
+Two things only ICS can settle:
 
-- **A woman in the frame.** Most ICS education students are women; the current cover is two men.
-- **A conversation, not a posed shot** — the argument of the piece is a community of practice.
-- **≥ 2625 px tall**, or a portrait crop from a ≥ 2625 px original.
+1. **Permission.** Several attendees are identifiable, not only Dr. van der Boom. An internal event
+   photograph is usually fine for ICS's own collateral, but the cover of a printed recruitment piece is
+   a further use than a newsletter, and it is worth being sure.
+2. **Does the room read right?** Muted under the duotone, but the setting is a book-launch reception and
+   most of the visible attendees are older than the teachers this piece is recruiting. The foreground
+   trio reads as professional women in conversation, which is the argument the cover needs to make; the
+   background reads as an event, not a classroom or a seminar. Worth a second opinion from someone who
+   has not been staring at it.
 
-Also on the current image: a legible third-party trademark (a Patagonia cap logo) on the subject.
-
-**Known candidate:** interview stills of Carolyn Bentum exist, but on a purple background that fights the cover treatment. Retreat photography is the other source — and the education cohort's attendance at the retreat is itself thin, which is worth solving for reasons beyond this cover.
+`img/seminar-table.jpg` is now unused by the booklet. It is still referenced by the website.
 
 ---
 
@@ -220,7 +227,7 @@ Every logo in the piece is raster, max 1200 px wide. That is fine at the sizes u
 
 | Item | Command | Blocked on |
 |---|---|---|
-| Five of eight pages carry no photography | `/impeccable layout` | item 12 |
+| Four of eight pages still carry no photography | `/impeccable layout` | nothing — cover has landed |
 | `.webp` assets → JPEG/PNG for the print pipeline | `/impeccable harden` | nothing |
 | QR quiet zones are 2.4–2.75 modules against the 4-module spec | `/impeccable harden` | nothing |
 | Flatten `mix-blend-mode` / filters / gradients for PDF/X-1a | `/impeccable harden` | printer's answer on PDF/X-1a vs high-quality PDF |

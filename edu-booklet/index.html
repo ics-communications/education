@@ -164,7 +164,6 @@ html, body {
   max-width: 4.15in;
   letter-spacing: 0.006em;
 }
-.caption   { font-family: var(--text); font-size: var(--t-label); line-height: 1.45; letter-spacing: 0.006em; color: var(--ink-soft); }
 .quote {
   font-family: var(--display);
   font-style: italic;
@@ -174,8 +173,8 @@ html, body {
   color: var(--purple);
   max-width: 3.7in;
 }
-.body, .quote, .dist, .pillar__body, .step__body, .fac__cred,
-.prog__statnote, .p7__prereq, .p7__notready p, .p8__credential { text-wrap: pretty; }
+.body, .quote, .dist, .pillar__body, .step__body,
+.prog__statnote, .p7__prereq { text-wrap: pretty; }
 
 /* Stat label — one shared primitive; pages recolour it via --acc-ink */
 .lbl {
@@ -227,9 +226,9 @@ html, body {
 .p1 { background: var(--purple-deep); color: var(--on-dark); }
 .p1__photo {
   position: absolute; inset: 0;
-  background-image: url('img/seminar-table.jpg');
+  background-image: url('img/evdb-launch.jpg');
   background-size: cover;
-  background-position: 56% 42%;
+  background-position: center;
   filter: saturate(0.3) contrast(1.1) brightness(1.06);
   z-index: 0;
 }
@@ -294,7 +293,7 @@ html, body {
 .p2__photo {
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  height: 3.55in;
+  height: 3.30in;
   background-image: url('img/library-research.jpg');
   background-size: cover;
   background-position: center 58%;
@@ -304,7 +303,7 @@ html, body {
 .p2__photo-tint {
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  height: 3.55in;
+  height: 3.30in;
   background: var(--purple);
   mix-blend-mode: multiply;
   opacity: 0.5;
@@ -313,7 +312,7 @@ html, body {
 .p2__photo-fade {
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  height: 3.55in;
+  height: 3.30in;
   background: linear-gradient(180deg,
     rgba(250,247,242,1) 0%,
     rgba(250,247,242,0) 32%,
@@ -321,7 +320,10 @@ html, body {
     rgba(31,15,61,0.34) 100%);
   z-index: 2;
 }
-.p2 .safe-area { bottom: 3.65in; }   /* clears the fade, which reaches full cream at 32% */
+/* The photo band was 3.55in — 41% of the page — on the one page that has to make
+   the case, and it left the pillar grid with 0.17in of slack: one pillar running to
+   three lines would have set ink type on the fade. 0.25in came back to the argument. */
+.p2 .safe-area { bottom: 3.40in; }   /* clears the fade, which reaches full cream at 32% */
 .p2__eyebrow { color: var(--red); }
 .p2__head { margin-top: 0.08in; }
 .p2__head em { color: var(--red); }
@@ -341,7 +343,7 @@ html, body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 0.26in;
-  row-gap: 0.34in;
+  row-gap: 0.46in;   /* the two rows are four separate reasons, not a block of eight lines */
 }
 .pillar { border-top: 1.5px solid rgba(45,24,84,0.18); padding-top: 0.13in; }
 .pillar__mark {
@@ -374,27 +376,36 @@ html, body {
 /* The distill freed ~2.7in here. `space-between` spent it as three gaps of
    0.821in — mathematically even, which is the same as having no rhythm: the
    fact panel and the testimonial read as equal weights when the panel IS the
-   page's argument. Now the panel takes most of that space as internal air and
-   leads, and the one wide interval falls at the single change of voice
-   (data → a student speaking). Reads 0.42 / 0.76 / 0.42 down the page. */
+   page's argument.
+   The `auto` then moved again: parked on the testimonial it opened a 0.96in
+   hole mid-page and separated the quote from the panel it corroborates. The
+   quote answers the panel, so it sits close under it; the page's one wide
+   interval belongs at the only real change of voice — the page finishing and
+   the reader being sent into the centre spread. Reads 0.42 / 0.42 / surplus. */
 .p3 .safe-area { justify-content: flex-start; }
 .p3 .factpanel   { margin-top: var(--sp-5); }
-.p3 .testimonial { margin-top: auto; }        /* surplus lands at the voice change */
-.p3 .paths       { margin-top: var(--sp-5); }
+.p3 .testimonial { margin-top: var(--sp-5); }
+.p3 .paths       { margin-top: var(--sp-6); }  /* the real voice change: page → turn the page */
 .p3__lockup > .p3__head { margin-top: 0.08in; }
 .p3__lockup > .p3__intro { margin-top: 0.12in; }
 .p3__eyebrow { color: var(--red); }
 .p3__head em { color: var(--red); }
 
 
+/* Was a 3px purple LEFT edge. Two problems: it is the generic accent-tab tell, and
+   the testimonial directly below it carries a left rule too — a quote bar, which is
+   real typographic convention. Two left edges in a column made the page's argument
+   and the student quoting it look like the same kind of object. The panel now takes
+   a top rule, the device P6's testimonial and P7's response block already use, and
+   the left edge belongs unambiguously to the quote. */
 .factpanel {
   background: var(--cream-dark);
-  border-left: 3px solid var(--purple);
-  padding: 0.26in 0.26in 0.27in;
+  border-top: 2.5px solid var(--purple);
+  padding: 0.24in 0.26in 0.27in;
 }
 .factrow {
   display: grid;
-  grid-template-columns: 1.05in 1fr;
+  grid-template-columns: 1.02in 1fr;
   gap: 0.1in;
   padding: 0.115in 0;
   border-bottom: 1px solid rgba(45,24,84,0.1);
@@ -430,7 +441,6 @@ html, body {
   color: var(--ink-soft);
 }
 
-.paths { margin-top: 0; }
 .paths__cta {
   font-family: var(--display);
   font-style: italic;
@@ -503,7 +513,7 @@ html, body {
 /* Body column between the two bands */
 .prog__body {
   position: absolute;
-  top: 2.35in; bottom: 1.55in;
+  top: 2.35in; bottom: 1.50in;
   padding-top: 0.2in;
   padding-bottom: 0.14in;
   display: flex;
@@ -572,17 +582,21 @@ html, body {
 
 /* Bottom crossover band — continuous colour, no text across the fold.
    Fixed padding-top (not centring) so the course line sits at the SAME height on
-   both halves of the spread; P5 carries a hidden eyebrow to hold that slot open. */
+   both halves of the spread; P5 carries a hidden eyebrow to hold that slot open.
+   The shared caption sits on P5, not P4: it is a spread-level sentence, and with
+   both it and the "Sample Courses" label on the left half the band's right third
+   was empty purple. Label anchors the left, caption the right, courses run
+   between them across the fold. */
 .prog__band {
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  height: 1.55in;
+  height: 1.50in;
   background: var(--purple-deep);
   z-index: 3;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 0.26in;
+  padding-top: 0.20in;
   padding-bottom: var(--safe);
 }
 .p4 .prog__band { padding-left: var(--safe);  padding-right: var(--spine); }
@@ -600,7 +614,7 @@ html, body {
 }
 .prog__courses span { color: var(--orange); font-style: normal; padding: 0 0.02in; }
 .prog__band-cap {
-  margin-top: 0.11in;
+  margin-top: 0.09in;
   font-family: var(--text);
   font-size: var(--t-label);
   line-height: 1.45;
@@ -642,21 +656,16 @@ html, body {
   line-height: 1.35;
   color: var(--red-ink);
 }
-.fac__cred {
-  margin-top: 0.05in;
-  font-family: var(--text);
-  font-size: var(--t-sm);
-  line-height: 1.48;
-  letter-spacing: 0.006em;
-  color: var(--ink-soft);
-}
-.fac__cred i { font-family: var(--display); font-style: italic; }
-
+/* Both halves of spread 6–7 close with a rule-topped block pinned to the foot. They
+   were landing 0.164in apart — near-aligned by accident, which reads as a mistake at
+   arm's length. The extra padding here makes this panel exactly as tall as P7's
+   response block, so the two rules meet across the fold as one line. Measured, not
+   derived: if either block's content changes, re-measure and re-set this value. */
 .p6__testimonial {
   margin-top: auto;
   background: var(--cream-dark);
   border-top: 2px solid var(--red);
-  padding: 0.19in 0.21in 0.2in;
+  padding: 0.354in 0.21in 0.2in;
 }
 .p6__testimonial .dia-rule { margin-bottom: 0.14in; }
 
@@ -664,15 +673,17 @@ html, body {
 /* P7 — COST, AID & HOW TO APPLY                                       */
 /* ══════════════════════════════════════════════════════════════════ */
 .p7 { background: var(--cream); }
-/* Was `gap: 0.088in` on every break plus a 1.062in hole above the QR grid — four
-   intervals that meant nothing and one that looked like a mistake. The steps are
-   the only thing on this page that asks the reader to act, so the prerequisite
-   fine print attaches to them (sp-2) and the response block gets the page's one
-   wide interval. */
+/* Was `gap: 0.088in` on every break plus a 1.062in hole above the QR grid. The hole
+   survived the first pass at 0.78in, because `margin-top:auto` still owned it and no
+   authored interval competed: the reader met "scan the code below" and then 0.78in of
+   nothing before the code. Two fixes. The money→steps break now takes real space, so
+   the page has a stated pivot from price to action; and the response block carries a
+   rule, which turns the remaining surplus from a hole into a section break — the same
+   device that makes P6's testimonial gap read as deliberate. */
 .p7 .safe-area { gap: 0; }
 .p7__head    { margin-top: 0.08in; }
-.p7 .money   { margin-top: 0.22in; }
-.p7 .steps   { margin-top: 0.22in; }
+.p7 .money   { margin-top: var(--sp-3); }   /* still the page's subject: what it costs */
+.p7 .steps   { margin-top: var(--sp-5); }   /* the pivot — information gives way to action */
 .p7__eyebrow { color: var(--red); }
 .p7__head em { color: var(--red); }
 
@@ -683,7 +694,7 @@ html, body {
 }
 .money .moneyrow {
   display: grid;
-  grid-template-columns: 1.2in 1fr;
+  grid-template-columns: 1.02in 1fr;
   gap: 0.08in;
   padding: 0.075in 0;
   border-bottom: 1px solid rgba(228,223,214,0.16);
@@ -735,6 +746,8 @@ html, body {
 
 .p7__grid {
   margin-top: auto;
+  padding-top: 0.17in;
+  border-top: 1.5px solid rgba(45,24,84,0.18);
   display: grid;
   grid-template-columns: 1.5in 1fr;
   column-gap: 0.22in;
@@ -787,22 +800,6 @@ html, body {
   color: var(--purple);
 }
 
-.p7__notready {
-  margin-top: 0.15in;
-  padding-top: 0.13in;
-  border-top: 1.5px solid rgba(45,24,84,0.18);
-}
-.p7__notready h4 {
-  font-family: var(--display);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 11pt;
-  line-height: 1.24;
-  color: var(--red);
-  margin-bottom: 0.05in;
-}
-.p7__notready p { font-size: var(--t-sm); line-height: 1.48; letter-spacing: 0.006em; color: var(--ink-soft); }
-
 /* ══════════════════════════════════════════════════════════════════ */
 /* P8 — BACK COVER                                                     */
 /* ══════════════════════════════════════════════════════════════════ */
@@ -818,12 +815,15 @@ html, body {
 .p8 .safe-area { align-items: center; text-align: center; color: var(--on-dark); }
 .p8__logo { width: 1.7in; height: auto; display: block; }
 .p8__rule { width: 2.4in; margin: 0.22in 0 0.2in; }
-/* fixed, not auto — with two autos the surplus split into two equal holes and
-   neither break meant anything. The masthead break is unruled, so it takes the
-   surplus; this one already has a rule doing the separating. */
-.p8__rule--foot { margin-top: var(--sp-5); margin-bottom: 0; }
+/* Reversed. The masthead break IS ruled — .p8__rule sits in it — so handing it the
+   surplus put 1.31in of void directly under a rule, and the rule read as a lid on an
+   empty box. The masthead now sits a stated interval above the invitation, the
+   invitation/QR/URL read as one solid centre, and the surplus falls at the foot rule,
+   which is already doing the separating. Split 0.62 / 0.95, not 0.88 / 0.69 — two
+   near-equal gaps are the same as no rhythm, which is what the first version had. */
+.p8__rule--foot { margin-top: auto; margin-bottom: 0; }
 .p8__head {
-  margin-top: auto;
+  margin-top: var(--sp-5);
   line-height: 1.24;
   color: #FFFFFF;
 }
@@ -845,7 +845,7 @@ html, body {
 }
 .p8__qr img { width: 100%; height: 100%; display: block; }
 .p8__qr-cap {
-  margin-top: 0.1in;
+  margin-top: 0.07in;   /* caption belongs to the code above it, not the URL below */
   font-family: var(--text);
   font-size: var(--t-eyebrow);
   font-weight: 600;
@@ -855,7 +855,7 @@ html, body {
   color: var(--orange);
 }
 .p8__url {
-  margin-top: 0.08in;
+  margin-top: 0.11in;
   font-family: var(--display);
   font-weight: 700;
   font-size: 18pt;
@@ -885,29 +885,10 @@ html, body {
   color: var(--orange);
   margin-bottom: 0.05in;
 }
-.p8__program {
-  margin-top: 0.15in;
-  font-family: var(--text);
-  font-size: var(--t-eyebrow);
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  word-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(232,228,220,0.9);
-}
-/* The credential line is the trust anchor of the whole piece — it does not whisper */
-.p8__credential {
-  margin-top: 0.16in;
-  font-family: var(--display);
-  font-style: italic;
-  font-size: var(--t-sm);
-  line-height: 1.5;
-  letter-spacing: 0.012em;
-  color: rgba(232,228,220,0.92);
-  max-width: 3.5in;
-}
 .p8__figures {
-  margin-top: 0.1in;
+  /* was 0.1in — tighter than the gap between the two contact blocks, so a legal
+     disclaimer read as part of the Registrar's address */
+  margin-top: var(--sp-4);
   font-family: var(--text);
   font-size: var(--t-label);
   letter-spacing: 0.01em;
@@ -1074,7 +1055,6 @@ html, body {
     <div class="prog__band">
       <div class="eyebrow prog__band-eyebrow">Sample Courses</div>
       <p class="prog__courses">·&nbsp;Called to Teach: From Formation to Transformation<span><br></span>·&nbsp;Lead From Where You Are</p>
-      <p class="prog__band-cap">Both programs draw on the same catalogue and the same community.</p>
     </div>
   </section>
 
@@ -1112,6 +1092,7 @@ html, body {
     <div class="prog__band">
       <div class="eyebrow prog__band-eyebrow prog__band-eyebrow--ghost" aria-hidden="true">Sample Courses</div>
       <p class="prog__courses">·&nbsp;Cultivating Learning Communities of Belonging<span><br></span>·&nbsp;What Is Christian About Christian Education?</p>
+      <p class="prog__band-cap">Both programs draw on the same catalogue and the same community.</p>
     </div>
   </section>
 
