@@ -17,7 +17,7 @@
   var CONFIG = {
     // The Apps Script web app URL (ends in /exec). Until it is set, the form
     // shows a "write to the Registrar" notice instead of the payment buttons.
-    SCRIPT_URL: '',
+    SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbwI_dTiSXfr27C1C-7iC3-3i1nH2GkwGP8t-zUHLQLV-i35ajawT-XJAEi1Mt06mlgryA/exec',
     // ICS's live PayPal client ID (the same PayPal app as ART in Orvieto, F2BF and the MA & PhD form).
     PAYPAL_CLIENT_ID: 'AdZ0cWK3Bl7wjgmrmgk_On-ac13XCdpZxx8te_4IPlRDVoYx3ZNoGG8vK7mb8VXdKH2L-TM1M3sMj6oI',
     SERVICE: 'ICS MA-EL/MWS-E',      // names the application in PayPal and emails
