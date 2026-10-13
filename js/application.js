@@ -85,6 +85,7 @@
   function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
   function icon(path) { return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="' + path + '"/></svg>'; }
   function program() { return CONFIG.PROGRAMS[val('program')] || null; }
+  var SCROLL = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
   /* Shown by the form's own conditions (the form itself is hidden while sending). */
   function visible(el) { var h = el.closest('[hidden]'); return !h || h === form; }
 
@@ -381,7 +382,7 @@
 
   function jumpTo(el) {
     var host = el.closest(HOSTS) || el;
-    host.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    host.scrollIntoView({ behavior: SCROLL, block: 'center' });
     setTimeout(function () { el.focus({ preventScroll: true }); }, 350);
   }
   function checkBeforePaying() {
@@ -449,7 +450,7 @@
     stateBox.innerHTML = html;
     stateBox.hidden = false;
     form.hidden = true;
-    stateBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    stateBox.scrollIntoView({ behavior: SCROLL, block: 'start' });
     stateBox.focus({ preventScroll: true });
   }
 
@@ -506,7 +507,7 @@
         ? 'Please <a href="' + mail + '">write to the Academic Registrar</a> and quote PayPal order ' + esc(paidOrderId) + '.'
         : 'Your payment is safe (PayPal order ' + esc(paidOrderId) + '), and you won’t be charged again. Press <em>Send application</em> to try once more, or <a href="' + mail + '">write to the Registrar</a>.'));
     renderPaySlot();
-    errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    errorBox.scrollIntoView({ behavior: SCROLL, block: 'center' });
     errorBox.focus({ preventScroll: true });
   }
 

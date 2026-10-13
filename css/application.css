@@ -19,6 +19,9 @@
 .ics-apply-online__card { padding: 2.75rem 2.75rem 2.5rem; }
 
 .af [hidden], .af[hidden], .af-state[hidden] { display: none !important; }
+main:focus { outline: none; }
+.ics-apply ::selection { background: rgba(241, 171, 106, 0.35); color: var(--ics-purple-deep); }
+.af { caret-color: var(--ics-purple); }
 .af, .af-state { text-align: left; font-family: var(--font-sans); color: var(--af-ink); line-height: 1.6; }
 .af-nojs { text-align: center; color: var(--af-muted); }
 .af-lede { font-size: 0.95rem; color: var(--af-muted); margin: 0 0 0.5rem; }
@@ -82,7 +85,7 @@
 .af-choice input:checked { border-color: var(--ics-purple); }
 .af-choice input:checked::before { transform: scale(1); }
 .af-choices.has-error .af-choice { border-color: rgba(200, 60, 44, 0.45); }
-.af-check { display: grid; grid-template-columns: 1.25rem 1fr; gap: 0.75rem; align-items: start; cursor: pointer; font-size: 0.95rem; line-height: 1.5; }
+.af-check { display: grid; grid-template-columns: 1.25rem 1fr; gap: 0.75rem; align-items: start; padding: 0.6rem 0; cursor: pointer; font-size: 0.95rem; line-height: 1.5; }
 .af-check input { border-radius: 3px; }
 .af-check input::before { content: ""; width: 0.7rem; height: 0.4rem; margin-top: -0.15rem; border: solid var(--ics-white); border-width: 0 0 2px 2px; transform: rotate(-45deg) scale(0); transition: transform 0.15s ease; }
 .af-check input:checked { background: var(--ics-purple); border-color: var(--ics-purple); }
@@ -122,7 +125,7 @@
 .af-file-remove { min-height: 44px; padding: 0 0.25rem; background: none; border: 0; font-family: var(--font-sans); font-size: 0.88rem; font-weight: 600; color: var(--ics-purple); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 .af-file-remove:hover { color: var(--ics-red); }
 .af-files .af-file-problem { margin-top: 0.5rem; padding: 0; min-height: 0; background: none; border: 0; color: var(--ics-red); font-weight: 500; font-size: 0.85rem; }
-.af-doc .af-check { margin-top: 0.75rem; font-size: 0.9rem; }
+.af-doc .af-check { margin-top: 0.25rem; font-size: 0.9rem; }
 .af-sign { max-width: 26rem; margin-top: 1.5rem; }
 .af .nw { white-space: nowrap; }
 
@@ -141,7 +144,7 @@
   letter-spacing: 0.06em; text-transform: uppercase; color: var(--ics-white); background: var(--ics-purple); border: 0; cursor: pointer; transition: background 0.25s ease;
 }
 .af-send:hover { background: var(--ics-purple-mid); }
-.af-error { margin: 1rem 0 1.25rem; padding: 0.9rem 1.1rem; background: #fdf6f5; border-left: 4px solid var(--ics-red); font-size: 0.92rem; line-height: 1.55; }
+.af-error { margin: 1rem 0 1.25rem; padding: 0.9rem 1.1rem; background: #fdf6f5; border: 1.5px solid rgba(200, 60, 44, 0.45); font-size: 0.92rem; line-height: 1.55; }
 .af-error strong { color: var(--ics-red); }
 .af-privacy { margin-top: 1.5rem; font-size: 0.85rem; color: var(--af-muted); }
 
