@@ -31,8 +31,7 @@ var CONFIG = {
   TITLE: 'MA-EL/MWS-E',                // used in email subjects and the PDF
   SERVICE: 'ICS education applications',
   REF_PATTERN: /^EDU-\d{4}-[A-Z0-9]{6}$/,
-  FEE: 90,                        // CAD, by the deadline
-  LATE_FEE: 120,                  // CAD, after the deadline
+  FEE: 90,                        // CAD
   CURRENCY: 'CAD',
   // ICS's live PayPal app: the same client ID as application.js, ART in Orvieto, F2BF and the MA & PhD form.
   PAYPAL_CLIENT_ID: 'AdZ0cWK3Bl7wjgmrmgk_On-ac13XCdpZxx8te_4IPlRDVoYx3ZNoGG8vK7mb8VXdKH2L-TM1M3sMj6oI',
@@ -60,16 +59,17 @@ var CONFIG = {
   }
 };
 
-/* ── Everything below is shared with the MA & PhD script ─────────────────── */
+/* ── Everything below is shared with the MA & PhD script, except the date of
+   birth and school fields (education only) ──────────────────────────────── */
 
-var TERMS = { winter: { label: 'Winter', month: 1 }, summer: { label: 'Summer', month: 5 }, fall: { label: 'Fall', month: 9 } };
+var TERMS = { winter: { label: 'Winter', month: 1 }, summer: { label: 'Summer', month: 4 }, fall: { label: 'Fall', month: 9 } };
 var ENGLISH = { first: 'English is my first language', toefl: 'TOEFL (sent by ETS)', ielts: 'IELTS' };
 
 function headers_() {
   return [].concat(
     ['Submitted', 'Reference', 'Payment status', 'Fee', 'Program'],
     CONFIG.CONCENTRATIONS ? ['Concentration'] : [],
-    ['Start', 'First name', 'Last name', 'Email', 'Phone', 'Street address', 'City', 'Province / State',
+    ['Start', 'First name', 'Last name', 'Date of birth', 'Email', 'Phone', 'School', 'Street address', 'City', 'Province / State',
       'Postal code', 'Country', 'Permanent address', 'Education'],
     CONFIG.THESES ? ['Baccalaureate thesis', 'Master’s thesis'] : [],
     ['First language', 'Other languages', 'English proficiency', 'Academic referees', 'Personal referee'],
@@ -170,7 +170,7 @@ function doPost(e) {
     var pdf = folder.createFile(buildPdf_(record));
 
     var row = rowFor_(record, folder, pdf);
-    sheet.appendRow(headers_().map(function (h) { return plain_(row[h]); }));
+    sheet.appendRow(sheetHeaders_(sheet).map(function (h) { return plain_(row[h]); }));
     SpreadsheetApp.flush();
 
     notifyStaff_(record, folder, pdf);
@@ -208,13 +208,16 @@ function validate_(d) {
   text('orderId', 'PayPal order', 40, true);
   if (d.orderId && !/^[A-Z0-9]{8,30}$/.test(d.orderId)) p.push('PayPal order is not valid');
   d.fee = Number(d.fee);
-  if (d.fee !== CONFIG.FEE && d.fee !== CONFIG.LATE_FEE) p.push('the application fee is not valid');
+  if (d.fee !== CONFIG.FEE) p.push('the application fee is not valid');
 
   text('firstName', 'First name', 100, true);
   text('lastName', 'Last name', 100, true);
   text('email', 'Email', 200, true);
   if (d.email && !EMAIL.test(d.email)) p.push('email address is not valid');
   text('phone', 'Phone', 40, true);
+  text('dob', 'Date of birth', 10, true);
+  if (d.dob && !birthDate_(d.dob)) p.push('date of birth is not valid');
+  text('school', 'School', 200, false);
   text('street', 'Street address', 200, true);
   text('city', 'City', 100, true);
   text('region', 'Province / State', 100, true);
@@ -291,16 +294,6 @@ function validate_(d) {
   if (d.declaration !== true) p.push('confirm the declaration');
   text('signature', 'Signature', 200, true);
   return p;
-}
-
-/* ── Fees ─────────────────────────────────────────────────────────────────── */
-
-/** The fee due for this start term on a given date: the late fee after the deadline. */
-function feeDue_(d, when) {
-  var m = /^(winter|summer|fall)-(\d{4})$/.exec(d.start);
-  var dl = CONFIG.PROGRAMS[d.program].terms[m[1]];
-  var deadline = new Date(+m[2] - dl[2], dl[0] - 1, dl[1], 23, 59, 59);
-  return when > deadline ? CONFIG.LATE_FEE : CONFIG.FEE;
 }
 
 /* ── PayPal ───────────────────────────────────────────────────────────────── */
@@ -393,12 +386,6 @@ function buildRecord_(d, payment) {
   var now = new Date();
   var tz = Session.getScriptTimeZone();
   var m = /^(winter|summer|fall)-(\d{4})$/.exec(d.start);
-  // A day's grace: the applicant saw the fee when they started paying.
-  var due = feeDue_(d, new Date(now.getTime() - 36 * 3600 * 1000));
-  var paid = payment.paid || d.fee;
-  if (paid < due) {
-    payment.note = (payment.note ? payment.note + ' ' : '') + 'This is a late application: CAD $' + due + ' was due and CAD $' + paid + ' was paid.';
-  }
   return {
     ref: d.ref,
     submitted: Utilities.formatDate(now, tz, 'yyyy-MM-dd HH:mm'),
@@ -407,7 +394,7 @@ function buildRecord_(d, payment) {
     d: d,
     payment: payment,
     paymentLabel: { paid: 'Paid', pending: 'Payment pending', unverified: 'CHECK PAYMENT' }[payment.status],
-    feeLabel: 'CAD $' + d.fee + (d.fee === CONFIG.LATE_FEE ? ' (late)' : ''),
+    feeLabel: 'CAD $' + d.fee,
     programName: CONFIG.PROGRAMS[d.program].name,
     concentrationName: d.concentration ? CONFIG.CONCENTRATIONS[d.concentration] : '',
     startName: TERMS[m[1]].label + ' ' + m[2],
@@ -432,7 +419,8 @@ function rowFor_(r, folder, pdf) {
   var row = {
     'Submitted': r.submitted, 'Reference': r.ref, 'Payment status': r.paymentLabel + (r.payment.note ? ': ' + r.payment.note : ''),
     'Fee': r.feeLabel, 'Program': r.programName, 'Concentration': r.concentrationName, 'Start': r.startName,
-    'First name': d.firstName, 'Last name': d.lastName, 'Email': d.email, 'Phone': d.phone,
+    'First name': d.firstName, 'Last name': d.lastName, 'Date of birth': d.dob, 'Email': d.email, 'Phone': d.phone,
+    'School': d.school,
     'Street address': d.street, 'City': d.city, 'Province / State': d.region, 'Postal code': d.postal, 'Country': d.country,
     'Permanent address': d.permanentAddress || 'Same as mailing address',
     'Education': educationText_(d.education),
@@ -482,7 +470,9 @@ function applicationHtml_(r) {
     '</table>' +
 
     '<h2>Applicant</h2><table>' +
+    row('Date of birth', birthDate_(d.dob)) +
     row('Email', d.email) + row('Telephone', d.phone) +
+    row('School where they work', d.school) +
     row('Mailing address', [d.street, d.city + ', ' + d.region, d.postal, d.country].join('\n')) +
     row('Permanent address', d.permanentAddress || 'Same as mailing address') +
     '</table>' +
@@ -525,7 +515,7 @@ function buildPdf_(r) {
 
 function notifyStaff_(r, folder, pdf) {
   var d = r.d;
-  var flag = r.payment.status === 'paid' && !/late application/.test(r.payment.note || '') ? '' : '[' + r.paymentLabel + '] ';
+  var flag = r.payment.status === 'paid' ? '' : '[' + r.paymentLabel + '] ';
   MailApp.sendEmail({
     to: CONFIG.STAFF.join(','),
     replyTo: d.email,
@@ -591,7 +581,7 @@ function getSheet_() {
 
 /** Finds an earlier row for this PayPal order; returns { ref } or null. */
 function findOrder_(sheet, orderId) {
-  var headers = headers_();
+  var headers = sheetHeaders_(sheet);
   var col = headers.indexOf('PayPal order ID') + 1;
   var cell = sheet.getRange(1, col, Math.max(sheet.getLastRow(), 1), 1)
     .createTextFinder(orderId).matchEntireCell(true).findNext();
@@ -602,6 +592,34 @@ function findOrder_(sheet, orderId) {
 /** Text that Sheets must never treat as a formula. */
 function own_(obj, key) {
   return !!obj && typeof key === 'string' && Object.prototype.hasOwnProperty.call(obj, key);
+}
+
+/**
+ * The sheet's header row. Columns added to headers_() since the sheet was
+ * created are appended at the right, so existing rows keep their columns.
+ */
+function sheetHeaders_(sheet) {
+  var have = sheet.getRange(1, 1, 1, Math.max(sheet.getLastColumn(), 1)).getDisplayValues()[0];
+  var missing = headers_().filter(function (h) { return have.indexOf(h) === -1; });
+  if (missing.length) {
+    var from = sheet.getLastColumn() + 1;
+    var short = from + missing.length - 1 - sheet.getMaxColumns();
+    if (short > 0) sheet.insertColumnsAfter(sheet.getMaxColumns(), short);
+    sheet.getRange(1, from, 1, missing.length).setValues([missing]).setFontWeight('bold');
+    sheet.getRange(2, from, sheet.getMaxRows() - 1, missing.length).setNumberFormat('@');
+    have = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getDisplayValues()[0];
+  }
+  return have;
+}
+
+/** 'YYYY-MM-DD' → 'March 12, 1985', or '' if it isn't a plausible birth date. */
+function birthDate_(v) {
+  var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(v || ''));
+  if (!m) return '';
+  var born = new Date(+m[1], +m[2] - 1, +m[3]);
+  var latest = new Date(); latest.setFullYear(latest.getFullYear() - 16);
+  if (born.getMonth() !== +m[2] - 1 || +m[1] < 1920 || born > latest) return '';
+  return Utilities.formatDate(born, Session.getScriptTimeZone(), 'MMMM d, yyyy');
 }
 
 function plain_(v) {

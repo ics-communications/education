@@ -20,14 +20,14 @@ checks every answer again, then for each applicant:
 - emails the applicant a confirmation listing what they still need to arrange
   (transcripts, references, any documents they chose to send separately).
 
-The fee is **CAD $90**, or **CAD $120** when the applicant applies after the
-deadline for their chosen start term. The form works this out from today's date
-and these deadlines (from the Admission page):
+The fee is **CAD $90**, with no late fee. The form shows the deadline for the
+chosen start term, and says when it has passed, using these deadlines (from the
+Admission page):
 
 | Start | MA-EL deadline | MWS-E deadline |
 |---|---|---|
 | Winter (January) | November 1 | December 1 |
-| Summer (May) | April 1 | April 1 |
+| Summer (April) | April 1 | April 1 |
 | Fall (September) | April 1 | August 1 |
 
 Until step 6 is done, the form shows a "write to the Registrar" notice and takes no
@@ -117,16 +117,17 @@ apply pages.
 ## Day to day
 
 - **New applications** arrive by email, and as a row and a folder in Drive.
+- **Columns added later** (such as **Date of birth** and **School**) appear at
+  the right-hand end of a Sheet that existed before they were added. Rows
+  already in the Sheet keep their columns.
 - **Documents sent separately**: the Sheet says "Will be sent separately"; the
   applicant has been asked to email it quoting their reference.
 - **Payment status** column:
   - `CHECK PAYMENT`: every application shows this until automatic checks are on.
     Search PayPal (**Activity**) for the **PayPal order ID** in the row and confirm
-    the fee in the **Fee** column (CAD $90, or $120 if marked late).
+    the fee in the **Fee** column (CAD $90).
   - `Paid`: confirmed by PayPal automatically. Requires the secret.
   - `Payment pending`: PayPal hasn't cleared it yet, usually a bank-funded payment.
-  - If an applicant paid $90 but the deadline had passed, the status says so
-    ("This is a late application: CAD $120 was due…").
 - **If an application fails to save**, the script emails ics-communications@ with
   the details. The applicant is told their payment is safe and can press
   **Send application** to try again without paying twice.
@@ -155,7 +156,7 @@ Change these together:
 
 | What | `js/application.js` | `education-applications.gs` |
 |---|---|---|
-| Fee, late fee | `FEE`, `LATE_FEE` | `FEE`, `LATE_FEE` |
+| Fee | `FEE` | `FEE` |
 | Deadlines or start terms | `PROGRAMS` (`winter: [11, 1, 1]` = November 1 of the year before the start) | `PROGRAMS` (same) |
 | Referees required | `PROGRAMS` (`referees`) | `PROGRAMS` (same) |
 | Concentrations | the radio buttons in both apply pages | `CONCENTRATIONS` |

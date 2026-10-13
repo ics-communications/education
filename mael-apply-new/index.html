@@ -173,12 +173,15 @@
       line-height: 1.2;
       color: var(--ics-white);
       margin-bottom: 1.4rem;
+      text-wrap: balance;
       animation: icsApplyFadeUp 0.9s ease-out 0.3s both;
     }
 
+    /* Keep the program acronym whole; never break at its hyphen */
     .ics-apply-hero__title em {
       font-style: italic;
       color: var(--mael-accent);
+      white-space: nowrap;
     }
 
     .ics-apply-hero__subtitle {
@@ -876,6 +879,8 @@
             <div class="af-field"><label for="af-last">Last name</label><input id="af-last" name="lastName" autocomplete="family-name" maxlength="100"></div>
             <div class="af-field"><label for="af-email">Email</label><input id="af-email" name="email" type="email" autocomplete="email" maxlength="200" spellcheck="false"></div>
             <div class="af-field"><label for="af-phone">Telephone</label><input id="af-phone" name="phone" type="tel" autocomplete="tel" maxlength="40"></div>
+            <div class="af-field"><label for="af-dob">Date of birth</label><input id="af-dob" name="dob" type="date" autocomplete="bday" min="1920-01-01"></div>
+            <div class="af-field"><label for="af-school">School where you work <span class="af-opt">optional</span></label><input id="af-school" name="school" autocomplete="organization" maxlength="200"></div>
           </div>
           <p class="af-q af-q--sub">Present mailing address</p>
           <div class="af-grid">
@@ -1016,7 +1021,7 @@
         <fieldset class="af-set af-pay">
           <legend>Application fee</legend>
           <table class="af-ledger"><tr><td id="af-fee-label">Application fee <span class="af-sub">non-refundable</span></td><td id="af-fee-amount">CAD $90.00</td></tr></table>
-          <p class="af-note">The fee is CAD $90 by the deadline for your start term and CAD $120 for a late application, paid by PayPal or card.</p>
+          <p class="af-note">The fee is CAD $90, paid by PayPal or card.</p>
           <div class="af-error" id="af-error" role="alert" tabindex="-1" hidden></div>
           <p class="af-pay-lede">Paying sends your application. You can pay with a PayPal account or a credit or debit card.</p>
           <div class="af-paypal" id="af-paypal"><p class="af-pay-status">Loading payment options…</p></div>

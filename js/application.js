@@ -22,8 +22,7 @@
     PAYPAL_CLIENT_ID: 'AdZ0cWK3Bl7wjgmrmgk_On-ac13XCdpZxx8te_4IPlRDVoYx3ZNoGG8vK7mb8VXdKH2L-TM1M3sMj6oI',
     SERVICE: 'ICS MA-EL/MWS-E',      // names the application in PayPal and emails
     REF_PREFIX: 'EDU',
-    FEE: 90,                         // CAD, by the deadline
-    LATE_FEE: 120,                   // CAD, after the deadline
+    FEE: 90,                         // CAD
     // Each program: academic or professional referees required, and its start
     // terms with the application deadline for each, as [month, day, years
     // before the start]. Winter [11, 1, 1] = November 1 of the year before.
@@ -36,7 +35,7 @@
     MAX_EDU_ROWS: 6,
     DRAFT_KEY: 'ics-education-application-draft'
   };
-  var TERMS = { winter: { label: 'Winter', month: 1, when: 'January' }, summer: { label: 'Summer', month: 5, when: 'May' }, fall: { label: 'Fall', month: 9, when: 'September' } };
+  var TERMS = { winter: { label: 'Winter', month: 1, when: 'January' }, summer: { label: 'Summer', month: 4, when: 'April' }, fall: { label: 'Fall', month: 9, when: 'September' } };
   var TERM_ORDER = ['winter', 'summer', 'fall'];
   var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   var FILE_TYPES = {
@@ -190,20 +189,15 @@
     for (var i = 0; i < terms.length; i++) if (terms[i].id === startSelect.value) return terms[i];
     return null;
   }
-  function fee() {
-    var t = chosenTerm();
-    return t && t.late ? CONFIG.LATE_FEE : CONFIG.FEE;
-  }
+  function fee() { return CONFIG.FEE; }
   function syncFee() {
     var t = chosenTerm();
     var note = document.getElementById('af-start-note');
     note.innerHTML = !t ? '' : t.late
-      ? 'The deadline for ' + esc(t.label) + ' was ' + longDate(t.deadline) + '. Late applications are considered at the admissions committee’s discretion, and the fee is ' + money(CONFIG.LATE_FEE) + '.'
+      ? 'The deadline for ' + esc(t.label) + ' was ' + longDate(t.deadline) + '. Late applications are considered at the admissions committee’s discretion.'
       : 'Apply by ' + longDate(t.deadline) + ' for ' + esc(t.label) + '.';
     note.hidden = !t;
     var shown = paidFee || fee();
-    document.getElementById('af-fee-label').innerHTML = (shown === CONFIG.LATE_FEE ? 'Late application fee' : 'Application fee') +
-      ' <span class="af-sub">non-refundable</span>';
     document.getElementById('af-fee-amount').textContent = money(shown);
   }
 
@@ -294,7 +288,7 @@
 
   var REQUIRED = {
     firstName: 'Enter your first name.', lastName: 'Enter your last name.', email: 'Enter your email address.',
-    phone: 'Enter a phone number.', street: 'Enter your street address.', city: 'Enter your city.',
+    phone: 'Enter a phone number.', dob: 'Enter your date of birth.', street: 'Enter your street address.', city: 'Enter your city.',
     region: 'Enter your province or state.', postal: 'Enter your postal or zip code.', country: 'Enter your country.',
     firstLanguage: 'Enter your first language.',
     personalName: 'Enter your personal referee’s name.', personalRelation: 'Say how your personal referee knows you.',
@@ -324,6 +318,14 @@
     $all('[aria-invalid]', form).forEach(function (e) { e.removeAttribute('aria-invalid'); e.removeAttribute('aria-errormessage'); });
   }
   var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  /** A YYYY-MM-DD date from 1920 up to 16 years ago. */
+  function plausibleBirthDate(v) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v);
+    if (!m) return false;
+    var born = new Date(+m[1], +m[2] - 1, +m[3]);
+    var latest = new Date(); latest.setFullYear(latest.getFullYear() - 16);
+    return born.getMonth() === +m[2] - 1 && +m[1] >= 1920 && born <= latest;
+  }
 
   /** Returns the first problem element, or null when the form is complete. */
   function validate() {
@@ -332,8 +334,9 @@
     function fail(el, msg) { setError(el, msg); if (!first) first = el; }
     function need(name, msg) { var el = form.elements[name]; if (el && visible(el) && !val(name)) fail(el, msg || REQUIRED[name]); }
 
-    ['firstName', 'lastName', 'email', 'phone', 'street', 'city', 'region', 'postal', 'country'].forEach(function (n) { need(n); });
+    ['firstName', 'lastName', 'email', 'phone', 'dob', 'street', 'city', 'region', 'postal', 'country'].forEach(function (n) { need(n); });
     if (val('email') && !EMAIL.test(val('email'))) fail(form.elements.email, 'Check your email address; it should look like name@example.com.');
+    if (val('dob') && !plausibleBirthDate(val('dob'))) fail(form.elements.dob, 'Check your date of birth.');
     need('permanentAddress', 'Enter your permanent address, or tick “same as my mailing address”.');
 
     if (!val('program')) fail(form.elements.program[0], 'Choose a program.');
@@ -418,6 +421,7 @@
     var data = {
       ref: ref, orderId: paidOrderId, fee: paidFee,
       firstName: val('firstName'), lastName: val('lastName'), email: val('email'), phone: val('phone'),
+      dob: val('dob'), school: val('school'),
       street: val('street'), city: val('city'), region: val('region'), postal: val('postal'), country: val('country'),
       permanentAddress: val('sameAddress') ? '' : val('permanentAddress'),
       program: val('program'), concentration: form.elements.concentration && visible(form.elements.concentration[0]) ? val('concentration') : '',
