@@ -1,9 +1,16 @@
 # MA-EL and MWS-E online applications: setup
 
-The application form on `/mael-apply/` and `/mwse-apply/` (`js/application.js`,
+The application form on `/mael-apply-new/` and `/mwse-apply-new/` (`js/application.js`,
 styles in `css/application.css`) takes the application fee through PayPal, then
 sends the application to a Google Apps Script (`education-applications.gs`). Both
-pages carry the same form; each just preselects its own program. The script
+pages carry the same form; each just preselects its own program.
+
+> **Preview pages.** Until the Program Director approves them, the new pages live
+> at `/mael-apply-new/` and `/mwse-apply-new/`, marked `noindex` and linked from
+> nowhere; `/mael-apply/` and `/mwse-apply/` still carry the original inquiry form.
+> To go live: copy each `-new/index.html` over the matching `-apply/index.html`,
+> change its `robots` meta back to `index, follow`, point its canonical, `og:url`
+> and JSON-LD URLs back to the `-apply/` address, and delete the `-new` folders. The script
 checks every answer again, then for each applicant:
 
 - creates a folder in Google Drive containing their uploaded documents (statement
@@ -154,7 +161,7 @@ Change these together:
 | Concentrations | the radio buttons in both apply pages | `CONCENTRATIONS` |
 | Staff who get applications | | `STAFF` (then run `setup` to share the folder) |
 
-The form markup is in both `mael-apply/index.html` and `mwse-apply/index.html`
+The form markup is in both `mael-apply-new/index.html` and `mwse-apply-new/index.html`
 (the "ONLINE APPLICATION" section). Keep the two identical apart from
 `data-program`. Deadlines shown elsewhere on the site (the deadline cards, the
 Admission page and the FAQs) are separate text; update them too.

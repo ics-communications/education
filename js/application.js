@@ -1,5 +1,5 @@
 /* ICS education programs (MA-EL and MWS-E): the online application form,
- * on /mael-apply/ and /mwse-apply/.
+ * on /mael-apply-new/ and /mwse-apply-new/ (previews until approved).
  *
  * Flow: the applicant completes the form → pays the application fee with
  * PayPal → once PayPal confirms the payment, the application (with any

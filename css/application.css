@@ -1,6 +1,6 @@
 /* =============================================
    ONLINE APPLICATION FORM: MA-EL and MWS-E
-   Used by /mael-apply/ and /mwse-apply/. Behaviour lives in /js/application.js.
+   Used by /mael-apply-new/ and /mwse-apply-new/. Behaviour lives in /js/application.js.
    The page accent (orange on MA-EL, red on MWS-E) is decoration only;
    anything that carries meaning is purple, and errors are ICS red.
    ============================================= */

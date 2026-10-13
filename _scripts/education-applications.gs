@@ -2,7 +2,7 @@
  * ICS education programs (MA-EL and MWS-E) — application receiver
  * (Google Apps Script web app)
  *
- * The online form on /mael-apply/ and /mwse-apply/ (js/application.js) takes
+ * The online form on /mael-apply-new/ and /mwse-apply-new/ (js/application.js) takes
  * the application fee through PayPal, then posts the application here. This
  * script:
  *
