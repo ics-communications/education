@@ -218,7 +218,7 @@ anchors the right, course titles run between them across the fold.*
 | Dr. Edith van der Boom | Associate Professor of Philosophy of Education and Practice of Pedagogy · Director, MA-EL & MWS-E |
 | Dr. Gideon Strauss | Associate Professor of Leadership and Worldview Studies |
 | Dr. Neal DeRoo | Professor of Philosophy |
-| Dr. Beth Green | Associate Professor of Education · President, ICS |
+| Dr. Beth Green | President, ICS |
 
 *Credibility lines are out of the build. Nik Ansell came off with the Biblical Foundations handover
 and Dr. Green took the fourth slot — `img/green.webp`, cropped square to match the other three.*

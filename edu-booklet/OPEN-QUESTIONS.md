@@ -153,8 +153,7 @@ The review call moved **programme enquiries** to Dr. van der Boom — done in th
 ### 11. Dr. Beth Green's `/faculty/` profile is a stub, and her email address is a guess
 
 She is on the faculty page now, in the slot Nik Ansell vacated. Her entry carries only what is
-known for certain: name, **Associate Professor of Education**, **President, Institute for Christian
-Studies**, and the photograph. Every other profile on that page also carries a credentials line, a
+known for certain: name, **President, Institute for Christian Studies**, and the photograph. Every other profile on that page also carries a credentials line, a
 "Vision" statement, and an expandable panel of courses, research interests and publications. Hers
 has none of them, so beside a full-height portrait it reads as unfinished — which it is.
 
@@ -246,7 +245,7 @@ Every logo in the piece is raster, max 1200 px wide. That is fine at the sizes u
 | **Both programs start three times a year** — Fall, Winter, Summer — and carry the same three application deadlines. The MA-EL's two-start pattern was stale policy. | P4/P5 stat rows, P7 deadline grid, P8 body — **see item 5 for the form dependency** |
 | **Dr. van der Boom is the contact**, not the Academic Registrar. It builds the relationship, it takes work off Parker, and it means an enquiry reaches one named person rather than an office that reads as bigger than it is. | P7 step 2, P8 contact block, apply and FAQ pages — **see item 10 for what stayed with the Registrar** |
 | **Both her titles print** — professorial title above the director title, so a reader knows what she is a professor *of*. Taken from the faculty page: *Associate Professor of Philosophy of Education and Practice of Pedagogy*. Worth a glance to confirm it is current. | P6 |
-| **Nik Ansell comes off, Dr. Beth Green goes on** — Associate Professor of Education, President of ICS. Her headshot is cropped square to match the other three and the page is back to four. Applied on `/faculty/` as well: Nik's profile removed, hers added in the slot he vacated. Worth confirming her rank still reads that way after Academic Council meets in September. | P6 · `/faculty/` |
+| **Nik Ansell comes off, Dr. Beth Green goes on** — titled President, ICS only; the Associate Professor of Education rank is dropped everywhere. Her headshot is cropped square to match the other three and the page is back to four. Applied on `/faculty/` as well: Nik's profile removed, hers added in the slot he vacated. | P6 · `/faculty/` |
 | **Both testimonials now carry a portrait** — Kevin Otter on P3, Carolyn Bentum on P6, in the same offset red frame as the faculty photos but two-thirds the size, so the face corroborates the quote rather than leading it. | P3, P6 |
 | **The QR codes are correct** — both resolve to `education.icscanada.edu`, which is the right destination. Sending a reader who wants information to an application form would be the wrong one. | P7, P8 |
 | **The MA-EL attribution on both testimonials is fine as it stands.** An MWS-E voice would be better, but the programme is in its first year and there are no graduates to quote. Relabelling the existing quotes as "education graduate student" was considered and judged unnecessary. | P3, P6 |
