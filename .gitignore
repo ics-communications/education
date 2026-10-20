@@ -4,3 +4,6 @@
 # macOS AppleDouble resource forks
 ._*
 .DS_Store
+
+# Apps Script server code — deployed by hand to script.google.com
+_scripts/
