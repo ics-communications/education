@@ -25,9 +25,9 @@
     FEE: 90,                         // CAD
     // Each program: academic or professional referees required, and its start
     // terms with the application deadline for each, as [month, day, years
-    // before the start]. Winter [11, 1, 1] = November 1 of the year before.
+    // before the start]. Winter [12, 1, 1] = December 1 of the year before.
     PROGRAMS: {
-      mael: { name: 'MA in Educational Leadership (MA-EL)', referees: 2, terms: { winter: [11, 1, 1], summer: [4, 1, 0], fall: [4, 1, 0] } },
+      mael: { name: 'MA in Educational Leadership (MA-EL)', referees: 2, terms: { winter: [12, 1, 1], summer: [4, 1, 0], fall: [8, 1, 0] } },
       mwse: { name: 'Master of Worldview Studies in Education (MWS-E)', referees: 2, terms: { winter: [12, 1, 1], summer: [4, 1, 0], fall: [8, 1, 0] } }
     },
     TERMS_SHOWN: 4,                  // how many upcoming start terms to offer
