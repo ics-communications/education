@@ -13,6 +13,14 @@
 - CSAC — Christian School Administration Certificate [/csac/]
 - CSTC — Christian School Teaching Certificate [/cstc/]
 
+## Tuition
+
+- For credit: $1,500 CAD per course (3 credit hours)
+- Bursary: $500 per semester for students who need it
+- First-time ICS auditors and ICS alumni: $425 per course, registration included
+- Team discount: $100 rebate each when two or more educators from the same school take the same course for credit at the same time
+- Details: /courses/#tuition
+
 ## Key Pages
 
 - Course Catalogue: /courses/

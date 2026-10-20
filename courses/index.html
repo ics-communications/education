@@ -467,11 +467,26 @@
     .ics-catl-format__detail-text strong { color: var(--ics-white); font-weight: 600; }
 
     /* ============================= */
+    /* TUITION & COSTS               */
+    /* ============================= */
+    .ics-catl-costs { background: var(--ics-cream); padding: 3rem 2rem 2rem; scroll-margin-top: 80px; }
+    .ics-catl-costs__inner { max-width: 860px; margin: 0 auto; }
+    .ics-catl-costs__heading { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.8rem); font-weight: 700; color: var(--ics-purple); text-align: center; margin-bottom: 0.5rem; }
+    .ics-catl-costs__intro { font-family: var(--font-sans); font-size: 0.95rem; color: #6b6460; line-height: 1.75; text-align: center; max-width: 600px; margin: 0 auto 1.75rem; }
+    .ics-catl-costs__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1rem; }
+    .ics-catl-costs__card { background: var(--ics-white); border: 1px solid var(--ics-border-light); border-top: 3px solid var(--catl-accent); border-radius: 6px; padding: 1.4rem 1.4rem 1.3rem; text-align: center; }
+    .ics-catl-costs__label { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6460; margin-bottom: 0.4rem; }
+    .ics-catl-costs__amount { font-family: var(--font-serif); font-size: 1.9rem; font-weight: 700; color: var(--ics-purple); line-height: 1.2; margin-bottom: 0.5rem; }
+    .ics-catl-costs__amount small { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; color: #6b6460; }
+    .ics-catl-costs__note { font-family: var(--font-sans); font-size: 0.86rem; color: #5c5550; line-height: 1.6; }
+    .ics-catl-costs__note a { color: var(--ics-purple); font-weight: 600; }
+    .ics-catl-costs__footnote { font-family: var(--font-sans); font-size: 0.8rem; color: #6b6460; text-align: center; margin-top: 1rem; }
+
+    /* ============================= */
     /* TEAM DISCOUNT                 */
     /* ============================= */
-    .ics-catl-discount { background: var(--ics-cream); padding: 2rem 2rem; }
     .ics-catl-discount__inner {
-      max-width: 680px; margin: 0 auto;
+      max-width: 860px; margin: 0 auto;
       background: linear-gradient(135deg, rgba(91, 164, 164, 0.08) 0%, rgba(241, 171, 106, 0.06) 100%);
       border: 1px solid rgba(91, 164, 164, 0.2); border-radius: 6px;
       padding: 1.5rem 1.75rem; display: flex; align-items: flex-start; gap: 1rem;
@@ -508,7 +523,8 @@
       .ics-catl-courses { padding: 2rem 1.25rem 2.5rem; }
       .ics-catl-format { padding: 2rem 1.25rem; }
       .ics-catl-format__inner { grid-template-columns: 1fr; }
-      .ics-catl-discount { padding: 1.5rem 1.25rem; }
+      .ics-catl-costs { padding: 2rem 1.25rem 1.5rem; }
+      .ics-catl-costs__grid { grid-template-columns: 1fr; }
       .ics-catl-cta { padding: 1.5rem 1.25rem 2.5rem; }
       .ics-cc { padding: 1.1rem 1.2rem; }
       .ics-cc__name { font-size: 0.98rem; }
@@ -853,7 +869,7 @@
   <!-- ===== INTRO ===== -->
   <section class="ics-catl-intro">
     <div class="ics-catl-intro__inner">
-      <p class="ics-catl-intro__text">ICS education courses serve our MA-EL and MWS-E degree programs as well as our three educator certificates (CILC, CSAC, and CSTC). Courses are delivered online with asynchronous work and scheduled Zoom sessions, and rotate on a regular cycle so that working educators can plan ahead.</p>
+      <p class="ics-catl-intro__text">ICS education courses serve our MA-EL and MWS-E degree programs as well as our three educator certificates (CILC, CSAC, and CSTC). Courses are delivered online with asynchronous work and scheduled Zoom sessions, and rotate on a regular cycle so that working educators can plan ahead. Tuition is $1,500 per course for credit, with a $500 bursary for those who need it. <a href="#tuition" style="color: var(--ics-purple); font-weight: 600;">See tuition and savings</a>.</p>
       <div class="ics-catl-intro__legend">
         <span class="ics-catl-intro__legend-item"><span class="ics-catl-intro__legend-dot ics-catl-intro__legend-dot--core"></span> Foundation / Core</span>
         <span class="ics-catl-intro__legend-item"><span class="ics-catl-intro__legend-dot ics-catl-intro__legend-dot--immersive"></span> Immersive / Elective</span>
@@ -1457,11 +1473,33 @@
     </div>
   </section>
 
-  <!-- ===== TEAM DISCOUNT ===== -->
-  <section class="ics-catl-discount">
-    <div class="ics-catl-discount__inner">
-      <svg class="ics-catl-discount__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-      <p class="ics-catl-discount__text"><strong>Team Discount:</strong> Two or more educators from the same school who register for the same course (for credit) at the same time each receive a $100 rebate on their course tuition. We believe that when teachers from the same school take a course together, they become stronger conversation partners and can better support each other in implementation. <strong>First-time ICS auditors and ICS alumni</strong> can take courses for only $425 (registration included).</p>
+  <!-- ===== TUITION & COSTS ===== -->
+  <section class="ics-catl-costs" id="tuition">
+    <div class="ics-catl-costs__inner">
+      <h2 class="ics-catl-costs__heading">Tuition and Savings</h2>
+      <p class="ics-catl-costs__intro">What you pay depends on whether you take a course for credit or audit it. Courses in the Calvin University partnership concentrations are paid directly to Calvin.</p>
+      <div class="ics-catl-costs__grid">
+        <div class="ics-catl-costs__card">
+          <p class="ics-catl-costs__label">For Credit</p>
+          <p class="ics-catl-costs__amount">$1,500 <small>/ course</small></p>
+          <p class="ics-catl-costs__note">3 credit hours, counting toward a degree or certificate.</p>
+        </div>
+        <div class="ics-catl-costs__card">
+          <p class="ics-catl-costs__label">Bursary</p>
+          <p class="ics-catl-costs__amount">$500 <small>/ semester</small></p>
+          <p class="ics-catl-costs__note">For students who need it. <a href="mailto:evanderboom@icscanada.edu?subject=Bursary%20question">Ask the Program Director</a> when you register.</p>
+        </div>
+        <div class="ics-catl-costs__card">
+          <p class="ics-catl-costs__label">Audit or Alumni</p>
+          <p class="ics-catl-costs__amount">$425 <small>/ course</small></p>
+          <p class="ics-catl-costs__note">For first-time ICS auditors and ICS alumni, registration included.</p>
+        </div>
+      </div>
+      <div class="ics-catl-discount__inner">
+        <svg class="ics-catl-discount__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        <p class="ics-catl-discount__text"><strong>Team Discount:</strong> Two or more educators from the same school who register for the same course (for credit) at the same time each receive a $100 rebate on their course tuition. We believe that when teachers from the same school take a course together, they become stronger conversation partners and can better support each other in implementation.</p>
+      </div>
+      <p class="ics-catl-costs__footnote">All amounts are in Canadian dollars. Tuition and fees are subject to change.</p>
     </div>
   </section>
 
