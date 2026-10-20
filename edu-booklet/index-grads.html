@@ -173,7 +173,7 @@ html, body {
   color: var(--purple);
   max-width: 3.7in;
 }
-.body, .quote, .dist, .pillar__body, .step__body,
+.body, .quote, .dist, .step__body,
 .prog__statnote, .p7__prereq { text-wrap: pretty; }
 
 /* Stat label — one shared primitive; pages recolour it via --acc-ink */
@@ -378,6 +378,7 @@ html, body {
 }
 .pillar__body {
   margin-top: 0.08in;
+  text-wrap: balance;   /* two-line bodies: "pretty" still stranded "per term." */
   font-family: var(--text);
   font-size: var(--t-sm);
   line-height: 1.45;
@@ -456,6 +457,10 @@ html, body {
   max-width: 4.0in;
   color: var(--ink-soft);
 }
+
+/* Program sits on its own line: inline, it wrapped on both testimonials and left a
+   "·" separator dangling at the start of the second line. */
+.testimonial__prog { display: block; }
 
 .paths__cta {
   font-family: var(--display);
@@ -758,7 +763,8 @@ html, body {
   letter-spacing: 0.006em;
   color: var(--ink-soft);
 }
-.p7__prereq { margin-top: var(--sp-2); font-size: var(--t-label); line-height: 1.5; letter-spacing: 0.006em; max-width: 3.7in; color: var(--ink-soft); }
+/* Hangs off step 3's text column (numeral 0.28in + gap 0.08in), not the numerals */
+.p7__prereq { margin-top: var(--sp-2); margin-left: 0.36in; font-size: var(--t-label); line-height: 1.5; letter-spacing: 0.006em; max-width: 3.7in; color: var(--ink-soft); }
 
 .p7__grid {
   margin-top: auto;
@@ -806,8 +812,11 @@ html, body {
   letter-spacing: 0.05em;
   line-height: 1.2;
 }
-.deadlines__row--mwse .deadlines__prog { color: var(--red-ink); }
-.deadlines__row--mael .deadlines__prog { color: var(--orange-ink); }
+.deadlines__prog { color: var(--purple); }
+.deadlines__prog--mwse { color: var(--red-ink); }
+.deadlines__prog--mael { color: var(--orange-ink); }
+/* Outfit's word space is narrow; in " · "-separated data rows the items ran together */
+.deadlines__dates, .factrow__value, .statrow__value, .moneyrow__value { word-spacing: 0.08em; }
 .deadlines__dates {
   margin-top: 0.03in;
   font-family: var(--text);
@@ -831,21 +840,23 @@ html, body {
 .p8 .safe-area { align-items: center; text-align: center; color: var(--on-dark); }
 .p8__logo { width: 1.7in; height: auto; display: block; }
 .p8__rule { width: 2.4in; margin: 0.22in 0 0.2in; }
-/* Reversed. The masthead break IS ruled — .p8__rule sits in it — so handing it the
-   surplus put 1.31in of void directly under a rule, and the rule read as a lid on an
-   empty box. The masthead now sits a stated interval above the invitation, the
-   invitation/QR/URL read as one solid centre, and the surplus falls at the foot rule,
-   which is already doing the separating. Split 0.62 / 0.95, not 0.88 / 0.69 — two
-   near-equal gaps are the same as no rhythm, which is what the first version had. */
+/* Spacing on the back cover: the invitation (head → body → QR → URL) is the page's
+   single centre, held between the logo and the foot rule. Those two outer
+   intervals do the same job — frame the centre — so they are set near-equal, the lower
+   a touch larger so the block sits on the optical rather than geometric centre. The
+   earlier 0.62 / 0.95 split left a dead band under the URL that read as missing content.
+   Frame is now 0.80 above / ~0.89 below (no rule under the logo). Rhythm comes from contrast between that outer
+   frame and the tighter,
+   stepped intervals inside the invitation (0.09 → 0.20 → 0.36). */
 .p8__rule--foot { margin-top: auto; margin-bottom: 0; }
 .p8__head {
-  margin-top: var(--sp-5);
+  margin-top: 0.8in;         /* frame above, measured from the logo */
   line-height: 1.24;
   color: #FFFFFF;
 }
 .p8__head em { color: var(--orange); }
 .p8__body {
-  margin-top: 0.15in;
+  margin-top: 0.2in;
   font-family: var(--text);
   font-size: var(--t-body);
   line-height: 1.5;
@@ -854,14 +865,14 @@ html, body {
   max-width: 3.8in;
 }
 .p8__qr {
-  margin-top: 0.28in;
+  margin-top: 0.36in;
   width: 1.3in; height: 1.3in;
   background: #fff;
   padding: 0.07in;
 }
 .p8__qr img { width: 100%; height: 100%; display: block; }
 .p8__qr-cap {
-  margin-top: 0.07in;   /* caption belongs to the code above it, not the URL below */
+  margin-top: 0.09in;   /* caption belongs to the code above it, not the URL below */
   font-family: var(--text);
   font-size: var(--t-eyebrow);
   font-weight: 600;
@@ -871,7 +882,7 @@ html, body {
   color: var(--orange);
 }
 .p8__url {
-  margin-top: 0.11in;
+  margin-top: 0.14in;
   font-family: var(--display);
   font-weight: 700;
   font-size: 18pt;
@@ -1014,10 +1025,10 @@ html, body {
       <div class="factpanel">
         <div class="factrow"><div class="lbl factrow__label">Delivery</div><div class="factrow__value">Fully online. No Toronto visits required.</div></div>
         <div class="factrow"><div class="lbl factrow__label">Format</div><div class="factrow__value">Part-time only · one course per term</div></div>
-        <div class="factrow"><div class="lbl factrow__label">Class time</div><div class="factrow__value">Asynchronous · ~6 live Zoom sessions per course</div></div>
+        <div class="factrow"><div class="lbl factrow__label">Class time</div><div class="factrow__value">Asynchronous study + six live Zoom sessions <span class="nb">per course</span></div></div>
         <div class="factrow"><div class="lbl factrow__label">Cohort size</div><div class="factrow__value">Up to 12 students</div></div>
         <div class="factrow"><div class="lbl factrow__label">July</div><div class="factrow__value">Summer courses pause so you can enjoy your break</div></div>
-        <div class="factrow"><div class="lbl factrow__label">Per course</div><div class="factrow__value">$1,500 CAD · $500 CAD per credit hour</div></div>
+        <div class="factrow"><div class="lbl factrow__label">Per course</div><div class="factrow__value">$1,500 CAD</div></div>
         <div class="factrow"><div class="lbl factrow__label">Bursary</div><div class="factrow__value">$500 CAD per semester (as available)</div></div>
       </div>
 
@@ -1026,7 +1037,7 @@ html, body {
           <span class="framed"><img src="img/otter.webp" alt="Kevin Otter"></span>
           <div>
             <p class="quote">“Nothing I did at ICS felt like a make-work project. I’m astounded by how the ICS professors make online classes feel like a community — I miss classes.”</p>
-            <p class="testimonial__attr">Kevin Otter — Teacher since 2009, Northumberland Christian School <span class="nb">· MA‑EL student</span></p>
+            <p class="testimonial__attr">Kevin Otter — Teacher since 2009, Northumberland Christian School <span class="testimonial__prog">MA‑EL alum</span></p>
           </div>
         </div>
       </blockquote>
@@ -1053,14 +1064,14 @@ html, body {
       <div class="prog__stats">
         <div class="statrow"><div class="lbl statrow__label">Length</div><div class="statrow__value">~2.5 years part-time</div></div>
         <div class="statrow"><div class="lbl statrow__label">Coursework</div><div class="statrow__value">6–7 courses</div></div>
-        <div class="statrow"><div class="lbl statrow__label">Capstone</div><div class="statrow__value">Action Project + paper, or major research paper</div></div>
+        <div class="statrow"><div class="lbl statrow__label">Capstone</div><div class="statrow__value">Action Project + theoretical paper, or major research paper</div></div>
         <div class="statrow"><div class="lbl statrow__label">Net cost</div><div class="statrow__value">$7,000–$8,500 CAD</div></div>
         <div class="statrow"><div class="lbl statrow__label">Starts</div><div class="statrow__value">Fall · Winter · Summer</div></div>
         <p class="prog__statnote">Net cost assumes the $500 semester bursary, as available. Timelines assume a steady pace; you can take longer.</p>
       </div>
 
       <div class="prog__dist">
-        <p class="dist"><b>An Action Project in your own school</b> — apply your learning where you already teach, then reflect on it in a summative paper.</p>
+        <p class="dist"><b>An Action Project in your own school</b> — apply your learning where you already teach, alongside a theoretical paper.</p>
         <p class="dist"><b>Two ways to finish</b> — the Action Project, or a seventh course and a major research paper.</p>
         <p class="dist"><b>Begin when your year allows</b> — entry points in Fall, Winter, and Summer.</p>
       </div>
@@ -1160,7 +1171,7 @@ html, body {
           <span class="framed"><img src="img/bentum.webp" alt="Carolyn Bentum"></span>
           <div>
             <p class="quote">“Doing it online meant I could fit a master’s program into the busyness of our life — I have four children with their own things going on.”</p>
-            <p class="testimonial__attr">Carolyn Bentum — Principal, Cairn Christian School <span class="nb">· MA‑EL student</span></p>
+            <p class="testimonial__attr">Carolyn Bentum — Principal, Cairn Christian School <span class="testimonial__prog">MA‑EL student</span></p>
           </div>
         </div>
       </blockquote>
@@ -1174,9 +1185,9 @@ html, body {
       <h2 class="dsp d-lg p7__head">An Investment<br>Within Reach</h2>
 
       <div class="money">
-        <div class="moneyrow"><div class="lbl moneyrow__label">Per course</div><div class="moneyrow__value">$1,500 CAD · 3 credit hours</div></div>
+        <div class="moneyrow"><div class="lbl moneyrow__label">Per course</div><div class="moneyrow__value">$1,500 CAD</div></div>
         <div class="moneyrow"><div class="lbl moneyrow__label">Bursary</div><div class="moneyrow__value">$500 CAD per semester (as available)</div></div>
-        <div class="moneyrow"><div class="lbl moneyrow__label">Colleagues</div><div class="moneyrow__value">$100 CAD off each · 2+ educators, same school, same course</div></div>
+        <div class="moneyrow"><div class="lbl moneyrow__label">Colleagues</div><div class="moneyrow__value">$100 CAD off each · 2+ educators, same school, <span class="nb">same course</span></div></div>
         <div class="moneyrow"><div class="lbl moneyrow__label">PD funding</div><div class="moneyrow__value">Your school’s PD budget may apply · ask your principal</div></div>
       </div>
 
@@ -1215,12 +1226,8 @@ html, body {
 
         <div class="deadlines">
           <div class="deadlines__hd">Application Deadlines</div>
-          <div class="deadlines__row deadlines__row--mwse">
-            <div class="deadlines__prog">MWS-E</div>
-            <div class="deadlines__dates">Apr 1 (Summer) · Aug 1 (Fall) · Dec 1 (Winter)</div>
-          </div>
-          <div class="deadlines__row deadlines__row--mael">
-            <div class="deadlines__prog">MA-EL</div>
+          <div class="deadlines__row">
+            <div class="deadlines__prog"><span class="deadlines__prog--mwse">MWS-E</span> &amp; <span class="deadlines__prog--mael">MA-EL</span></div>
             <div class="deadlines__dates">Apr 1 (Summer) · Aug 1 (Fall) · Dec 1 (Winter)</div>
           </div>
         </div>
@@ -1233,10 +1240,9 @@ html, body {
     <div class="p8__glow"></div>
     <div class="safe-area">
       <img class="p8__logo" src="img/ics-logo-white.webp" alt="Institute for Christian Studies">
-      <div class="dia-rule dia-rule--center dia-rule--dark p8__rule"><span></span><i></i><span></span></div>
 
       <h2 class="dsp d-lg p8__head">Ready to Think<br>Deeper About<br>Your Calling?</h2>
-      <p class="p8__body">Applications are open for Fall, Winter, and Summer starts. Take the next step in your journey as a Christian educator.</p>
+      <p class="p8__body">Applications are open for Fall, Winter, and Summer starts.<br>Take the next step in your journey as a Christian educator.</p>
 
       <div class="p8__qr"><img src="img/qr-education.png" alt="QR code to education.icscanada.edu"></div>
       <div class="p8__qr-cap">Scan to start the conversation</div>

@@ -78,11 +78,11 @@ That covers the *availability* question. It does not cover the *mechanism*: does
 
 The booklet now prints **`Starts — Fall · Winter · Summer`** and **the same three deadlines (Apr 1 / Aug 1 / Dec 1) for both programs**, per the review call: the two programs should be identical here, and the MA-EL's two-start pattern is a stale policy from the old website.
 
-**The dependency:** Parker has to update the MA-EL application form before this is true in practice. Until then the booklet is ahead of the system.
+**The dependency:** Irina has to update the MA-EL application form before this is true in practice. Until then the booklet is ahead of the system.
 
 **The website has deliberately not been changed** to three MA-EL starts for the same reason — a printed booklet is read weeks after it is picked up, but a website is read now, and a form that contradicts it is a live support problem. Say the word once the form is updated and the site follows in one pass.
 
-**Who can answer / act:** Parker (application form), then Academic Registrar to confirm.
+**Who can answer / act:** Irina (application form), then Academic Registrar to confirm.
 
 ---
 
@@ -243,7 +243,7 @@ Every logo in the piece is raster, max 1200 px wide. That is fine at the sizes u
 | **The bursary cannot be guaranteed.** It is donor-funded, and ICS does not want it read as simply a cheaper course. | "(as available)" on P2, P3, P7; stat note on P4/P5 |
 | **MWS-E length is ~2.5 years**, not 2 — six courses is two years, plus the project and paper. | P4 stat row; `/`, `/mwse/`, `/mwse-design/`, `/mwse-faq/` |
 | **Both programs start three times a year** — Fall, Winter, Summer — and carry the same three application deadlines. The MA-EL's two-start pattern was stale policy. | P4/P5 stat rows, P7 deadline grid, P8 body — **see item 5 for the form dependency** |
-| **Dr. van der Boom is the contact**, not the Academic Registrar. It builds the relationship, it takes work off Parker, and it means an enquiry reaches one named person rather than an office that reads as bigger than it is. | P7 step 2, P8 contact block, apply and FAQ pages — **see item 10 for what stayed with the Registrar** |
+| **Dr. van der Boom is the contact**, not the Academic Registrar. It builds the relationship, it takes work off Irina, and it means an enquiry reaches one named person rather than an office that reads as bigger than it is. | P7 step 2, P8 contact block, apply and FAQ pages — **see item 10 for what stayed with the Registrar** |
 | **Both her titles print** — professorial title above the director title, so a reader knows what she is a professor *of*. Taken from the faculty page: *Associate Professor of Philosophy of Education and Practice of Pedagogy*. Worth a glance to confirm it is current. | P6 |
 | **Nik Ansell comes off, Dr. Beth Green goes on** — titled President, ICS only; the Associate Professor of Education rank is dropped everywhere. Her headshot is cropped square to match the other three and the page is back to four. Applied on `/faculty/` as well: Nik's profile removed, hers added in the slot he vacated. | P6 · `/faculty/` |
 | **Both testimonials now carry a portrait** — Kevin Otter on P3, Carolyn Bentum on P6, in the same offset red frame as the faculty photos but two-thirds the size, so the face corroborates the quote rather than leading it. | P3, P6 |
